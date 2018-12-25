@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>热区控制测试</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+		<meta charset="utf-8" />
+		<link href="../css/base.css" rel="stylesheet" type="text/css" />
+		<link href="../css/s01.css" rel="stylesheet" type="text/css" />
+		<script src="../js/flashCtrl.js"></script>
+        <script src="../js/vr0001.js"></script>
+
+		<style type="text/css">
+			.abtn {
+				width: 12%;
+				height: 9.6%;
+				left: 5%;
+				bottom: 16.6%;
+				/* background-color: rgba(0, 255, 255, 0.3); */
+			}
+			.abtn:hover {
+				background-color: rgba(255, 255, 0, 0.3);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="boso" class="boso midOut" ondblclick="fDoe.StopPlay();">
+			<div class="midTop">
+				<div id="nDoe" class="mark nd5"></div>
+			</div><!--
+			--><div id="fDoe" class="midSub swf">
+				<div id="runDoe" class="abtn" onclick="dat.run();">播放</div>
+				<div class="mark">
+					<div class="btn sfs" onclick="dat.part(this.innerHTML - 0);">
+						0
+					</div>
+					<div class="btn sfs" onclick="dat.part(500);">
+						1
+					</div>
+					<div class="btn sfs" onclick="dat.part(1000);">
+						2
+					</div>
+					<div class="btn sfs" onclick="dat.part(1400, 1800);">
+						3
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		document.body.onload = init();
+	</script>
+</html>
