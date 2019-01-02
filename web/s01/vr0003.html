@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>as调用js测试</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+		<meta charset="utf-8" />
+		<link href="../css/base.css" rel="stylesheet" type="text/css" />
+		<link href="../css/s01.css" rel="stylesheet" type="text/css" />
+		<script src="../js/vr0003.js"></script>
+
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<div id="boso" class="boso midOut">
+			<div class="midTop"></div><!--
+			--><div id="fDoe" class="midSub swf">
+				<div id="markDoe" class="Lc_nosee">
+					<div class="bfs">
+						<br/><br/>问：下边哪只小动物不在十二生肖里边？<br/><br/>
+					</div>
+					<div id="choseDoe">
+						<div class="btn bfs" onclick="dat.ans(1);">猫</div>
+						<div class="btn bfs" onclick="dat.ans(0);">鼠</div>
+						<br/>
+						<div class="btn bfs" onclick="dat.ans(0);">狗</div>
+						<div class="btn bfs" onclick="dat.ans(0);">兔</div>
+					</div>
+					<div id="exitDoe" class="Lc_nosee">
+						<div class="bfs"><br/><span id="resDoe"></span><br/><br/></div>
+						<div class="btn bfs" onclick="dat.hid();">确定</div>
+					</div>
+				</div>
+				<embed src="../v/界面设计.swf" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		document.body.onload = init();
+	</script>
+</html>
