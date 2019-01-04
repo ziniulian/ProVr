@@ -121,3 +121,25 @@ var fc = {
 		}
 	}
 };
+
+// 常用工具
+var tls = {
+	// 全屏
+	fullScreen: function (doe){
+		var isFullscreen=document.fullScreen||document.mozFullScreen||document.webkitIsFullScreen;
+		if(!isFullscreen){	//进入全屏,多重短路表达式
+			(doe.requestFullscreen&&doe.requestFullscreen())||
+			(doe.mozRequestFullScreen&&doe.mozRequestFullScreen())||
+			(doe.webkitRequestFullscreen&&doe.webkitRequestFullscreen())||
+			(doe.msRequestFullscreen&&doe.msRequestFullscreen());
+		}else{	//退出全屏,三目运算符
+			document.exitFullscreen?document.exitFullscreen():
+			document.mozCancelFullScreen?document.mozCancelFullScreen():
+			document.webkitExitFullscreen?document.webkitExitFullscreen():isNaN();
+		}
+	},
+	toggleFullScreen: function (btn, doe){
+		btn.innerHTML==="全屏"?btn.innerHTML="退出全屏":btn.innerHTML="全屏";
+		tls.fullScreen(doe);
+	}
+};
