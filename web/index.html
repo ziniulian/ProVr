@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
 		<meta charset="utf-8" />
 		<link href="css/s02.css" rel="stylesheet" type="text/css" />
+		<script src="js/flashCtrl.js"></script>
+		<script src="js/index.js"></script>
 
 		<style type="text/css">
 		</style>
@@ -50,38 +52,124 @@
 			<div class="hom_body">
 				<div class="hom_w">
 					<!-- 视频 -->
-					<div>
-						<div class="hom_v"></div>
-						<div class="hom_v_txt">
-							<div class="hom_v_btn"> ... </div>
+					<div class="hom_v_out">
+						<div class="hom_v">
+							<embed
+								src="v/flvplayer.swf"
+								wmode="opaque"
+								allowscriptaccess="always"
+								allowfullscreen="true"
+								type="application/x-shockwave-flash"
+								flashvars="vcastr_file=a.flv&IsAutoPlay=1"
+								quality="high"
+								width="100%"
+								height="100%"
+								pluginspage="http://www.macromedia.com/go/getflashplayer">
+							</embed>
+						</div><!--
+						--><div class="hom_v_txt sfs">
+							所属分类 ： xxxx<br />
+							实验学时 ： xxxx<br />
+							实验操作步数 ： xxxx<br />
+							实验项目负责人 ： xxxx<br />
+							联系电话 ： xxxx<br />
+							实验简介 ： xxxx
+							<a href="#">
+								<div class="hom_v_btn mfs">开始实验</div>
+							</a>
 						</div>
 					</div>
+
+					<!-- 实验 -->
+					<div class="hom_gap bfs">
+						<a href="#">实验教学项目</a>
+					</div>
+					<div class="midOut">
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_1 sfs">实验目的</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_2 sfs">实验原理</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_3 sfs">实验仪器设备</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_4 sfs">实验材料</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_5 sfs">实验教学方法</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_6 sfs">实验方法与步骤</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_7 sfs">实验结果与结论</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_8 sfs">实验考核要求</div>
+						</a>
+						<a href="#">
+							<div class="hom_test_btn hom_test_btn_9 sfs">面向学生要求</div>
+						</a>
+					</div>
+
+					<!-- 团队 -->
+					<div class="hom_gap bfs">
+						<a href="#">服务团队</a>
+					</div>
+					<div id="albumDoe" class="hom_team"></div>
+
+					<!-- 网络 -->
+					<div class="hom_gap bfs">
+						<a href="#">网络相关要求</a>
+					</div>
+					<div class="hom_net">
+						<div class="hom_net_img hom_net_img_1"></div>
+						<div class="hom_net_txt sfs">有效链接</div>
+						<div class="hom_net_gap"></div>
+						<div class="hom_net_img hom_net_img_2"></div>
+						<div class="hom_net_txt sfs">网络条件要求</div>
+						<div class="hom_net_gap"></div>
+						<div class="hom_net_img hom_net_img_3"></div>
+						<div class="hom_net_txt sfs">用户操作<br/>系统要求</div>
+						<div class="hom_net_img hom_net_img_4"></div>
+						<div class="hom_net_txt sfs">用户非操作<br/>系统软件配置</div>
+						<div class="hom_net_gap"></div>
+						<div class="hom_net_img hom_net_img_5"></div>
+						<div class="hom_net_txt sfs">用户硬件<br/>配置要求</div>
+						<div class="hom_net_gap"></div>
+						<div class="hom_net_img hom_net_img_6"></div>
+						<div class="hom_net_txt sfs">用户特殊外<br/>置硬件要求</div>
+					</div>
+
 				</div>
 			</div>
 
 			<!-- 尾 -->
 			<div class="hom_foot midOut">
-				<!-- <div class="hom_w"> -->
-					<div class="hom_foot_txt sfs">
-						<a href="#">首页</a> |
-						<a href="#">项目描述</a> |
-						<a href="#">服务团队</a> |
-						<a href="#">网络要求</a> |
-						<a href="#">架构研发</a> |
-						<a href="#">项目特色</a> |
-						<a href="#">持续建设</a> |
-						<a href="#">项目申报书</a>
-						<br />
-						建设单位 ： 兰州大学公共卫生学院
-						<br />
-						合作单位 ： 兰州翼途动漫文化传播有限公司
-						<br />
-						联系电话 ： 0931-8888888
-					</div>
-				<!-- </div> -->
+				<div class="hom_foot_txt sfs">
+					<a href="#">首页</a> |
+					<a href="#">项目描述</a> |
+					<a href="#">服务团队</a> |
+					<a href="#">网络要求</a> |
+					<a href="#">架构研发</a> |
+					<a href="#">项目特色</a> |
+					<a href="#">持续建设</a> |
+					<a href="#">项目申报书</a>
+					<br />
+					建设单位 ： 兰州大学公共卫生学院
+					<br />
+					合作单位 ： 兰州翼途动漫文化传播有限公司
+					<br />
+					联系电话 ： 0931-8888888
+				</div>
 			</div>
 			<div class="hom_foot2"></div>
 		</div>
 	</body>
 
+	<script type="text/javascript">
+		document.body.onload = init();
+	</script>
 </html>
