@@ -283,8 +283,8 @@ a{
 .hom_net {
 	margin: 2rem 1rem;
 	padding: 0.7rem 0;
-	border: solid 0.1rem #CCC;
-	background-color: #F4F4F4;
+	border: solid 0.1rem #999;
+	background-color: #F6F6F6;
 }
 
 .hom_net_img {
@@ -327,9 +327,81 @@ a{
 	vertical-align: middle;
 	width: 14%;
 	line-height: 1.3;
+	color: #000;
 }
 
 /*---------------------- 其它主页 ----------------------*/
+.ohm_bar {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	margin-bottom: 2rem;
+}
+
+.ohm_bar_nam {
+	margin: 1rem 0;
+	line-height: 3;
+	text-align: center;
+	color: #FFF;
+	font-weight: bolder;
+	background-color: #00528C;
+	border: solid #00528C 0.1rem;
+}
+
+.ohm_bar_sub {
+	display: block;
+	line-height: 3;
+	text-align: center;
+	color: #00528C;
+	font-weight: bolder;
+	background-color: #F4F4F4;
+	border: solid #CCC 0.1rem;
+	border-top-width: 0;
+}
+.ohm_bar_sub_0 {
+	border-top-width: 0.1rem;
+}
+.ohm_bar_sub:hover {
+	color: #000;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.ohm_bar_scd {
+	color: #FFF;
+	background-color: #80A9C6;
+}
+
+.ohm_body {
+	display: inline-block;
+	vertical-align: top;
+	width: 70%;
+	min-height: 20rem;
+	margin: 0 0 2rem 3%;
+}
+
+.ohm_body_nam {
+	line-height: 3;
+	text-align: center;
+	border-bottom: solid #CCC 0.1rem;
+	margin: 0.5rem 0 1rem 0;
+}
+
+.ohm_body_txt {
+	word-break: break-all;
+	text-indent: 1.5rem;
+	line-height: 2;
+}
+
+.ohm_pic {
+	height: 12vw;
+    background-repeat: no-repeat;
+	background-position: center left;
+	background-size: contain;
+}
+.ohm_pic_1 {
+	background-image: url(../img/pic.png);
+}
 
 
 
@@ -353,5 +425,11 @@ a{
 	.hom_team_p {
 		height: 25.45vw;
 	    background-size: 23vw 25.45vw;
+	}
+	.ohm_body_txt {
+		text-indent: 2.5rem;
+	}
+	.ohm_pic {
+		margin-left: 1rem;
 	}
 }

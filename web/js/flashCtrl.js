@@ -182,7 +182,7 @@ var tls = {
 				this.exeRoll = tls.bind(this, this.roll);
 				var i, d;
 				for (i = 0; i <= n; i ++) {
-					d = this.crtOne(ps[i]);
+					d = this.crtOne(ps[i], i);
 					this.ds.push(d);
 					doe.appendChild(d);
 				}
@@ -190,11 +190,15 @@ var tls = {
 		};
 
 		// 创建元素
-		this.crtOne = function (pic) {
-			var d = document.createElement("div");
+		this.crtOne = function (pic, i) {
+			var d = document.createElement("a");
 			d.className = this.showCss;
 			if (pic) {
-				d.style.backgroundImage = "url(\"" + pic + "\")";
+				d.style.backgroundImage = "url(\"" + pic.imgurl + "\")";
+				if (pic.tagurl) {
+					d.href = pic.tagurl;
+					d.target = "_blank";
+				}
 			}
 			return d;
 		};
@@ -205,24 +209,31 @@ var tls = {
 			if (this.imgs.length > this.num) {
 				this.ds[0].className = this.hidCss;
 				var self = this;
-				this.timid = setTimeout(this.exeChgImg, this.aTim);
+				setTimeout(this.exeChgImg, this.aTim);
 			}
 		};
 
 		// 换图片
 		this.chgImg = function () {
-			var i, j;
+			var i, j, n, m;
 			j = this.p;
+			n = this.imgs.length;
 			this.p ++;
-			if (this.p >= this.imgs.length) {
+			if (this.p >= n) {
 				this.p = 0;
 			}
 			for (var i = 0; i <= this.num; i ++) {
 				j ++;
-				if (j >= this.imgs.length) {
+				if (j >= n) {
 					j = 0;
 				}
-				this.ds[i].style.backgroundImage = "url(\"" + this.imgs[j] + "\")";
+				m = this.imgs[j];
+				this.ds[i].style.backgroundImage = "url(\"" + m.imgurl + "\")";
+				if (m.tagurl) {
+					this.ds[i].href = m.tagurl;
+				} else {
+					this.ds[i].href = "";
+				}
 			}
 			this.ds[0].className = this.showCss;
 			this.autoRoll();
@@ -238,5 +249,20 @@ var tls = {
 				this.timid = setTimeout(this.exeRoll, this.rollTim);
 			}
 		};
+	},
+
+	// 获取GET参数
+	getUrlReq: function () {
+		var url = location.search;
+		var theRequest = {};
+		if (url.indexOf("?") != -1) {
+			url = url.substr(1).split("&");
+			for(var i = 0; i < url.length; i ++) {
+				var str = url[i].split("=");
+				theRequest[str[0]] = decodeURIComponent(str[1]);
+			}
+		}
+		return theRequest;
 	}
+
 };
