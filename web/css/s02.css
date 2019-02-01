@@ -1,3 +1,7 @@
+/*
+Copyright (C) 2019 犟子工作室 https://www.ziniulian.tk/
+*/
+
 html, body {
 	padding: 0;
 	margin: 0;
@@ -87,10 +91,10 @@ a{
 
 .hom_log {
 	height: 6vw;
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: contain;
-    background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: contain;
+	background-image: url(../img/logo.png);
 }
 
 .hom_head_title {
@@ -108,10 +112,10 @@ a{
 	vertical-align: bottom;
 	font-weight: bolder;
 	color: #000;
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: contain;
-    background-image: url(../img/an01.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: contain;
+	background-image: url(../img/an01.png);
 }
 .hom_head_btn:hover {
 	font-family: "SimHei";
@@ -182,10 +186,10 @@ a{
 	line-height: 2.73vw;
 	text-align: center;
 	color: #FFF;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-image: url(../img/an2.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-image: url(../img/an2.png);
 }
 
 /*---------------------- 首页 实验 ----------------------*/
@@ -197,10 +201,10 @@ a{
 	line-height: 5.46vw;
 	text-align: center;
 	font-weight: bolder;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-image: url(../img/an3.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-image: url(../img/an3.png);
 }
 .hom_gap a {
 	color: #FFF;
@@ -216,9 +220,9 @@ a{
 	font-weight: bolder;
 	color: #FFF;
 	border-radius: 0.2rem;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 8vw;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 8vw;
 }
 .hom_test_btn_1 {
 	background-color: #00528C;
@@ -269,9 +273,9 @@ a{
 	width: 23%;
 	height: 19.34vw;
 	margin: 1rem 1%;
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: 17.48vw 19.34vw;
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: 17.48vw 19.34vw;
 }
 .hom_team_p0 {
 	width: 0;
@@ -293,9 +297,9 @@ a{
 	width: 5%;
 	height: 5vw;
 	margin: 0.5rem 1% 0.5rem 2%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
 }
 .hom_net_img_1 {
 	background-image: url(../img/tb1.png);
@@ -395,7 +399,7 @@ a{
 
 .ohm_pic {
 	height: 12vw;
-    background-repeat: no-repeat;
+	background-repeat: no-repeat;
 	background-position: center left;
 	background-size: contain;
 }
@@ -408,7 +412,7 @@ a{
 @media screen and (max-width:900px){
 	.hom_w {
 		width: 100%;
-    }
+	}
 	.hom_head_btn {
 		line-height: 3.8vw;
 	}
@@ -424,7 +428,7 @@ a{
 	}
 	.hom_team_p {
 		height: 25.45vw;
-	    background-size: 23vw 25.45vw;
+		background-size: 23vw 25.45vw;
 	}
 	.ohm_body_txt {
 		text-indent: 2.5rem;
@@ -432,4 +436,70 @@ a{
 	.ohm_pic {
 		margin-left: 1rem;
 	}
+}
+
+/*---------------------- 其它主页 ----------------------*/
+.bal_out {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.bal_title {
+	font-family: "Microsoft YaHei";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1.7rem;
+	line-height: 1.7rem;
+	width: 95%;
+	padding-left: 5%;
+	color: #FFF;
+	font-weight: bolder;
+	background-color: #00528C;
+}
+
+.bal_foot {
+	top: auto;
+	bottom: 0;
+	font-family: "SimHei";
+	font-weight: normal;
+}
+
+.bal_bar_out {
+	position: absolute;
+	top: 2.1rem;
+	right: 0.7rem;
+	text-align: right;
+}
+
+.bal_btn {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	color: #FFF;
+	width: 5.1rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	margin-right: 0.5rem;
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size: contain;
+	background-image: url(../img/an3.png);
+}
+.bal_btn_scd {
+	color: #000;
+}
+
+.bal_dw {
+	position: absolute;
+	left: 20%;
+	top: 20%;
+	width: 60%;
+	height: 67%;
+	text-align: center;
+}
+.bal_dw_txt {
+	background-color: rgba(255, 255, 255, 0.6);
+	overflow-y: auto;
 }
