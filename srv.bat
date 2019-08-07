@@ -1,3 +1,3 @@
 @echo off
-node index
+node srv/bld/index
 pause

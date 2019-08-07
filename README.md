@@ -13,11 +13,33 @@
 - 压缩JS批处理
 - 实现 as 与 js 的互相调用
 - 实现全景图浏览功能
+- 实现阿里云的部署
+- 阿里云部署FTP服务，以便进行文件交互工作
+- 选择题的地方使用 flash.external.ExternalInterface.call("cq", "1");
+- 最后查看分数的地方使用 flash.external.ExternalInterface.call("end", "1");
+- 测试六个flash文件互相调用，能否都触发页面函数
+- 改用模板架构
+- 给出一个配置文件，可以配置 老师信息，及页面信息
+- 地图加一个 首页 按钮
+- 测试云服务器的路径问题
 
 *******************************************************************
 
 计划：
 -------------------------------------------------------------------
+
+- 首页视频下方加载两个按钮用于切换视频
+- 实现 falsh 加载进度条
+- 问题配置文件 + 模板
+- flash 文件互调需使用绝对路径
+- 检查云服务器网速太慢的原因
+- 云服务每次重启都有一个Nginx占用80端口
+- 研究这个占用80端口的Nginx的反向代理功能
+- 在 iframe 里，无法触发 swf 文件的 flash.external.ExternalInterface.call 方法
+- 对接实验平台接口 ：
+	http://www.ilab-x.com/details?id=3048
+
+	http://39.107.64.153:8094/nls/login?token=AAABbErxtREBAAAAAAABht8%3D.c%2B7qJCAz0VizSIqlHvPhIfsgxbJSYLH3t%2FNXYGu18z4Qv9hxhXIGd2td%2BtAbKjgOp3yYT40t9i%2FtXCAXiAuw1uJ%2BiTEDErhayAGJx7Ea0co%3D.JPRgGPeFjpGSh%2FEOhfS0uKueabkNHjAI8HOfx2%2BBkZ8%3D
 
 *******************************************************************
 
@@ -27,6 +49,12 @@
 
 开发明细：
 -------------------------------------------------------------------
+
+##### 2019-8-7 （ 改用模板 ）：
+	阿里云服务部署
+	改用模板
+	多个flash互调测试
+	使用配置文件
 
 ##### 2019-1-29 （ 完成全景图 ）：
 	实现全景图浏览功能

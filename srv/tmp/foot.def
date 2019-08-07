@@ -1,0 +1,14 @@
+<div class="hom_foot midOut">
+	<div class="hom_foot_txt sfs">
+		{{~it.dat.menu:o:i}}
+			{{= i > 0 ? " | " : ""}}<a href="{{=it.url.rout + o.a}}"{{? o.tag}} target="{{=o.tag}}"{{?}}>{{= o.anm || o.nam}}</a>
+		{{~}}
+		<br />
+		建设单位 ： 兰州大学公共卫生学院
+		<br />
+		合作单位 ： 兰州翼途动漫文化传播有限公司
+		<br />
+		联系电话 ： 0931-8888888
+	</div>
+</div>
+<div class="hom_foot2"></div>

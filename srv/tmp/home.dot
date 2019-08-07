@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{=it.title}}</title>
+		{{#def.meta}}
+
+		<link rel="stylesheet" type="text/css" href="{{=it.url.rout}}css/s02.css">
+	</head>
+
+	<body>
+		<div id="boso">
+			<!-- 头 -->
+			{{#def.head}}
+
+			<!-- 主体 -->
+			<div class="hom_body">
+				<div class="hom_w">
+					<div id="boutDoe" class="ohm_bar">
+						<div id="bnamDoe" class="ohm_bar_nam mfs">{{=it.dat.itm.nam}}</div>
+						{{? it.dat.itm.sub}}
+							{{~it.dat.itm.sub:o:i}}
+								{{? i===it.si}}
+									<div class="ohm_bar_sub sfs ohm_bar_scd{{=i?"":" ohm_bar_sub_0"}}">{{=o.nam}}</div>
+								{{??}}
+									<a class="ohm_bar_sub sfs{{=i?"":" ohm_bar_sub_0"}}" href="{{=it.url.rout}}home/{{=it.scd}}/{{=i}}/">{{=o.nam}}</a>
+								{{?}}
+							{{~}}
+						{{?}}
+					</div><!--
+					--><div class="ohm_body">
+						<div id="dnamDoe" class="ohm_body_nam bfs">{{=it.nam}}</div>
+						<div id="dtxtDoe" class="ohm_body_txt sfs">{{=it.txt}}</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 尾 -->
+			{{#def.foot}}
+		</div>
+	</body>
+</html>

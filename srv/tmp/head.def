@@ -1,0 +1,17 @@
+<div class="hom_head">
+	<div class="hom_w">
+		<div class="hom_log"></div>
+		<div class="hom_head_title">实验教学虚拟仿真项目</div>
+		<div class="midOut">
+			{{~it.dat.menu:o:i}}
+				{{? it.scd === o.id}}
+					<div class="hom_head_btn mfs hom_head_btn_scd">{{=o.nam}}</div>
+				{{??}}
+					<a href="{{=it.url.rout + o.a}}"{{? o.tag}} target="{{=o.tag}}"{{?}}>
+						<div class="hom_head_btn mfs">{{=o.nam}}</div>
+					</a>
+				{{?}}
+			{{~}}
+		</div>
+	</div>
+</div>

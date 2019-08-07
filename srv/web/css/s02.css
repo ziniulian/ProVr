@@ -1,0 +1,510 @@
+/*
+Copyright (C) 2019 犟子工作室 https://www.ziniulian.tk/
+*/
+
+html, body {
+	padding: 0;
+	margin: 0;
+	/* width: 100%;
+	height: 100%; */
+	font-family: "SimHei";
+	/* font-family: "Microsoft YaHei"; */
+	font-size: 2vw;
+	color: #000;
+}
+
+/*取消a链接默认样式*/
+a{
+	text-decoration:none;
+}
+
+#boso {
+	position: relative;
+	font-size: 0;
+	/* min-width: 600px; */
+}
+
+/*---------------------- 公共样式库 ----------------------*/
+
+/*设置元素不可见*/
+.Lc_nosee {
+	display: none !important;
+}
+
+/*设置元素不能被选中*/
+.Lc_noselect {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/*居中父容器*/
+.midOut {
+	text-align: center;
+}
+
+/*居中头*/
+.midTop {
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+}
+
+/*居中子容器*/
+.midSub {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*大字体*/
+.bfs {
+	font-size: 1.1rem;
+	line-height: 1.4rem;
+}
+
+/*中字体*/
+.mfs {
+	font-size: 0.7rem;
+	line-height: 1rem;
+}
+
+/*小字体*/
+.sfs {
+	font-size: 0.6rem;
+	line-height: 0.7rem;
+}
+
+/*---------------------- 首页 ----------------------*/
+
+/*---------------------- 首页 头部 ----------------------*/
+
+.hom_head {
+	background-color: #00528C;
+}
+
+.hom_w {
+	width: 76%;
+	margin: 0 auto;
+}
+
+.hom_log {
+	height: 6vw;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: contain;
+	background-image: url(../img/logo.png);
+}
+
+.hom_head_title {
+	margin: 0.1rem 0 0.6rem 0.8rem;
+	font-size: 1.7rem;
+	font-weight: bolder;
+	color: #FFF;
+}
+
+.hom_head_btn {
+	font-family: "Microsoft YaHei";
+	width: 12%;
+	line-height: 2.8vw;
+	display: inline-block;
+	vertical-align: bottom;
+	font-weight: bolder;
+	color: #000;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: contain;
+	background-image: url(../img/an01.png);
+}
+.hom_head_btn:hover {
+	font-family: "SimHei";
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.hom_head_btn_scd {
+	color: #FFF;
+	background-image: url(../img/an001.png);
+}
+
+/*---------------------- 首页 尾部 ----------------------*/
+
+.hom_foot {
+	background-color: #666;
+}
+
+.hom_foot_txt {
+	display: inline-block;
+	line-height: 3;
+	color: #FFF;
+	font-weight: bolder;
+	text-align: left;
+	margin: 1rem 0;
+}
+.hom_foot_txt a {
+	color: #FFF;
+}
+
+.hom_foot2 {
+	height: 0.8rem;
+	background-color: #333;
+}
+
+/*---------------------- 首页 主体 ----------------------*/
+
+.hom_body {
+	background-color: #FFF;
+}
+
+/*---------------------- 首页 视频 ----------------------*/
+
+.hom_v {
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+	height: 28vw;
+	margin: 1.5rem;
+}
+
+.hom_v_txt {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	height: 28vw;
+	margin: 1.5rem 0;
+	font-weight: bolder;
+	line-height: 2;
+}
+
+.hom_v_btn {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 10.85vw;
+	height: 2.73vw;
+	line-height: 2.73vw;
+	text-align: center;
+	color: #FFF;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-image: url(../img/an2.png);
+}
+
+/*---------------------- 首页 实验 ----------------------*/
+
+.hom_gap {
+	margin: 1rem auto;
+	width: 18.41vw;
+	height: 5.46vw;
+	line-height: 5.46vw;
+	text-align: center;
+	font-weight: bolder;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-image: url(../img/an3.png);
+}
+.hom_gap a {
+	color: #FFF;
+}
+.hom_test_btn {
+	display: inline-block;
+	margin: 2%;
+	width: 16%;
+	padding-top: 7vw;
+	height: 3vw;
+	line-height: 3vw;
+	text-align: center;
+	font-weight: bolder;
+	color: #FFF;
+	border-radius: 0.2rem;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 8vw;
+}
+.hom_test_btn_0 {
+	background-color: #00528C;
+	background-image: url(../img/bb1.png);
+}
+.hom_test_btn_1 {
+	background-color: #8DC21F;
+	background-image: url(../img/bb2.png);
+}
+.hom_test_btn_2 {
+	background-color: #00528C;
+	background-image: url(../img/bb3.png);
+}
+.hom_test_btn_3 {
+	background-color: #8DC21F;
+	background-image: url(../img/bb4.png);
+}
+.hom_test_btn_4 {
+	background-color: #00528C;
+	background-image: url(../img/bb5.png);
+}
+.hom_test_btn_5 {
+	background-color: #8DC21F;
+	background-image: url(../img/bb6.png);
+}
+.hom_test_btn_6 {
+	background-color: #00528C;
+	background-image: url(../img/bb7.png);
+}
+.hom_test_btn_7 {
+	background-color: #8DC21F;
+	background-image: url(../img/bb8.png);
+}
+.hom_test_btn_8 {
+	background-color: #00528C;
+	background-image: url(../img/bb9.png);
+}
+
+/*---------------------- 首页 团队 ----------------------*/
+.hom_team {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.hom_team_p {
+	display:inline-block;
+	width: 23%;
+	height: 19.34vw;
+	margin: 1rem 1%;
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: 17.48vw 19.34vw;
+}
+.hom_team_p0 {
+	width: 0;
+	margin: 1rem 0;
+	transition: width 500ms;
+}
+
+/*---------------------- 首页 网络 ----------------------*/
+.hom_net {
+	margin: 2rem 1rem;
+	padding: 0.7rem 0;
+	border: solid 0.1rem #999;
+	background-color: #F6F6F6;
+}
+
+.hom_net_img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 5%;
+	height: 5vw;
+	margin: 0.5rem 1% 0.5rem 2%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+.hom_net_img_0 {
+	background-image: url(../img/tb1.png);
+}
+.hom_net_img_1 {
+	background-image: url(../img/tb2.png);
+}
+.hom_net_img_2 {
+	background-image: url(../img/tb3.png);
+}
+.hom_net_img_3 {
+	background-image: url(../img/tb4.png);
+}
+.hom_net_img_4 {
+	background-image: url(../img/tb5.png);
+}
+.hom_net_img_5 {
+	background-image: url(../img/tb6.png);
+}
+
+.hom_net_gap {
+	display: inline-block;
+	vertical-align: middle;
+	width: 16%;
+}
+
+.hom_net_txt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 14%;
+	line-height: 1.3;
+	color: #000;
+}
+
+/*---------------------- 其它主页 ----------------------*/
+.ohm_bar {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	margin-bottom: 2rem;
+}
+
+.ohm_bar_nam {
+	margin: 1rem 0;
+	line-height: 3;
+	text-align: center;
+	color: #FFF;
+	font-weight: bolder;
+	background-color: #00528C;
+	border: solid #00528C 0.1rem;
+}
+
+.ohm_bar_sub {
+	display: block;
+	line-height: 3;
+	text-align: center;
+	color: #00528C;
+	font-weight: bolder;
+	background-color: #F4F4F4;
+	border: solid #CCC 0.1rem;
+	border-top-width: 0;
+}
+.ohm_bar_sub_0 {
+	border-top-width: 0.1rem;
+}
+.ohm_bar_sub:hover {
+	color: #000;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.ohm_bar_scd {
+	color: #FFF;
+	background-color: #80A9C6;
+}
+
+.ohm_body {
+	display: inline-block;
+	vertical-align: top;
+	width: 70%;
+	min-height: 20rem;
+	margin: 0 0 2rem 3%;
+}
+
+.ohm_body_nam {
+	line-height: 3;
+	text-align: center;
+	border-bottom: solid #CCC 0.1rem;
+	margin: 0.5rem 0 1rem 0;
+}
+
+.ohm_body_txt {
+	word-break: break-all;
+	text-indent: 1.5rem;
+	line-height: 2;
+}
+
+.ohm_pic {
+	height: 12vw;
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size: contain;
+}
+.ohm_pic_1 {
+	background-image: url(../img/pic.png);
+}
+
+.ohm_team_txt {
+	width: 100%;
+	text-indent: 1rem;
+	font-size: 0.5rem;
+}
+
+
+
+@media screen and (max-width:900px){
+	.hom_w {
+		width: 100%;
+	}
+	.hom_head_btn {
+		line-height: 3.8vw;
+	}
+	.hom_v {
+		height: 37vw;
+	}
+	.hom_v_txt {
+		height: 37vw;
+	}
+	.hom_test_btn {
+		height: 5vw;
+		line-height: 5vw;
+	}
+	.hom_team_p {
+		height: 25.45vw;
+		background-size: 23vw 25.45vw;
+	}
+	.ohm_body_txt {
+		text-indent: 2.5rem;
+	}
+	.ohm_pic {
+		margin-left: 1rem;
+	}
+}
+
+/*---------------------- 其它主页 ----------------------*/
+.bal_out {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.bal_title {
+	font-family: "Microsoft YaHei";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1.7rem;
+	line-height: 1.7rem;
+	width: 95%;
+	padding-left: 5%;
+	color: #FFF;
+	font-weight: bolder;
+	background-color: #00528C;
+}
+
+.bal_foot {
+	top: auto;
+	bottom: 0;
+	font-family: "SimHei";
+	font-weight: normal;
+}
+
+.bal_bar_out {
+	position: absolute;
+	top: 2.1rem;
+	right: 0.7rem;
+	text-align: right;
+}
+
+.bal_btn {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	color: #FFF;
+	width: 5.1rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	margin-right: 0.5rem;
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size: contain;
+	background-image: url(../img/an3.png);
+}
+.bal_btn_scd {
+	color: #000;
+}
+
+.bal_dw {
+	position: absolute;
+	left: 20%;
+	top: 20%;
+	width: 60%;
+	height: 67%;
+}
+.bal_dw_txt {
+	background-color: rgba(255, 255, 255, 0.6);
+	overflow-y: auto;
+}
