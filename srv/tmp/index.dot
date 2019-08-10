@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
-		<title>首页</title>
+		<title>重大公共卫生事件应急处理</title>
 		{{#def.meta}}
 
 		<link rel="stylesheet" href="{{=it.url.rout}}css/s02.css">
@@ -19,31 +19,24 @@
 				<div class="hom_w">
 					<!-- 视频 -->
 					<div class="hom_v_out">
-						<div class="hom_v">
-							<embed src="{{=it.url.rout}}v/flvplayer.swf"
-								wmode="opaque"
-								allowscriptaccess="always"
-								allowfullscreen="true"
-								type="application/x-shockwave-flash"
-								flashvars="vcastr_file=a.flv&IsAutoPlay=1&IsContinue=1"
-								quality="high"
-								width="100%"
-								height="100%"
-								pluginspage="http://www.macromedia.com/go/getflashplayer">
-							</embed>
-						</div><!--
+						<div id="videoDoe" class="hom_v"></div><!--
 						--><div class="hom_v_txt sfs">
-							所属分类 ： xxxx<br />
-							实验学时 ： xxxx<br />
-							实验操作步数 ： xxxx<br />
-							实验项目负责人 ： xxxx<br />
-							联系电话 ： xxxx<br />
-							实验简介 ： xxxx
-							<a href="{{=it.url.rout}}ball/">
-								<div class="hom_v_btn mfs">开始实验</div>
-							</a>
+							{{=it.dat.hom.video.txt}}
 						</div>
+						<div class="hom_v_chg_out">
+							<div id="vbtnDoe_0" class="bal_btn sfs" onclick="dco.loadFlv(0);">项目简介视频</div>
+							<div id="vbtnDoe_1" class="bal_btn sfs" onclick="dco.loadFlv(1);">教学引导视频</div>
+						</div>
+						<a href="{{=it.url.rout}}ball/">
+							<div class="hom_v_btn mfs">开始实验</div>
+						</a>
 					</div>
+
+					<!-- 团队 -->
+					<div class="hom_gap bfs">
+						<a href="{{=it.url.rout}}home/team/">服务团队</a>
+					</div>
+					<div id="albumDoe" class="hom_team"></div>
 
 					<!-- 实验 -->
 					<div class="hom_gap bfs">
@@ -56,12 +49,6 @@
 							</a>
 						{{~}}
 					</div>
-
-					<!-- 团队 -->
-					<div class="hom_gap bfs">
-						<a href="{{=it.url.rout}}home/team/">服务团队</a>
-					</div>
-					<div id="albumDoe" class="hom_team"></div>
 
 					<!-- 网络 -->
 					<div class="hom_gap bfs">
@@ -87,7 +74,8 @@
 	</body>
 
 	<script type="text/javascript">
-		dco.rout = "{{=it.url.rout}}";
-		document.body.onload = dco.init({{=it.utJson.toJson(it.dat.img)}});
+		tls.rout = "{{=it.url.rout}}";
+		dco.imgs = {{=it.utJson.toJson(it.dat.img)}};
+		document.body.onload = dco.init;
 	</script>
 </html>

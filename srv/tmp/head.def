@@ -1,7 +1,7 @@
 <div class="hom_head">
 	<div class="hom_w">
 		<div class="hom_log"></div>
-		<div class="hom_head_title">实验教学虚拟仿真项目</div>
+		<div class="hom_head_title">重大公共卫生事件应急处置的仿真教学（以环境重金属污染为例）</div>
 		<div class="midOut">
 			{{~it.dat.menu:o:i}}
 				{{? it.scd === o.id}}

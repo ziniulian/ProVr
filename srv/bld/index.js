@@ -9,12 +9,11 @@ LZR.load([
 // 文件位置
 var curPath = require.resolve("./index.js");
 curPath = curPath.substr(0, curPath.length - 12);
-console.log("curPath = " + curPath);
 
 // 服务
 var srv = new LZR.Node.Srv ({
-	ip: process.env.OPENSHIFT_NODEJS_IP || "0.0.0.0",
-	port: process.env.OPENSHIFT_NODEJS_PORT || 80
+	ip: process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1",
+	port: process.env.OPENSHIFT_NODEJS_PORT || 8080		// 对应阿里云服务nginx.conf文件配置的 80 端口
 });
 srv.ro.path = curPath;
 
@@ -164,6 +163,22 @@ srv.ro.get("/ball/", function (req, res, next) {
 	tools.rtmp ("ball", o, res, next);
 });
 
+// 问答题
+srv.ro.get("/qa/:id/", function (req, res, next) {
+	var d = tools.dat.qa[req.params.id];
+	if (d) {
+		var o = {
+			user: {},	// 用户信息，以后以后改用post进行数据接收
+			dat: d,
+			utJson: tools.utJson	// JSON工具
+		};
+		tools.url ("qa", o, req);
+		tools.rtmp ("qa", o, res, next);
+	} else {
+		next();
+	}
+});
+
 // 静态文件夹
 srv.ro.setStaticDir("/", curPath + "web");
 
@@ -173,4 +188,3 @@ srv.use("*", function (req, res) {
 });
 
 srv.start();
-console.log("server start " + srv.ip + ":" + srv.port);

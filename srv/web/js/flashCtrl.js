@@ -124,6 +124,9 @@ var fc = {
 
 // 常用工具
 var tls = {
+	rout: "",	// 根目录
+	flashPlayerUrl: "v/flvplayer.swf",	// Flash播放器路径
+
 	// 全屏
 	fullScreen: function (doe){
 		var isFullscreen=document.fullScreen||document.mozFullScreen||document.webkitIsFullScreen;
@@ -158,6 +161,45 @@ var tls = {
 		};
 	},
 
+	// 播放FLV视频
+	showFlv: function (doe, file, autoPlay, ctnue, o) {
+		if (!o) {
+			o = {};
+		}
+		o.type = "application/x-shockwave-flash";
+		o.allowfullscreen = "true";
+		o.quality = "high";
+		o.pluginspage = "http://www.macromedia.com/go/getflashplayer";
+		o.FlashVars = "vcastr_file=" + file;	// 此文件路径是相对于 Flash 播放器的相对路径
+		if (autoPlay) {	// 自动播放
+			o.FlashVars += "&IsAutoPlay=1";
+		}
+		if (ctnue) {	// 循环播放
+			o.FlashVars += "&IsContinue=1";
+		}
+
+		var e = tls.crtFlash(tls.flashPlayerUrl, o);
+		doe.appendChild(e);
+		return e;
+	},
+
+	// 关闭FLV视频
+	hidFlv: function (e) {
+		e.parentNode.removeChild(e);
+	},
+
+	// 创建Flash对象
+	crtFlash: function (file, o) {
+		var e = document.createElement("embed");
+		e.src = tls.rout + file;
+		if (o) {
+			for (var s in o) {
+				e.setAttribute (s, o[s]);
+			}
+		}
+		return e;
+	},
+
 	// 滚动相册
 	album: function () {
 		this.timid = 0;
@@ -170,7 +212,7 @@ var tls = {
 		this.ds = [];
 		this.rollTim = 0;	// 滚动间隔
 		this.aTim = 500;	// 动画间隔
-		this.rout = "";		// 路径前缀
+		this.rout = tls.rout;	// 根目录
 
 		// 初始化
 		this.init = function (doe, n, ps) {

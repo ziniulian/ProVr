@@ -12,11 +12,11 @@ module.exports = {
 		},
 		team: {
 			nam: "服务团队",
-			sub: [	// 子项目
+			sub: [
 				{
 					nam: "王俊玲",
 					img: "img/pic1.png",
-					txt: '<font><p><font><font face="Tahoma 宋体">王俊玲，女，</font>1974年11月生，中共党员，动物学专业博士研究生，教授，硕士生导师，兰州大学公共卫生学院副院长，中国毒理学会教育专业委员会委员，主要研究方面为环境毒理学。</font></p><p><font><b><font face="Tahoma 宋体">学习简历</font>:</b><b></b></font></p><p></p><table border="0" cellspacing="0"><tbody><tr><td valign="top" width="165"><p><font>1993.9-1998.7</font></p></td><td valign="top" width="318"><p><font>兰州医学院预防医学系</font></p></td><td valign="top" width="207"><p><font>本科学习</font></p></td></tr><tr><td valign="top" width="165"><p><font>2001.9-2004.7</font></p></td><td valign="top" width="318"><p><font>兰州大学公共卫生学院毒理学专业</font></p></td><td valign="top" width="207"><p><font>硕士研究生学习</font></p></td></tr><tr><td valign="top" width="165"><p><font>2007.9-2010.7<font face="Tahoma"> &nbsp;</font></font></p></td><td valign="top" width="318"><p><font>兰州大学生命科学院动物学专业</font></p></td><td valign="top" width="207"><p><font>博士研究生学习</font></p></td></tr></tbody></table><p></p><p><font><b><font face="Tahoma 宋体">工作和进修简历</font>:</b><b></b></font></p><p></p><table border="0" cellspacing="0"><tbody><tr><td valign="top" width="176"><p><font>1998.7-2003.12<font face="Tahoma">&nbsp;&nbsp;&nbsp;</font></font></p></td><td valign="top" width="295"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top" width="236"><p><font>助教</font></p></td></tr><tr><td valign="top" width="176"><p><font>2004.1-2009.4</font></p></td><td valign="top" width="295"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top" width="236"><p><font>讲师</font></p></td></tr><tr><td valign="top" width="176"><p><font>2009.5-2018.4<font face="Tahoma">&nbsp;</font></font></p></td><td valign="top" width="295"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top" width="236"><p><font>副教授，硕士研究生导师</font></p></td></tr><tr><td valign="top" width="176"><p><font>2013.3-2013.10<font face="Tahoma">&nbsp;&nbsp;</font></font></p></td><td valign="top" width="295"><p><font>新疆维吾尔自治区疾病预防控制中心</font></p></td><td valign="top" width="236"><p><font>挂职主任助理</font></p></td></tr><tr><td valign="top" width="176"><p><font>2013.12-2015.1</font></p></td><td valign="top" width="295"><p><font>美国加州大学伯克利分校公共卫生学院</font></p></td><td valign="top" width="236"><p><font>访问学者</font></p></td></tr><tr><td valign="top" width="176"><p><font>2018.5-至今 &nbsp;&nbsp;</font></p></td><td valign="top" width="295"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top" width="236"><p><font>教授，硕士研究生导师</font></p></td></tr></tbody></table><p></p><p><b><font face="Tahoma 宋体">主要教学和科研简历：</font></b></p><p><font><font face="Tahoma 宋体">主持或完成国家自然科学基金委海外及港澳学者合作研究基金项目</font>1项和主任基金项目1项、美国加州大学伯克利分校女性科学家基金项目2<font face="Tahoma 宋体">项、兰州市科技局科技计划项目社会发展类项目</font>1项、横向课题2项、兰州大学交叉学科青年创新研究基金项目1项、中央高校基本科研业务费专项资金自由探索项目2项。参与国家自然科学基金项目3<font face="Tahoma 宋体">项、兰州市城关区科技局科技攻关项目</font>1项、兰州市红古区科技局科技攻关项目1项、横向课题2项，获甘肃省高校科技进步三等奖、兰州市科技进步三等奖和第十届发展中国家毒理学大会资助奖。以第一作者或通讯作者在Toxicology Research、</font><a href="http://www.baidu.com/link?url=VYJrsJ1UIOSqxlQFUCZCL2jM1oPXGPSArUX6jXzpj6WVdvshAfx6MKa240UEztN-VihJ_9y2r7_QLLMP8N2L3q&amp;wd=&amp;eqid=ff3b897600019516000000035a9cb865"><font>Environmental Science and Pollution Research、</font></a><font>Toxicology Mechanisms and Methods、Fluoride、Toxicological &amp; Environmental Chemistry<font face="Tahoma">&nbsp;</font><font face="Tahoma 宋体">和Waste Management&amp; Research 等SCI杂志上发表论文</font>9<font face="Tahoma 宋体">篇，在中华地方病学杂志、毒理学杂志等</font>CSCD 杂志上发表论文十余篇。主持兰州大学教学改革项目1项，2017年获得兰州大学教学成果一等奖，在国家级和省级杂志发表教学论文5篇。主要承担预防、卫生事业管理和临床专业本科生和预防医学研究生的《预防医学》、《毒理学基础》、《医学史》和《医学科研设计》的教学工作。</font></p><p><font><font face="Tahoma 宋体">联系方式：</font>wangjl@lzu.edu.cn</font></p><div>&nbsp;</div></font>'
+					txt: '<font><p><font><font face="Tahoma 宋体">王俊玲，女，</font>1974年11月生，中共党员，动物学专业博士研究生，教授，硕士生导师，兰州大学公共卫生学院副院长，中国毒理学会教育专业委员会委员，主要研究方面为环境毒理学。</font></p><p><font><b><font face="Tahoma 宋体">学习简历</font>:</b><b></b></font></p><p></p><table class="ohm_team_table"><tbody><tr><td valign="top"><p><font>1993.9-1998.7</font></p></td><td valign="top"><p><font>兰州医学院预防医学系</font></p></td><td valign="top"><p><font>本科学习</font></p></td></tr><tr><td valign="top"><p><font>2001.9-2004.7</font></p></td><td valign="top"><p><font>兰州大学公共卫生学院毒理学专业</font></p></td><td valign="top"><p><font>硕士研究生学习</font></p></td></tr><tr><td valign="top"><p><font>2007.9-2010.7<font face="Tahoma"> &nbsp;</font></font></p></td><td valign="top"><p><font>兰州大学生命科学院动物学专业</font></p></td><td valign="top"><p><font>博士研究生学习</font></p></td></tr></tbody></table><p></p><p><font><b><font face="Tahoma 宋体">工作和进修简历</font>:</b><b></b></font></p><p></p><table class="ohm_team_table"><tbody><tr><td valign="top"><p><font>1998.7-2003.12<font face="Tahoma">&nbsp;&nbsp;&nbsp;</font></font></p></td><td valign="top"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top"><p><font>助教</font></p></td></tr><tr><td valign="top"><p><font>2004.1-2009.4</font></p></td><td valign="top"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top"><p><font>讲师</font></p></td></tr><tr><td valign="top"><p><font>2009.5-2018.4<font face="Tahoma">&nbsp;</font></font></p></td><td valign="top"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top"><p><font>副教授，硕士研究生导师</font></p></td></tr><tr><td valign="top"><p><font>2013.3-2013.10<font face="Tahoma">&nbsp;&nbsp;</font></font></p></td><td valign="top"><p><font>新疆维吾尔自治区疾病预防控制中心</font></p></td><td valign="top"><p><font>挂职主任助理</font></p></td></tr><tr><td valign="top"><p><font>2013.12-2015.1</font></p></td><td valign="top"><p><font>美国加州大学伯克利分校公共卫生学院</font></p></td><td valign="top"><p><font>访问学者</font></p></td></tr><tr><td valign="top"><p><font>2018.5-至今 &nbsp;&nbsp;</font></p></td><td valign="top"><p><font>兰州大学公共卫生学院</font></p></td><td valign="top"><p><font>教授，硕士研究生导师</font></p></td></tr></tbody></table><p></p><p><b><font face="Tahoma 宋体">主要教学和科研简历：</font></b></p><p><font><font face="Tahoma 宋体">主持或完成国家自然科学基金委海外及港澳学者合作研究基金项目</font>1项和主任基金项目1项、美国加州大学伯克利分校女性科学家基金项目2<font face="Tahoma 宋体">项、兰州市科技局科技计划项目社会发展类项目</font>1项、横向课题2项、兰州大学交叉学科青年创新研究基金项目1项、中央高校基本科研业务费专项资金自由探索项目2项。参与国家自然科学基金项目3<font face="Tahoma 宋体">项、兰州市城关区科技局科技攻关项目</font>1项、兰州市红古区科技局科技攻关项目1项、横向课题2项，获甘肃省高校科技进步三等奖、兰州市科技进步三等奖和第十届发展中国家毒理学大会资助奖。以第一作者或通讯作者在Toxicology Research、</font><a href="http://www.baidu.com/link?url=VYJrsJ1UIOSqxlQFUCZCL2jM1oPXGPSArUX6jXzpj6WVdvshAfx6MKa240UEztN-VihJ_9y2r7_QLLMP8N2L3q&amp;wd=&amp;eqid=ff3b897600019516000000035a9cb865"><font>Environmental Science and Pollution Research、</font></a><font>Toxicology Mechanisms and Methods、Fluoride、Toxicological &amp; Environmental Chemistry<font face="Tahoma">&nbsp;</font><font face="Tahoma 宋体">和Waste Management&amp; Research 等SCI杂志上发表论文</font>9<font face="Tahoma 宋体">篇，在中华地方病学杂志、毒理学杂志等</font>CSCD 杂志上发表论文十余篇。主持兰州大学教学改革项目1项，2017年获得兰州大学教学成果一等奖，在国家级和省级杂志发表教学论文5篇。主要承担预防、卫生事业管理和临床专业本科生和预防医学研究生的《预防医学》、《毒理学基础》、《医学史》和《医学科研设计》的教学工作。</font></p><p><font><font face="Tahoma 宋体">联系方式：</font>wangjl@lzu.edu.cn</font></p><div>&nbsp;</div></font>'
 				},
 				{
 					nam: "罗斌",
@@ -36,7 +36,7 @@ module.exports = {
 				{
 					nam: "张莹",
 					img: "img/pic5.png",
-					txt: '<font><font face="宋体">张莹，女，汉族，</font>1985<font face="宋体">年生，博士，讲师，公共卫生专业学位硕士生导师。</font><font face="宋体">教学及研究方向</font><font face="宋体">为</font><font face="宋体">营养与食品卫生学，</font><font face="宋体">青藏高原乳酸菌种质资源发掘、创新与利用</font><font face="宋体">。近五年</font><font face="宋体">主持和</font><font face="宋体">参与科研项目</font>9<font face="宋体">项</font><font face="宋体">，</font><font face="宋体">其中</font><font face="宋体">主持</font>1<font face="宋体">项国家自然基金</font><font face="宋体">和</font>3<font face="宋体">项中央高校基本科研业务</font><font face="宋体">费</font><font face="宋体">，参与国际合作项目</font>2<font face="宋体">项，其余项目</font>3<font face="宋体">项；</font><font face="宋体">发表学术论文</font>10<font face="宋体">余篇，其中以第一作者发表</font>SCI<font face="宋体">论文</font>4<font face="宋体">篇，</font>CSCD 2<font face="宋体">篇</font><font face="宋体">。</font></div><div></div><div>&nbsp;</div><div><b><font face="宋体">主要学习工作简历：</font></b><b></b></div><div>2003.9-2007.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">甘肃农业大学 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;草业科学 &nbsp;学士</font></div><div>2007.9-2010.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">兰州大学</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">草业科学</font><font face="宋体">（动物营养方向）</font>&nbsp;&nbsp;<font face="宋体">硕士</font></div><div>2010.6-2010.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">马来西亚博特拉大学（</font>UPM) &nbsp;<font face="宋体">生命科学院 &nbsp;</font><font face="宋体">交流访学</font></div><div>2010.9-2014.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">兰州大学</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">草业科学（动物营养方向）</font> &nbsp;<font face="宋体">博士</font></div><div>2012.9-2013.9&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">美国农业部南方农业研究中心（</font>USDA/ARS, Southern Plains Agricultural Research Center<font face="宋体">）</font> &nbsp;<font face="宋体">解毒微生物方向</font>&nbsp;&nbsp;&nbsp;<font face="宋体">联合</font><font face="宋体">培</font><font face="宋体">养博士</font></div><div>2014.7-<font face="宋体">至今 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;<font face="宋体">兰州大学公共卫生学院营养与食品卫生学</font><font face="宋体">研究所</font>&nbsp;&nbsp;&nbsp;<font face="宋体">讲师</font></div><div>&nbsp;</div><div>&nbsp;</div><div><b><font face="宋体">教学科研工作及成果：</font></b><b></b></div><div><font face="宋体">主要</font><font face="宋体">承担本科生</font><font face="宋体">《营养与食品卫生学》</font><font face="宋体">、《食物、营养与健康》、</font><font face="宋体">《食品安全与人体健康》以及《秘书学》等</font><font face="宋体">课程。</font><font face="宋体">目前正在开展有关乳酸菌果蔬保鲜以及少数民族营养状况与影响因素等方面的研究。</font></div><div>&nbsp;</div><div><font face="宋体">发表论文：</font></div><div>1)&nbsp;<b>Y. Zhang</b>, R. J. Long, R. C. Anderson*, M. E. Hume, J. A. Coverdaled, E. A. Latham, D. J. Nisbet (2016). Characterization of Nitrate-Reducing and Amino Acid-Utilizing Bacteria Prominent in Nitrotoxin-Enriched Equine Cecal Populations. <b><i>Journal of Equine Veterinary Science.</i></b>&nbsp;doi: 10.1016/j.jevs.2016.04.007.</div><div>2)<b>&nbsp;</b><b>Y. Zhang</b>, R. J. Long, C. M. Warzecha, J. A. Coverdaled, E. A. Latham, M. E. Hume, T. R. Callaway, M. R. O’ Neile, R. C. Anderson, D. J. Nisbet (2013). Characterization of bovine ruminal and equine cecal microbial populations enriched for enhanced nitro-toxin metabolizing activity. <b><i>Anaerobe</i></b>. 26, 7-13.</div><div>3)&nbsp;<b>Y. Zhang</b>, J.W. Zhou, X.S. Guo, G.X. Cui, L.M. Ding, H.C. Wang, L.W. Li and R.J. Long (2012). Influences of dietary nitrogen and non-fiber carbohydrate levels on apparent digestibility, rumen fermentation and nitrogen utilization in growing yaks fed low quality forage based-diet. <b><i>Livestock Science</i></b>. 147, 139-147.</div><div>4)&nbsp;X. S. Guo,<b>&nbsp;Y. Zhang</b>, J. W. Zhou, R. J. Long, G. S. Xin, B. Qi, L. M. Ding and H. C. Wang (2012). Nitrogen metabolism and recycling in yaks (<i>Bos grunniens</i>) offered a forage–concentrate diet differing in N concentration. <b><i>Animal Production Science</i></b>. 52, 287-296. <b><font face="宋体">共同一作</font></b></div><div>5)<b>&nbsp;</b>C. L. Zhong, J. P. Kang, G. S. Stewart, J. W. Zhou<font face="宋体">，</font><font face="Arial">X. D. Huang, J. D. Mi,J. Liu, C. Yang , </font><b>Y. Zhang </b>and R. J. Long (2016). Comparison of aquaporin-1 expression between yak (<i>Bos grunniens</i>) and indigenous cattle (<i>Bos taurus</i>) in the Qinghai<font face="宋体">–</font><font face="Arial">Tibetan Plateau. </font><b><i>Animal Production Science</i></b>. http://dx.doi.org/10.1071/AN15702. </div><div>6)&nbsp;Ding L.M., Wang Y.P., Kreuzer M., Guo X.S., Mi J.D., Gou Y.J., Shang Z.H.,<b>&nbsp;Zhang Y.</b>, Zhou J.W., Wang H.C., Long R.J. 2013. Seasonal variations in the fatty acid profile of milk from yaks grazing on the Qinghai-Tibetan plateau. <b><i>Journal of Dairy Research</i></b>, 80:410-417. </div><div>7)&nbsp;X. S. Guo, Ruijun Long, Michael Kreuzer, Luming Ding, Zhanhuan Shang, <b>Ying Zhang</b>, Yang Yang and Guangxin Cui (2011). Importance of functional ingredients in yak milk derived food from alpine region on health of Tibetan nomads living under high altitude stress. <b><i>Critical Reviews in Food Science and Nutrition</i></b>. (in press, doi: 10.1080/10408398.2011.58413) </div><div>8)&nbsp;X.S. Guo, W. Cheng,<b>&nbsp;Y. Zhang</b>, F.Y. Yang, H. Zhou (2011). Contribution of Endopeptidase to the Formation of Nonprotein Nitrogen during the Ensiling process of Alfalfa. <b><i>Animal Feed Science and Technology</i></b>, 168, 42-50. </div><div>9)&nbsp;T. Sun, RJ Long, ZY Liu, WR Ding and <b>Y Zhang</b>&nbsp;(2012). Aspects of lipid oxidation of meat from free-range broilers consuming a diet containing grasshoppers on alpine steppe of the Tibetan Plateau. <b><i>Poultry Science</i></b>. 91/1:224-231. </div><div>10)&nbsp;<b><font face="宋体">张莹</font></b><font face="宋体">，</font><font face="宋体">郭旭生，龙瑞军，周建伟，朱玉环，米见对</font>. <font face="宋体">饲粮氮水平对牦牛瘤胃发酵及营养物质消化代谢特征的影响</font><font face="Arial">. </font><b><font face="宋体">动物营养学报</font></b>. 2011<font face="宋体">，</font><font face="Arial">23</font><font face="宋体">（</font><font face="Arial">6</font><font face="宋体">）</font><font face="Arial">:956-964.</font></div><div>11)&nbsp;<b><font face="宋体">张莹</font></b><font face="宋体">，郭旭生，丁路明，龙瑞军</font>. <font face="宋体">反刍动物尿素氮再循环利用的研究进展</font><font face="Arial">. </font><b><font face="宋体">动物营养学报</font></b>. 2009<font face="宋体">，</font><font face="Arial">21</font><font face="宋体">（</font><font face="Arial">5</font><font face="宋体">）</font><font face="Arial">:609-616.</font></div><div>12)&nbsp;<font face="宋体">米见对，郭旭生，周建伟，辛国省，</font><b><font face="宋体">张莹</font></b><font face="宋体">，朱玉环，龙瑞军</font>. <font face="宋体">日粮氮水平对牦牛瘤胃发酵参数和氮组分的影响</font><font face="Arial">. </font><b><font face="宋体">中国农业科学</font></b><font face="宋体">，</font>2011<font face="宋体">，</font><font face="Arial">44</font><font face="宋体">（</font><font face="Arial">22</font><font face="宋体">）</font><font face="Arial">:4678-4686.</font></div><div>13)&nbsp;<b>Y. Zhang</b>, R. J. Long, R. C. Anderson, M. E. Hume, J. A. Coverdaled, E. A. Latham, D. J. Nisbet (2015). Characterization of Prominent Nitrate-Reducing and Amino Acid-Utilizing Bacteria from Nitrotoxin-Enriched Equine Cecal Populations. Proceedings of the Fifth International Conference on Sustainable Animal Agriculture for Developing Countries (SAADC 2015), 26-29 October 2015, Pattaya, Thailand, pg. 277</div><div>14)&nbsp;<b>Y. Zhang,</b>&nbsp;R. C. Anderson, R. J. Long, D. J. Nisbet (2013). Effects of Gas Phase, Formate and Nitrate on Nitropropionic Acid Metabolizing Activity of Mixed Populations of Bovine Ruminal and Equine Cecal Microbes. Proceedings of Congress on Gastrointestinal Function, 15-17 April 2013, Chicago, USA, pg. 33</div><div>15)&nbsp;<b>Y. Zhang</b>, X. S. Guo, X. D. Huang, R. J. Long (2010). Adaptation of Nitrogen Metabolism in Yak to the Harsh Foraging Environment of the Qinghai-Tibetan Plateau. Proceedings of the 14th AAAP Animal Science Congress,&nbsp;23-27 August 2010, Pingtung, Taiwan, p. 546</div><div>&nbsp;</div><div>EMALL<font face="宋体">：</font>yingz@lzu.edu.cn </div></font>'
+					txt: '<div><font><font face="宋体">张莹，女，汉族，</font>1985<font face="宋体">年生，博士，讲师，公共卫生专业学位硕士生导师。</font><font face="宋体">教学及研究方向</font><font face="宋体">为</font><font face="宋体">营养与食品卫生学，</font><font face="宋体">青藏高原乳酸菌种质资源发掘、创新与利用</font><font face="宋体">。近五年</font><font face="宋体">主持和</font><font face="宋体">参与科研项目</font>9<font face="宋体">项</font><font face="宋体">，</font><font face="宋体">其中</font><font face="宋体">主持</font>1<font face="宋体">项国家自然基金</font><font face="宋体">和</font>3<font face="宋体">项中央高校基本科研业务</font><font face="宋体">费</font><font face="宋体">，参与国际合作项目</font>2<font face="宋体">项，其余项目</font>3<font face="宋体">项；</font><font face="宋体">发表学术论文</font>10<font face="宋体">余篇，其中以第一作者发表</font>SCI<font face="宋体">论文</font>4<font face="宋体">篇，</font>CSCD 2<font face="宋体">篇</font><font face="宋体">。</font></font></div><div></div><div><font>&nbsp;</font></div><div><font><b><font face="宋体">主要学习工作简历：</font></b><b></b></font></div><div><font>2003.9-2007.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">甘肃农业大学 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;草业科学 &nbsp;学士</font></font></div><div><font>2007.9-2010.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">兰州大学</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">草业科学</font><font face="宋体">（动物营养方向）</font>&nbsp;&nbsp;<font face="宋体">硕士</font></font></div><div><font>2010.6-2010.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">马来西亚博特拉大学（</font>UPM) &nbsp;<font face="宋体">生命科学院 &nbsp;</font><font face="宋体">交流访学</font></font></div><div><font>2010.9-2014.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">兰州大学</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">草业科学（动物营养方向）</font> &nbsp;<font face="宋体">博士</font></font></div><div><font>2012.9-2013.9&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">美国农业部南方农业研究中心 &nbsp;<font face="宋体">解毒微生物方向</font>&nbsp;&nbsp;&nbsp;<font face="宋体">联合</font><font face="宋体">培养博士</font></font></font></div><div><font>2014.7-至今 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="宋体">兰州大学公共卫生学院营养与食品卫生学</font>&nbsp;&nbsp;&nbsp;<font face="宋体">研究所</font>&nbsp;&nbsp;&nbsp;<font face="宋体">讲师</font></font></div><div><font><font face="宋体">&nbsp;</font></font></div><div><font><font face="宋体">&nbsp;</font></font></div><div><font><font face="宋体"><b><font face="宋体">教学科研工作及成果：</font></b><b></b></font></font></div><div><font><font face="宋体"><font face="宋体">主要</font><font face="宋体">承担本科生</font><font face="宋体">《营养与食品卫生学》</font><font face="宋体">、《食物、营养与健康》、</font><font face="宋体">《食品安全与人体健康》以及《秘书学》等</font><font face="宋体">课程。</font><font face="宋体">目前正在开展有关乳酸菌果蔬保鲜以及少数民族营养状况与影响因素等方面的研究。</font></font></font></div><div><font><font face="宋体">&nbsp;</font></font></div><div><font><font face="宋体"><font face="宋体">发表论文：</font></font></font></div><div><font><font face="宋体">1)&nbsp;<b>Y. Zhang</b>, R. J. Long, R. C. Anderson*, M. E. Hume, J. A. Coverdaled, E. A. Latham, D. J. Nisbet (2016). Characterization of Nitrate-Reducing and Amino Acid-Utilizing Bacteria Prominent in Nitrotoxin-Enriched Equine Cecal Populations. <b><i>Journal of Equine Veterinary Science.</i></b>&nbsp;doi: 10.1016/j.jevs.2016.04.007.</font></font></div><div><font><font face="宋体">2)<b>&nbsp;</b><b>Y. Zhang</b>, R. J. Long, C. M. Warzecha, J. A. Coverdaled, E. A. Latham, M. E. Hume, T. R. Callaway, M. R. O’ Neile, R. C. Anderson, D. J. Nisbet (2013). Characterization of bovine ruminal and equine cecal microbial populations enriched for enhanced nitro-toxin metabolizing activity. <b><i>Anaerobe</i></b>. 26, 7-13.</font></font></div><div><font><font face="宋体">3)&nbsp;<b>Y. Zhang</b>, J.W. Zhou, X.S. Guo, G.X. Cui, L.M. Ding, H.C. Wang, L.W. Li and R.J. Long (2012). Influences of dietary nitrogen and non-fiber carbohydrate levels on apparent digestibility, rumen fermentation and nitrogen utilization in growing yaks fed low quality forage based-diet. <b><i>Livestock Science</i></b>. 147, 139-147.</font></font></div><div><font><font face="宋体">4)&nbsp;X. S. Guo,<b>&nbsp;Y. Zhang</b>, J. W. Zhou, R. J. Long, G. S. Xin, B. Qi, L. M. Ding and H. C. Wang (2012). Nitrogen metabolism and recycling in yaks (<i>Bos grunniens</i>) offered a forage–concentrate diet differing in N concentration. <b><i>Animal Production Science</i></b>. 52, 287-296. <b><font face="宋体">共同一作</font></b></font></font></div><div><font><font face="宋体">5)<b>&nbsp;</b>C. L. Zhong, J. P. Kang, G. S. Stewart, J. W. Zhou<font face="宋体">，</font><font face="Arial">X. D. Huang, J. D. Mi,J. Liu, C. Yang , </font><b>Y. Zhang </b>and R. J. Long (2016). Comparison of aquaporin-1 expression between yak (<i>Bos grunniens</i>) and indigenous cattle (<i>Bos taurus</i>) in the Qinghai<font face="宋体">–</font><font face="Arial">Tibetan Plateau. </font><b><i>Animal Production Science</i></b>. http://dx.doi.org/10.1071/AN15702. </font></font></div><div><font><font face="宋体">6)&nbsp;Ding L.M., Wang Y.P., Kreuzer M., Guo X.S., Mi J.D., Gou Y.J., Shang Z.H.,<b>&nbsp;Zhang Y.</b>, Zhou J.W., Wang H.C., Long R.J. 2013. Seasonal variations in the fatty acid profile of milk from yaks grazing on the Qinghai-Tibetan plateau. <b><i>Journal of Dairy Research</i></b>, 80:410-417. </font></font></div><div><font><font face="宋体">7)&nbsp;X. S. Guo, Ruijun Long, Michael Kreuzer, Luming Ding, Zhanhuan Shang, <b>Ying Zhang</b>, Yang Yang and Guangxin Cui (2011). Importance of functional ingredients in yak milk derived food from alpine region on health of Tibetan nomads living under high altitude stress. <b><i>Critical Reviews in Food Science and Nutrition</i></b>. (in press, doi: 10.1080/10408398.2011.58413) </font></font></div><div><font><font face="宋体">8)&nbsp;X.S. Guo, W. Cheng,<b>&nbsp;Y. Zhang</b>, F.Y. Yang, H. Zhou (2011). Contribution of Endopeptidase to the Formation of Nonprotein Nitrogen during the Ensiling process of Alfalfa. <b><i>Animal Feed Science and Technology</i></b>, 168, 42-50. </font></font></div><div><font><font face="宋体">9)&nbsp;T. Sun, RJ Long, ZY Liu, WR Ding and <b>Y Zhang</b>&nbsp;(2012). Aspects of lipid oxidation of meat from free-range broilers consuming a diet containing grasshoppers on alpine steppe of the Tibetan Plateau. <b><i>Poultry Science</i></b>. 91/1:224-231. </font></font></div><div><font><font face="宋体">10)&nbsp;<b><font face="宋体">张莹</font></b><font face="宋体">，</font><font face="宋体">郭旭生，龙瑞军，周建伟，朱玉环，米见对</font>. <font face="宋体">饲粮氮水平对牦牛瘤胃发酵及营养物质消化代谢特征的影响</font><font face="Arial">. </font><b><font face="宋体">动物营养学报</font></b>. 2011<font face="宋体">，</font><font face="Arial">23</font><font face="宋体">（</font><font face="Arial">6</font><font face="宋体">）</font><font face="Arial">:956-964.</font></font></font></div><div><font><font face="宋体">11)&nbsp;<b><font face="宋体">张莹</font></b><font face="宋体">，郭旭生，丁路明，龙瑞军</font>. <font face="宋体">反刍动物尿素氮再循环利用的研究进展</font><font face="Arial">. </font><b><font face="宋体">动物营养学报</font></b>. 2009<font face="宋体">，</font><font face="Arial">21</font><font face="宋体">（</font><font face="Arial">5</font><font face="宋体">）</font><font face="Arial">:609-616.</font></font></font></div><div><font><font face="宋体">12)&nbsp;<font face="宋体">米见对，郭旭生，周建伟，辛国省，</font><b><font face="宋体">张莹</font></b><font face="宋体">，朱玉环，龙瑞军</font>. <font face="宋体">日粮氮水平对牦牛瘤胃发酵参数和氮组分的影响</font><font face="Arial">. </font><b><font face="宋体">中国农业科学</font></b><font face="宋体">，</font>2011<font face="宋体">，</font><font face="Arial">44</font><font face="宋体">（</font><font face="Arial">22</font><font face="宋体">）</font><font face="Arial">:4678-4686.</font></font></font></div><div><font><font face="宋体">13)&nbsp;<b>Y. Zhang</b>, R. J. Long, R. C. Anderson, M. E. Hume, J. A. Coverdaled, E. A. Latham, D. J. Nisbet (2015). Characterization of Prominent Nitrate-Reducing and Amino Acid-Utilizing Bacteria from Nitrotoxin-Enriched Equine Cecal Populations. Proceedings of the Fifth International Conference on Sustainable Animal Agriculture for Developing Countries (SAADC 2015), 26-29 October 2015, Pattaya, Thailand, pg. 277</font></font></div><div><font><font face="宋体">14)&nbsp;<b>Y. Zhang,</b>&nbsp;R. C. Anderson, R. J. Long, D. J. Nisbet (2013). Effects of Gas Phase, Formate and Nitrate on Nitropropionic Acid Metabolizing Activity of Mixed Populations of Bovine Ruminal and Equine Cecal Microbes. Proceedings of Congress on Gastrointestinal Function, 15-17 April 2013, Chicago, USA, pg. 33</font></font></div><div><font><font face="宋体">15)&nbsp;<b>Y. Zhang</b>, X. S. Guo, X. D. Huang, R. J. Long (2010). Adaptation of Nitrogen Metabolism in Yak to the Harsh Foraging Environment of the Qinghai-Tibetan Plateau. Proceedings of the 14th AAAP Animal Science Congress,&nbsp;23-27 August 2010, Pingtung, Taiwan, p. 546</font></font></div><div><font><font face="宋体">&nbsp;</font></font></div><div><font><font face="宋体">EMALL<font face="宋体">：</font>yingz@lzu.edu.cn </font></font>'
 				},
 				{
 					nam: "代鹏",
@@ -66,7 +66,7 @@ module.exports = {
 				{
 					nam: "陈仁彤",
 					img: "img/pic11.png",
-					txt: "<img width=\"100%\" src=\"/img/ls1.png\">"
+					txt: "<div><b>基本资料：</b></div><div>陈仁彤，1991年生，辽宁省营口市人，博士，讲师</div><br/><div><b>主要学习与工作经历：</b></div><div>2019.07-至今 兰州大学公共卫生学院，劳动卫生与环境卫生研究所 讲师；</div><div>2014.09-2019.07  中国医科大学劳动卫生与环境卫生学专业，硕博连读，博士；</div><div>2009.09-2014.07  中国医科大学预防医学专业，学士</div><br/><div><b>主要研究领域与方向：</b></div><div>环境物理因素对健康的影响（紫外线生物效应等）；职业与健康</div><br/><div><b>科研情况：</b></div><div>1. 国家自然科学基金项目“我国眼部损伤有效紫外线暴露强度分布规律研究及老年性白内障危险性评价”，2013.01-2016.12，参与</div><div>2. 国家自然科学基金项目“低剂量UVA对眼晶状体羊毛甾醇及其上游主要限速酶负性调节机制研究”，2017.01-2020.12，参与</div><br/><div><b>代表性论文：</b></div><div>1.  Chen Rentong, Wang Nan, Hua Hui, Huang Liting, Li Menglin, Zou Zhenzhen, Ma Fangfang, Li Xin, Yang Dan, Deng Yan, Ou Fengrong and Liu Yang*, Optical Modeling and Physical Experiments on Ocular UV Manikins Exposure, IEEE Access 2019, 7:478-86.</div><div>2.  Wu B, Ou F, Deng Y, Liu R, Hua H, Chen R, Guan Y, Yang D, Gjesteby L, Yang J et al: E-Index—A Bibliometric Index of Research Efficiency. IEEE Access 2018, 6:51355-51364.</div><div>3.  Wang F, Gao Q, Deng Y, Chen R, Liu Y*: Risk Assessment of Face Skin Exposure to UV Irradiance from Different Rotation Angle Ranges. Int J Env Res Pub He 2017, 14(6):606.</div><br/><div><b>联系方式</b></div><div>电子邮件：chenrt@lzu.edu.cn</div>"
 				}
 			]
 		},
@@ -75,45 +75,54 @@ module.exports = {
 			sub: [
 				{
 					nam: "有效链接",
-					txt: " ..... 正文部分 。。。。 有效链接"
+					txt: "<a href=\"http://lzugw.cn/\" target=\"_blank\">重大公共卫生事件应急处置的仿真教学（http://lzugw.cn/）</a>"
 				},
 				{
 					nam: "网络条件要求",
-					txt: " ..... 正文部分 。。。。 网络条件要求"
+					txt: "<div>（1）说明客户端到服务器的带宽要求（需提供测试带宽服务）</div><div>本项目采用了按需下载技术，采取边使用边下载的技术模式，虚拟课件的下载最低要求带宽为100Mbps,约30秒完成全部下载</div><br/><div>（2）说明能够支持的同时在线人数 500人（需提供在线排队提示服务）</div>"
 				},
 				{
 					nam: "系统要求",
 					anm: "用户操作<br/>系统要求",
-					txt: " ..... 正文部分 。。。。 系统要求"
+					txt: "<div>（1）计算机操作系统和版本要求</div><div>windows7/8/10主流操作系统</div><br/><div>（2）其他计算终端操作系统和版本要求</div><div>安装有flash播放插件的Android系统的手机，平板等。</div><br/><div>（3）支持移动端：☑ 是 &nbsp; ☐ 否</div>"
 				},
 				{
 					nam: "非操作系统软件配置",
 					anm: "用户非操作<br/>系统软件配置",
-					txt: " ..... 正文部分 。。。。 非操作系统软件配置"
+					txt: "<div>（1）需要特定插件  ☑ 是 &nbsp; ☐ 否</div><div>（勾选“是”，请填写）插件名称：flash播放插件 插件容量：30M以内 <br/>下载链接  <a href=\"https://www.flash.cn/\">https://www.flash.cn/</a></div><br/><div>（2）其他计算终端非操作系统软件配置要求（需说明是否可提供相关软件下载服务）</div><div>装有flash 插件的IE浏览器版本9.0以上，360/UC/QQ浏览器极速模式</div>"
 				},
 				{
 					nam: "硬件配置要求",
 					anm: "用户硬件<br/>配置要求",
-					txt: " ..... 正文部分 。。。。 硬件配置要求"
+					txt: "<div>（1）计算机硬件配置要求</div><div>CPU推荐使用intel四核以上级别；内存4G以上；显示器分辨率1920x1080以上。系统硬盘剩余空间不小于50g。</div><br/><div>（2）其他计算终端硬件配置要求</div><div>无</div>"
 				},
 				{
 					nam: "特殊外置硬件要求",
 					anm: "用户特殊外<br/>置硬件要求",
-					txt: " ..... 正文部分 。。。。 特殊外置硬件要求"
+					txt: "<div>（1）计算机特殊外置硬件要求</div><div>无</div><br/><div>（2）其他计算终端特殊外置硬件要求</div><div>无</div>"
 				}
 			]
 		},
 		stc: {
 			nam: "架构研发",
-			txt: " ..... 正文部分 。。。。 架构研发"
+			sub: [
+				{
+					nam: "系统架构图及简要说明",
+					txt: "系统仿真操作界面利用虚拟现实技术，以2D和3D动画技术相结合的形式，以具体的情景案例为依托，模拟真实环境下重大公共卫生事件发生时的应急处置流程和相关调查、检测实验过程。最终构建成一个完整的重大公共卫生事件应急处置综合实验虚拟学习系统。该系统包括：实验目的、实验原理、实验仪器设备、实验材料、实验教学方法、实验方法与步骤、实验结果与结论、实验考核要求、面向学生的要求九个部分。学生可在此系统中完成重大公共卫生事件应急处置的相关理论、实验、实习等学习活动。系统打造虚拟现场与真实情景一致，学习的同时能进一步提高学生对现场流行病学调查、环境调查、食品调查、职业调查等知识内容的理解能力，巩固所学的理论知识，加强学员的理解和掌握能力。"
+				},
+				{
+					nam: "实验教学项目",
+					txt: "<br/>开发技术<div>☐ VR &nbsp; ☐ AR &nbsp; ☐ MR &nbsp; ☑ 3D仿真 &nbsp; ☑ 二维动画 &nbsp; ☑ HTML5</div><div>☐ 其他 _____</div><br/>开发工具<div>☐ Unity3D &nbsp; ☐ 3D Studio Max &nbsp; ☐ Maya &nbsp; ☐ ZBrush &nbsp; ☑ SketchUp</div><div>☑ Adobe Flash &nbsp; ☐ Unreal Development Kit</div><div>☑ Animate CC &nbsp; ☐ Blender &nbsp; ☑ Visual Studio</div><div>☐ 其他 _____</div><br/>运行环境<div><b>服务器</b></div><div>CPU<span style=\"text-decoration:underline;\"> 2 </span>核、内存<span style=\"text-decoration:underline;\"> 2 </span>GB、磁盘<span style=\"text-decoration:underline;\"> 80 </span>GB、</div><div>显存 _____GB、GPU型号 _____</div><br/><div><b>操作系统</b></div><div>☐ Windows Server &nbsp; ☑ Linux</div><div>☑ 其他 具体版本<span style=\"text-decoration:underline;\"> &nbsp; CentOS7.3 ；Node.js 4.8.4 &nbsp; </span></div><br/><div><b>数据库</b></div><div>☑ Mysql &nbsp; ☐ SQL Server &nbsp; ☐ Oracle</div><div>☑ 其他<span style=\"text-decoration:underline;\"> &nbsp; MongoDB &nbsp; </span></div><div>备注说明 <span style=\"text-decoration:underline;\"> &nbsp;（需要其他硬件设备或服务器数量多于1台时请说明） &nbsp; </span></div><br/>项目品质<div>单场景模型总面数 ： </div><div>贴图分辨率 ： 3000</div><div>动作反馈时间 ： 15 ms</div><div>显示刷新率 ： 30 ms</div><div>分辨率 ： 1920x1080</div>"
+				}
+			]
 		},
 		df: {
 			nam: "项目特色",
-			txt: " ..... 正文部分 。。。。 项目特色"
+			txt: "<br/>（体现虚拟仿真实验教学项目建设的必要性及先进性、教学方式方法、评价体系及对传统教学的延伸与拓展等方面的特色情况介绍。）<br/>（1）实验方案设计思路：<div>依托兰州大学已有的预防医学学科人才培养模式，利用信息技术对于本科生课程设置中的重大公共卫生事件案例及其应急处置的相关理论、环境重金属污染状况调查的实验教学内容展开仿真。首先，学习掌握群体性不明原因重大公共卫生事件的流行病学应急响应过程、环境重金属污染状况的卫生学调查、环境重金属污染物的定量检测及危险度评价是公共卫生与预防医学人才培养的目标之一，通过基于虚拟仿真的案例教学使其知识结构更趋前沿化、合理化和综合化。其次，通过仿真使学生深入理解掌握基础理论（包括流行病学和环境卫生学），促使学生综合运用本学科的理论知识解决实际问题。再次，通过计算机仿真拓展实验教学内容，引导学生对实验教学内容进行综合理解及分析，并与理论教学内容有机联系，进一步深化对于实验教学内容的认识。同时，对于部分不适宜开设的实验内容，例如群体性不明原因重大公共卫生事件的流行病学应急响应过程、环境重金属污染状况的卫生学调查过程和ICP-MS定量检测环境重金属污染物的实验技术等，可以采用仿真教学来实施。</div><br/>（2）教学方法创新：<div>本项目教学过程中以学生为中心，教师现场指导，实施“师生”互动式教学方法。仿真操作和半实物操作交互进行，实现“虚实互动”。学生交互式操作，参与感、趣味性强，角色互动，具有真实沉浸感，有利于培养对重大公共卫生事件的应急处置能力，解决传统案例讨论课学习效果差的问题。</div><div>除了传统的《预防医学》实验外，本项目包括群体性不明原因重大公共卫生事件的流行病学应急响应过程仿真、环境重金属污染状况调查仿真（包括不同来源的环境样本采集及前处理的计算机仿真和ICP-MS定量检测环境重金属污染物的计算机仿真），是传统课程所不具备的。具体包括学习并掌握群体性不明原因重大公共卫生事件的流行病学应急响应过程并根据现场流行病学调查的结果分析群体性不明原因突发公共卫生事件发生的潜在成因；学习环境重金属污染状况调查方法，例如不同来源环境样本的采样布点及其前处理方法，并对ICP-MS定量检测环境重金属污染物的实验技术进行计算机仿真模拟，通过仿真结果，模拟实测结果并计算平均值，要求学生计算各种来源样品的重金属暴露风险，对照环境标准，找出当地重金属污染的主要来源。</div><div>在教学方法上除了传统的课堂教学与上机实习外，本项目更注重与已有的实验教学的结合与互动，实现理论教学、实验教学与仿真教学的互相渗透。</div><br/>（3）评价体系创新：<div>本项目评价体系强调应急处置过程性评价，主要特色在于线上与线下自评相结合，形成了科学客观、多维一体的评价机制，学生成绩由实操表现和实训报告两部分组成。同时组织学生之间互评打分，以促进学生深入思考，提高参与的积极性。</div><br/>（4）对传统教学的延伸与拓展:<div>该项目实现了信息技术与实验教学的深度融合，通过整合我校教学科研资源，将群体性不明原因重大公共卫生事件的流行病学应急响应过程、环境重金属污染状况的卫生学调查、环境重金属污染物的定量检测及危险度评价集成于一个完整的虚拟仿真实验教学项目体系中，有效地将环境流行病学、环境卫生学、卫生化学和卫生毒理学等分散的多学科知识塑造成一个整体，融合在一个实验系统中，使学生对公共卫生与预防医学由原本管中窥豹的认知水平提升至总揽全局的新高度，为建设多样化综合虚拟仿真实验教学模块提供了新的思路。</div><div>该项目实施后，不仅将服务我院预防医学专业和公共事业管理专业学生的教学工作，同时还将面向社会开放。在满足教学需求之外，能够大幅提升学生的专业素养，是传统教学模式的有效延伸和崭新拓展。</div>"
 		},
 		bld: {
 			nam: "持续建设",
-			txt: " ..... 正文部分 。。。。 持续建设"
+			txt: "<br/>（本实验教学项目今后5年继续向高校和社会开放服务计划及预计服务人数）<br/>（1）项目持续建设与服务计划：<div>本项目今后五年内计划：在目前基础上，将当前已开设的仿真实验教学内容包括群体性不明原因重大公共卫生事件的流行病学应急响应过程、环境重金属污染状况的卫生学调查、环境重金属污染物的定量检测等从仅对预防医学专业学生开设，逐步对我校公共事业管理、临床医学、麻醉学、影像学和护理学专业本科生开设，提高医学生面对群体性不明原因重大公共卫生事件时的应急处置能力。</div><div>此外，本教学团队拟针对其他已开设的实验教学课程开设仿真教学课程，初步计划再开设的两个仿真实验为：环境污染物危险度评价过程的计算机仿真、卫生政策制定及卫生经济学评价过程仿真，以此提高学生的学习兴趣和对公共卫生与预防医学学科系统知识的掌握程度。  </div><br/>（2）面向高校的教学推广应用计划：<div>本项目依托兰州大学实验教学示范中心，在今后五年内有步骤有计划地面向省内外高校包括甘肃省中医药大学、西北民族大学等多个高校开放教学内容的全部内容，包括仿真代码，服务器的系统配置、仿真教学课件及教学安排等，特别是对中西部高校实施教学项目推广，进一步扩大开放共享范围。力争每年增加10所共享高校，并做好在线服务与保障工作，使更多的医学相关专业学生受益。</div><div>此外，针对不同的实验条件和教学安排，本项目计划在未来进行不同案例或实验条件设置下的仿真，并将其发布在网站上。最后，本项目计划建设专门用于教学交流的知识管理平台，引导学生维护其内容，并全面开放。</div><br/>（3）面向社会的推广应用计划：<div>本项目被认定后1年内继续面向高校和社会免费开放，并提供在线教学服务；1年后至3年内免费开放服务内容不少于50%；3年后免费开放服务内容不少于70%。同时本项目在今后五年内计划面向疾病预防控制中心、临床医疗机构、环保局、卫生监督和社区卫生服务中心等机构开放教学内容的全部内容，并对相关人员进行重大公共卫生事件应急处置能力的虚拟仿真培训，藉此提升相关人员的应急处置能力。</div>"
 		},
 		book: {
 			nam: "申报书",
@@ -150,22 +159,154 @@ module.exports = {
 				},
 				{
 					nam: "实验结果与结论",
-					txt: " ..... 正文部分 。。。。 实验结果与结论"
+					txt: "<br/>（1）	是否记录每步实验结果：☑ 是 &nbsp; ☐ 否<br/>（2）	实验结果与结论要求：☑ 实验报告 &nbsp; ☐ 心得体会 其他            <br/>（3）	其他描述：<br/><b>一、一次群体性不明原因重大公共卫生事件应急响应过程仿真</b><div>1.本次公共卫生事件的应急处置过程的综合性评价，并填报突发公共卫生事件报告管理信息系统；</div><div>2.现场流行病学调查报告，分析潜在病因，确定本次事件的高危人群特征，能利用恰当的方式制作图表，并对进一步的病因验证和下一步的应急处置给出有针对性的建议。</div><br/><b>二、环境重金属污染状况调查仿真</b><div>通过对大气、水体和土壤等环境重金属污染的来源、危害及有关卫生标准的查阅，对该地区重金属污染程度给予卫生学评价。</div><div>本项目强调应急处置过程性评价，采用线上线下交互，学生自评与互评相结合，线上操作和实训操作共同完成统一的实验报告（即根据环境重金属污染状况的卫生学评价结果，为当地政府制定环境污染治理政策提供合理化建议）。</div>"
 				},
 				{
 					nam: "实验考核要求",
-					txt: " ..... 正文部分 。。。。 实验考核要求"
+					txt: "<br><b>一、一次群体性不明原因重大公共卫生事件应急响应过程仿真</b><div>1. 熟知应急响应过程的报告流程及其时限，并能根据调查结果填报突发公共卫生事件报告管理信息系统。</div><div>2. 能选择恰当的流行病学设计类型，确定样本量大小，并选择适宜的对照。</div><br><b>二、环境重金属污染状况调查仿真</b><div>1. 熟练掌握大气和水样污染物的采集方法及测定方式。</div><div>2．能够通过对大气和水样重金属污染的来源、危害及有关卫生标准的查阅，对该区重金属污染程度给予卫生学评价。</div>"
 				},
 				{
 					nam: "面向学生要求",
-					txt: " ..... 正文部分 。。。。 面向学生要求"
+					txt: "<br/>（1）	专业与年级要求<div>专业：预防医学</div><div>年级：大学本科五年级上学期（预防医学专业）基本知识和能力要求</div><div>学习过预防医学专业《环境卫生学》课程，掌握环境流行病学、环境卫生学和ICP-MS定量检测方法等相关的知识；同时与《环境卫生学创新综合实验教程》的实验课程同步进行仿真教学。</div>"
 				}
 			]
+		},
+		video: {
+			txt: "<p>所属分类 ：环境卫生学</p><p>实验学时 ：4学时</p><p>实验操作步数 ：150</p><p>实验项目负责人 ：王俊玲</p><p>联系电话 ：(0931)8915008</p><p>实验简介 ：系统仿真操作界面利用虚拟现实技术，以2D和3D动画技术相结合的形式，以具体的情景案例为依托，模拟真实环境下重大公共卫生事件发生时的应急处置流程和相关调查、检测实验过程。最终构建成一个完整的重大公共卫生事件应急处置综合实验虚拟学习系统。</p>"
 		}
 	},
 	ball: {	// 全景图
-		txt: "<div align=\"center\"><br/><br/>文字介绍<br/><br/><br/><br/> ... <br/><br/><br/><br/> ... <br/><br/><br/><br/> ... END ... <br/><br/></div>"
+		txt: "<p>某市位于黄河上游，为全国著名的重金属之乡，各类重金属开采、冶炼加工的大小企业比比皆是，该市人口约200万。</p><p>位于重金属矿区东南面和下游地带，分为4个集中居住区块，其中最近的居住区距选矿车间仅百余米。矿区和居住区隔耕地相望。矿区生产区共有3条排污沟，其中一条是从选矿车间引出、专门排放含毒污水的封闭式暗沟，污水直接排入矿区的尾砂库，在尾砂库右侧有一条明沟用来排放库中溢出污水，因库岸周边岩石溶蚀严重，库水大范围多方向侧漏。另有一条排污沟则引入村民灌溉农田水渠，农民利用排污渠的废水漫灌耕地。在居住区，有一个供当地居民孩子就近入学的小学，大约有600多学生在这里上学。当地村民和部分企业职工就住在附近的村庄里，早期村里的饮水主要是通过水井供应，后来通了自来水。在居住区的附近有一个1294.4亩的水塘，进行着淡水鱼的养殖，可以满足当地居民鱼类的供应需求。</p><p>10年前，该地区曾发生回水管道破裂等环境污染事故。后来，村民发现水稻的收成不好。而且，有些地方甚至连草都不长，而且有灰色片状物，与正常土壤看起来很不一样。淡水鱼塘周围由于没有任何防护、防渗措施，养殖的鱼类也出现了死亡的现象。但是，这种现象并未引起大家的重视。</p><p>直到6个月前，一名居住在矿区周围的5岁女孩送市医院就诊，主要症状为脚痛症状，痛得抽筋，痛了就哭，晚上睡觉都听到她的哭声（此症状为镉中毒症状）。同时，患儿的邻居中6人出现相似症状。于是，市医院向当地卫生局进行报告，说“发生了一种不明原因的群体性疾病流行”。经过市医院、市卫生局及医师协会的初步调查，发现该病的病例数共30例，儿童及成年人均有病例发生。在医院，对病人进行了详细的询问和实验室检查，包括血液、尿液等检测（血镉、尿镉和尿金属硫蛋白为其暴露生物学标志物）。</p><p>随后，在市卫生局的协调指挥下，组成了以疾病预防控制中心、监督所和医院等机构专业人员为主的现场调查和应急处置小组，开展现场流行病学调查、环境调查、食品调查、职业调查等。</p><p>现场流行病学调查，包括人群暴露资料的调查。</p><p>调查组还对环境质量现状进行了全面考察，采集了矿区及周边空气样本、土壤样本、村民饮用水的样本、工厂排出的废水样本、地表水、地下水样本送检，进一步确认主要污染物的类型及污染途径。还采集了淡水鱼塘底泥及其旁边土壤样本和土壤上农作物样本等进行实验室检查。</p><p>另外，调查组还对当地居民的食物进行了全面评价。采集鱼塘中的鱼类样本及死鱼样本进行检测，同时，调查组还收集了购买市场上销售的小麦、大米和蔬菜等农作物样本，进行实验室检查。</p><p>为更加科学准确地调查了解村民的健康现状，市卫生局安排职业病防治研究院组织有关专家和医务人员共30人，为当地居民开展健康体检。</p><p>因矿区附近学校的孩子多反映有关节疼痛等症状，故在学校内也开展了相关的健康检查。</p><p>为了解矿区企业职工的职业性有害因素的危害接触情况及其健康状况，防护措施使用及其效果评价，“工业三废”的净化处理及其排放情况，在企业开展了相关的现场调查。同时，还组织工人进行健康检查。</p><p>经调查和实验室检测，初步认定为重金属镉中毒，毒物来自于矿区企业排放的“工业三废”。</p><p>根据人群流行病学调查、环境调查结果及毒理学安全性评价程序，毒理学实验分为4个阶段（4个阶段分别简要介绍），以其中第三阶段的部分内容即亚慢性毒性试验为例，观察长期接触镉的毒性效应谱、毒作用特点和靶器官，并确定镉的剂量效应关系、阈剂量和最大无毒作用剂量，形成毒理学安全性评价报告，为制定人类接触的安全限量提供依据。</p><p>根据上述调查、动物试验及实验室检测结果，形成统一的风险-效益评价，管理部门可根据风险评估的结果，权衡管理决策，必要时，采取适当的控制措施，控制对人体造成危害。</p><p>后来，国家下达财政专项资金用于治理该地区重金属污染和土壤污染，环保部门则进一步加强环境监督，坚决遏制重大环境污染事故多发势头。</p>"
 	},
 	qa: {	// 问答题
+		test: {
+			nam: "问答测试",
+			url: "v/swf/",
+			file: "c1.swf",
+			sub: {
+				"1": {
+					typ: 0,	// 类型：0：单选，1：多选
+					q: "1+1=?",	// 问题
+					v: 1,	// 分数
+					o: [	// 选项
+						"0",
+						"1",
+						"2",
+						"3"
+					],
+					a: [2]	// 答案
+					// ua: 用户选择的答案
+					// uv: 用户实际的得分
+				},
+				"2": {
+					typ: 0,
+					q: "2+2=?",
+					v: 1,
+					o: [
+						"3",
+						"4",
+						"5",
+						"6"
+					],
+					a: [1]
+				},
+				"3": {
+					typ: 0,
+					q: "3+3=?",
+					v: 1,
+					o: [
+						"6",
+						"7",
+						"8",
+						"9"
+					],
+					a: [0]
+				},
+				"4": {
+					typ: 1,	// 多选
+					q: "豹属于 ？ （多选）",
+					v: 1,
+					o: [
+						"猫科",
+						"犬科",
+						"哺乳类",
+						"脊椎动物"
+					],
+					a: [0,2,3]	// 答案（多选）
+				},
+				"5": {
+					typ: 0,
+					q: "2+2=?",
+					v: 1,
+					o: [
+						"3",
+						"4",
+						"5",
+						"6"
+					],
+					a: [1]
+				},
+				"6": {
+					typ: 0,
+					q: "2+2=?",
+					v: 1,
+					o: [
+						"3",
+						"4",
+						"5",
+						"6"
+					],
+					a: [1]
+				},
+				"7": {
+					typ: 0,
+					q: "2+2=?",
+					v: 1,
+					o: [
+						"3",
+						"4",
+						"5",
+						"6"
+					],
+					a: [1]
+				},
+				"8": {
+					typ: 0,
+					q: "2+2=?",
+					v: 1,
+					o: [
+						"3",
+						"4",
+						"5",
+						"6"
+					],
+					a: [1]
+				},
+				"9": {
+					typ: 0,
+					q: "2+2=?",
+					v: 1,
+					o: [
+						"3",
+						"4",
+						"5",
+						"6"
+					],
+					a: [1]
+				},
+				"10": {
+					typ: 0,
+					q: "2+2=?",
+					v: 1,
+					o: [
+						"3",
+						"4",
+						"5",
+						"6"
+					],
+					a: [1]
+				}
+			}
+		}
 	}
 };

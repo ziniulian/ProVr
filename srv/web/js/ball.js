@@ -2,6 +2,10 @@
 
 function init () {
 	dco.bo.init(boDom, dco.rout + "img/qj.jpg");
+	tls.showFlv(voDom, "a.flv", true, true, {
+		width: "100%",
+		height: "100%"
+	});
 }
 
 var dco = {
@@ -82,7 +86,7 @@ var dco = {
 	},
 
 	cuw: 0,		// 当前窗口
-	rout: "/",	// 根目录
+	rout: "",	// 根目录
 
 	// 显示窗口
 	show: function (w) {
@@ -99,7 +103,7 @@ var dco = {
 
 		o  = this.getw(w);
 		o.b.className = "bal_btn bal_btn_scd sfs";
-		o.d.className = "bal_dw bfs";
+		o.d.className = "bal_dw mfs";
 		switch (w) {
 			case 2:
 				o.d.className += " bal_dw_txt";
