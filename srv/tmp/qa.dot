@@ -14,16 +14,23 @@
 		<div id="boso" class="bal_out midOut">
 			<div class="midTop"></div><!--
 			--><div class="midSub qa_swf">
-				<div id="loaDoe" class="qa_loding bfs"></div>
-				<div id="tDoe" class="Lc_nosee">
-					<div id="qDoe" class="qa_q bfs"></div>
-					<div id="aDoe"></div>
-					<div id="rDoe" class="qa_r sfs"></div>
-					<div id="btnDoe" class="qa_btn bfs" onclick="dco.hid();">确定</div>
+				<!-- <div id="loaDoe" class="qa_loding bfs"></div> -->
+				<div id = "tDoe" class = "Lc_nosee"> 
+					<div class="qa_bg bfs">
+						选择题
+						<div class="qa_cbg mfs">
+							<div id="qDoe" class="qa_q"></div>
+							<div id="aDoe"></div>
+							<div id="btnDoe" class="qa_btn bfs" onclick="dco.subm();">确 定</div>
+						</div>
+						<div id="rDoe" class="qa_r">
+							<div class="qa_r_t"></div>
+							<div id="rcDoe" class="qa_r_c mfs qa_r_cr"></div>
+							<div class="qa_r_b sfs" onclick="dco.hid();">下一步</div>
+						</div>
+					</div>
 				</div>
-				<div class="qa_mark">
-					<div class="qa_btn sfs" onclick="tls.toggleFullScreen(this, boso);">全屏</div>
-				</div>
+				<div class="qa_full" onclick="tls.fullScreen(boso);"></div>
 				<embed id="fDoe" src="{{=it.url.rout}}{{=it.dat.url}}{{=it.dat.file}}"
 					wmode="opaque"
 					allowscriptaccess="always"

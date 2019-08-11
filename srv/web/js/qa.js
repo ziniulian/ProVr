@@ -5,10 +5,11 @@ function init () {
 	dco.doeA = aDoe;
 	dco.doeB = btnDoe;
 	dco.doeR = rDoe;
-	dco.doeL = loaDoe;
+	dco.doeRc = rcDoe;
 	dco.rout = tls.rout;
 	dco.path = dco.rout + dco.path;
-	dco.loading();
+	// dco.doeL = loaDoe;
+	// dco.loading();
 }
 
 // AS 调用的方法名
@@ -41,6 +42,7 @@ var dco = {
 	doeA: null,	// 选项容器
 	doeB: null,	// 按钮容器
 	doeR: null,	// 结果容器
+	doeRc: null,	// 结果内容
 	count: 0,	// 总分
 
 	// 资源加载中
@@ -71,10 +73,10 @@ var dco = {
 			// 填充内容
 			dco.doeQ.innerHTML = q.q;
 			dco.doeA.innerHTML = "";
-			dco.doeR.innerHTML = "";
+			dco.doeR.className = "Lc_nosee";
 			for (i = 0; i < q.o.length; i ++) {
 				d = document.createElement("div");
-				d.className = "qa_a bfs";
+				d.className = "qa_a";
 				d.innerHTML = q.o[i];
 				d.onclick = tls.bind(d, dco.ans, i);
 				q.ua[i] = {
@@ -91,12 +93,11 @@ var dco = {
 			// 根据不同类型 显示或隐藏按钮
 			if (q.typ === 1) {
 				dco.doeB.className = "qa_btn bfs";
-				dco.doeB.onclick = dco.subm;
 			} else {
 				dco.doeB.className = "Lc_nosee";
 			}
 
-			dco.doe.className = "qa_bg Lc_noselect";
+			dco.doe.className = "qa_mark Lc_noselect";
 		}
 	},
 
@@ -106,12 +107,12 @@ var dco = {
 			var a = dco.cq.ua[i];
 			a.a = !a.a;
 			if (a.a) {
-				a.doe.className = "qa_a bfs qa_a_scd";
+				a.doe.className = "qa_a qa_a_scd";
 				if (dco.cq.typ === 0) {
 					dco.subm();	// 单选题直接提交
 				}
 			} else {
-				a.doe.className = "qa_a bfs";
+				a.doe.className = "qa_a";
 			}
 		}
 	},
@@ -122,23 +123,28 @@ var dco = {
 		for (i = 0; i < dco.cq.ua.length; i ++) {
 			if (b && a[i].a !== a[i].r) {
 				b = false;
-			}
-			if (a[i].r) {
-				a[i].doe.className += " qa_a_right";
+				break;
 			}
 		}
 		if (b) {
 			dco.count += dco.cq.v;
 			dco.cq.uv = dco.cq.v;
-			dco.doeR.innerHTML = "回答正确！ （目前总得分 ： " + dco.count + "分）";
+			dco.doeRc.innerHTML = "回 答 正 确";
+			dco.doeRc.className = "qa_r_c qa_r_cr mfs";
 		} else {
-			dco.doeR.innerHTML = "回答错误！ （目前总得分 ： " + dco.count + "分）";
+			a = "你答错了！正确答案是 <span class = \"qa_r_cet\">";
+			for (i = 0; i < dco.cq.a.length; i ++) {
+				a += dco.cq.o[dco.cq.a[i]][0];
+			}
+			a += " </span>";
+			dco.doeRc.innerHTML = a;
+			dco.doeRc.className = "qa_r_c qa_r_ce mfs";
 		}
 		dco.cq.ue = false;
 
-		// 显示按钮
-		dco.doeB.className = "qa_btn bfs";
-		dco.doeB.onclick = dco.hid;
+		// 隐藏提交按钮
+		dco.doeR.className = "qa_r";
+		dco.doeB.className = "Lc_nosee";
 	},
 
 	// 隐藏问答页面
@@ -149,14 +155,14 @@ var dco = {
 
 	// 输出得分情况
 	total: function () {
-		var s, c = 0;
-		for (s in dco.dat) {
-			c += dco.dat[s].uv;
-		}
-
 		dco.doeQ.innerHTML = "总分 ： " + dco.count;
 		dco.doeA.innerHTML = "";
-		dco.doeR.innerHTML = "";
-		dco.doe.className = "qa_bg Lc_noselect";
+		dco.doeR.className = "Lc_nosee";
+		dco.doe.className = "qa_mark Lc_noselect";
+		dco.count = 0;
+		dco.doeB.className = "qa_btn bfs";
+		dco.doeB.onclick = function () {
+			dco.doe.className = "Lc_nosee";
+		};
 	}
 };
