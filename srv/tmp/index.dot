@@ -40,11 +40,11 @@
 
 					<!-- 实验 -->
 					<div class="hom_gap bfs">
-						<a href="{{=it.url.rout}}home/item/">实验教学项目</a>
+						<a href="{{=it.url.rout}}home/info/">实验教学项目</a>
 					</div>
 					<div class="midOut">
-						{{~it.dat.hom.item.sub:o:i}}
-							<a href="{{=it.url.rout}}home/item/{{=i}}/">
+						{{~it.dat.hom.info.sub:o:i}}
+							<a href="{{=it.url.rout}}home/info/{{=i}}/">
 								<div class="hom_test_btn hom_test_btn_{{=i}} sfs">{{=o.nam}}</div>
 							</a>
 						{{~}}
