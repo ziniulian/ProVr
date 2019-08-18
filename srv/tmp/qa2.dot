@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>在线考试</title>
+		{{#def.meta}}
+
+		<link rel="stylesheet" type="text/css" href="{{=it.url.rout}}css/s02.css">
+		<script type="text/javascript" src="{{=it.url.rout}}js/qa2.js"></script>
+	</head>
+
+	<body>
+		<div id="boso">
+			<div id="headDoe" class="hom_head">
+				<div class="hom_w">
+					<div class="hom_log"></div>
+				</div>
+			</div>
+			<div class="hom_body">
+				<div class="qa2_l">
+					<table class="qa2_tb1 sfs">
+						<tbody>
+							<tr>
+								<td class="qa2_tb1_td">考试须知</td>
+								<td>
+									&nbsp; （1） 本考卷共包括四大项，考试时间为<span class="qa_r_cet">{{=it.dat.tim}}</span>分钟，满分<span class="qa_r_cet">{{=it.dat.ts}}</span>分。<br/>
+									&nbsp; （2） 试卷中选择题请点击你认为的正确答案选择
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="qa2_tb2 sfs">
+						<tbody>
+							<tr>
+								<td>姓名 ： 评委专家</td>
+								<td>考试名称 ： 课后测验</td>
+								<td>出题人 ： 系统管理员</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="qa2_txt sfs">
+						<br/>
+						<b>单选题</b>
+						<div class="qa2_hr"></div>
+						{{ for (var s in it.dat.sub) { }}
+							<b id="qid{{=s}}">{{=s}}、 {{=it.dat.sub[s].q}}</b> （{{=it.dat.sub[s].v}}分）<br/>
+							{{~it.dat.sub[s].o:o:i}}
+								<input type="radio" name="qor{{=s}}" value="{{=i}}" onclick="dco.ans('{{=s}}', {{=i}}, this);"><span id="qor{{=s}}_{{=i}}">{{=o}}</span></input><br/>
+							{{~}}
+							<div class="qa2_hr"></div>
+						{{ } }}
+					</div>
+				</div>
+				<div id="flotDoe" class="qa2_r">
+					<div class="sfs">
+						<span id="r_timTxtDoe">剩余时间：</span>
+						<span id="timeDoe" class="bfs qa_r_cet"></span>
+						<br/><br/>
+					</div>
+					{{ for (var s in it.dat.sub) { }}
+						<a id="qidbtn{{=s}}" class="qa2_qidbtn sfs" href="#qid{{=s}}">{{=s}}</a>
+					{{ } }}
+					<div class="qa2_hr"></div>
+					<span class="qa2_qidbtn qa2_qidspan midSub"></span>
+					<span class="midSub sfs"> 未答</span>
+					<br/>
+					<span class="qa2_qidbtn qa2_qided qa2_qidspan midSub"></span>
+					<span class="midSub sfs"> 已答</span>
+					<div id="r_btnDoe" class="qa2_btn mfs" onclick="dco.total();">提交试卷</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		dco.rout = "{{=it.url.rout}}";
+		dco.dat = {{=it.utJson.toJson(it.dat)}};
+		document.body.onload = init;
+	</script>
+</html>

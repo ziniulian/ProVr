@@ -20,13 +20,11 @@ console.log("id = " + id);
 
 // AS 调用的方法名
 function end () {
-console.log("END");
 	dco.total();
 }
 
 // AS 调用的方法名
 function url () {
-console.log("url");
 	return dco.path;
 }
 

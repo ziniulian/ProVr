@@ -452,36 +452,6 @@ a{
 	text-decoration: underline;
 }
 
-
-@media screen and (max-width:900px){
-	.hom_w {
-		width: 100%;
-	}
-	.hom_head_btn {
-		line-height: 3.8vw;
-	}
-	.hom_v {
-		height: 37vw;
-	}
-	.hom_v_txt {
-		height: 37vw;
-	}
-	.hom_test_btn {
-		height: 5vw;
-		line-height: 5vw;
-	}
-	.hom_team_p {
-		height: 25.45vw;
-		background-size: 23vw 25.45vw;
-	}
-	.ohm_body_txt {
-		text-indent: 2.5rem;
-	}
-	.ohm_pic {
-		margin-left: 1rem;
-	}
-}
-
 /*---------------------- 全景图 ----------------------*/
 .bal_out {
 	width: 100%;
@@ -549,7 +519,7 @@ a{
 	text-indent: 1.5rem;
 }
 
-/*---------------------- 全景图 ----------------------*/
+/*---------------------- 问答题 ----------------------*/
 .qa_swf {
 	position: relative;
 	width: 100%;
@@ -710,4 +680,461 @@ a{
 	background-position: center center;
 	background-size: contain;
 	background-image: url(../img/loding.gif);
+}
+
+/*---------------------- 新的主页 ----------------------*/
+.hom2_bg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	color: #FFF;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-image: url(../img/bg.png);
+}
+.hom2_bg a {
+	color: #FFF;
+}
+
+.hom2_head {
+	padding-left: 70%;
+	line-height: 2.2;
+	background-color: #00528C;
+	background-repeat: no-repeat;
+	background-position: 0.6rem center;
+	background-size: auto 80%;
+	background-image: url(../img/logo.png);
+}
+
+.hom2_body {
+	position: relative;
+}
+
+.hom2_img {
+	width: 60%;
+	height: 85vh;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+	background-image: url(../img/hi1.png);
+	animation: bounceInLeft 1s forwards;
+}
+
+.hom2_txt {
+	position: absolute;
+	top: 0;
+	right: 2rem;
+}
+
+.hom2_title {
+	margin-top: 3vh;
+	line-height: 1.2;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1.3rem;
+	font-family: "Microsoft YaHei";
+	animation: bounceIn 1s .5s forwards;
+	opacity: 0;
+}
+
+
+.hom2_btn_out {
+	margin-left: 42%;
+	width: 46%;
+	text-align: center;
+}
+
+.hom2_btn {
+	display: inline-block;
+	margin-top: 6vh;
+	padding: 0.2rem 1rem;
+	border: solid 0.1rem #FFF;
+	border-radius: 0.3rem;
+	background-color: rgba(255, 255, 255, 0.13);
+}
+
+.hom2_btn2 {
+	display: inline-block;
+	margin: 3vh 0.5vw 0 0;
+	padding: 0.2rem 0.3rem;
+	border: solid 0.07rem #FFF;
+	border-radius: 0.2rem;
+	background-color: rgba(255, 255, 255, 0.13);
+}
+
+.hom2_box1 {
+	animation: bounceInUp .5s 1.5s forwards;
+	opacity: 0;
+}
+
+.hom2_box2 {
+	animation: bounceInDown .5s 1.5s forwards;
+	opacity: 0;
+}
+
+.hom2_box3 {
+	animation: bounceInLeft .5s 2s forwards;
+	opacity: 0;
+}
+
+.hom2_box4 {
+	animation: bounceInRight .5s 2s forwards;
+	opacity: 0;
+}
+
+.hom2_box5 {
+	animation: fadeIn .5s 2.5s forwards;
+	opacity: 0;
+}
+
+.hom2_foot {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: right;
+	line-height: 2;
+}
+
+.hom2_foot2 {
+	width: 98%;
+	padding-left: 2%;
+	line-height: 2;
+	text-align: left;
+	background-color: #00528C;
+}
+
+.hom2_vdOut {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 82, 140, 0.5);
+}
+
+.hom2_video {
+	width: 60vw;
+	height: 33.75vw;
+}
+
+.hom2_vbtn {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-image: url(../img/rce.png);
+}
+
+/*---------------------- 问答题2 ----------------------*/
+.qa2_l {
+	width: 60vw;
+	margin-left: 12vw;
+}
+
+.qa2_r {
+	position: fixed;
+	width: 18vw;
+	right: 6vw;
+	top: 3vh;
+}
+
+.qa2_tb1 {
+	width: 97%;
+	margin-top: 1rem;
+	vertical-align: middle;
+	border-collapse: collapse;
+	border: 1px solid #808080;
+	background-color: #F0F0F0;
+	line-height: 2;
+}
+.qa2_tb1_td {
+	background-color: #E6E6E6;
+	width: 1px;
+	padding: 0.5rem;
+	line-height: 1.2;
+	border: 1px solid #808080;
+}
+
+.qa2_tb2 {
+	width: 97%;
+	margin-top: 1rem;
+	vertical-align: middle;
+	border: 0;
+}
+
+.qa2_hr {
+	width: 100%;
+	height: 1px;
+	background-color: #A4C9EE;
+	margin: 0.6rem 0;
+}
+
+.qa2_txt {
+	line-height: 2;
+}
+
+.qa2_qidbtn {
+	display: inline-block;
+	margin: 0.25rem;
+	padding: 0.2rem 0.4rem;
+	font-weight: bold;
+	color: #333;
+	border: 1px solid #A4C9EE;
+}
+.qa2_qided {
+	background-color: #8DC21F;
+}
+.qa2_qidspan {
+	width: 0.6rem;
+	height: 0.7rem;
+}
+
+.qa2_btn {
+	display: inline-block;
+	margin: 1rem 0 0 2rem;
+	padding: 0.3rem 0.7rem;
+	cursor: pointer;
+	color: #FFF;
+	background-color: #00528C;
+	border-radius: 0.3rem;
+}
+
+.qa2_right {
+	background-color: #FF0;
+}
+
+/*---------------------- 响应式布局 ----------------------*/
+@media screen and (max-width:900px){
+	.hom_w {
+		width: 100%;
+	}
+	.hom_head_btn {
+		line-height: 3.8vw;
+	}
+	.hom_v {
+		height: 37vw;
+	}
+	.hom_v_txt {
+		height: 37vw;
+	}
+	.hom_test_btn {
+		height: 5vw;
+		line-height: 5vw;
+	}
+	.hom_team_p {
+		height: 25.45vw;
+		background-size: 23vw 25.45vw;
+	}
+	.ohm_body_txt {
+		text-indent: 2.5rem;
+	}
+	.ohm_pic {
+		margin-left: 1rem;
+	}
+
+	.qa2_l {
+		width: 78%;
+		margin-left: 2%;
+	}
+	.qa2_r {
+		width: 18%;
+		right: 0;
+	}
+	.qa2_btn {
+		margin: 1rem 0 0 0;
+	}
+}
+
+/*---------------------- 动画效果 ----------------------*/
+@keyframes widthChange {
+	0% { width: 0; }
+	100% { width: 100%; }
+}
+
+@keyframes widthChange2 {
+	0% { width: 0; }
+	100% { width: 40%; }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+	from, 20%, 40%, 60%, 80%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		transform: scale3d(.3, .3, .3);
+	}
+
+	20% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	40% {
+		transform: scale3d(.9, .9, .9);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale3d(1.03, 1.03, 1.03);
+	}
+
+	80% {
+		transform: scale3d(.97, .97, .97);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes zoomIn {
+	from {
+		opacity: 0;
+		transform: scale(.3);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeIn1 {
+	0% { opacity: 0; }
+	65% { transform: translateX(0); }
+	79% { transform: translateX(-2px); }
+	89% { transform: translateX(-8px); }
+	96% { transform: translateX(-2px); }
+	100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounceInRight {
+	from, 60%, 75%, 90%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		transform: translate3d(100px, 0, 0);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translate3d(-25px, 0, 0);
+	}
+
+	75% {
+		transform: translate3d(10px, 0, 0);
+	}
+
+	90% {
+		transform: translate3d(-5px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes bounceInLeft {
+	from, 60%, 75%, 90%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		transform: translate3d(-100px, 0, 0);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translate3d(25px, 0, 0);
+	}
+
+	75% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	90% {
+		transform: translate3d(5px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes bounceInUp {
+	from, 60%, 75%, 90%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	from {
+		opacity: 0;
+		transform: translate3d(0, 3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translate3d(0, -20px, 0);
+	}
+
+	75% {
+		transform: translate3d(0, 10px, 0);
+	}
+
+	90% {
+		transform: translate3d(0, -5px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes bounceInDown {
+	from, 60%, 75%, 90%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translate3d(0, 25px, 0);
+	}
+
+	75% {
+		transform: translate3d(0, -10px, 0);
+	}
+
+	90% {
+		transform: translate3d(0, 5px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
 }

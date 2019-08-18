@@ -20,10 +20,10 @@
 			<div id="boDom" class="bal_out"></div>
 			<div class="bal_title mfs">重大公共卫生事件应急处置的仿真教学（以环境重金属污染为例）</div>
 			<div class="bal_bar_out">
-				<a href="{{=it.url.rout}}"><div class="bal_btn sfs">首页</div></a>
+				<a href="{{=it.url.rout}}index/"><div class="bal_btn sfs">首页</div></a>
 				<a href="javascript: dco.show(1);"><div id="voBtnDom" class="bal_btn sfs">背景视频介绍</div></a>
 				<a href="javascript: dco.show(2);"><div id="txtBtnDom" class="bal_btn sfs">背景文字介绍</div></a>
-				<a href="{{=it.url.rout}}qa/test/" target="_blank"><div class="bal_btn sfs">进入实验</div></a>
+				<a href="{{=it.url.rout}}qa/lb/liubing/" target="_blank"><div class="bal_btn sfs">进入实验</div></a>
 			</div>
 			<div class="bal_title bal_foot sfs">版权所有@2019 兰州翼途动漫文化传播有限公司 all rights reserved</div>
 			<div id="txtDom" class="Lc_nosee">{{=it.dat.ball.txt}}</div>

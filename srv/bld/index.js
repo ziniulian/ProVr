@@ -90,7 +90,7 @@ tools.initDat();	// 初始化数据
 srv.ro.crtTmp("tmp");
 
 // 首页
-srv.ro.get("/", function (req, res, next) {
+srv.ro.get("/index/", function (req, res, next) {
 	var o = {
 		user: {	// 用户信息，以后调用接口时会用到
 			iid: "I001",	// 由“实验空间”分配给各实验平台的唯一编号
@@ -164,9 +164,10 @@ srv.ro.get("/ball/", function (req, res, next) {
 });
 
 // 问答题
-srv.ro.get("/qa/:id/", function (req, res, next) {
+srv.ro.get("/qa/:id/:file/", function (req, res, next) {
 	var d = tools.dat.qa[req.params.id];
 	if (d) {
+		d.file = req.params.file + ".swf";
 		var o = {
 			user: {},	// 用户信息，以后以后改用post进行数据接收
 			dat: d,
@@ -174,6 +175,23 @@ srv.ro.get("/qa/:id/", function (req, res, next) {
 		};
 		tools.url ("qa", o, req);
 		tools.rtmp ("qa", o, res, next);
+	} else {
+		next();
+	}
+});
+
+// 问答题2，在线限时答题页面
+srv.ro.get("/qa2/:id/", function (req, res, next) {
+	var d = tools.dat.qa[req.params.id];
+	if (d) {
+		// todo: 若题型有多种，则需对 单选、多选、问答题等进行分组整理。目前暂时只有单选题，故暂不做调整。
+		var o = {
+			user: {},	// 用户信息，以后改用post进行数据接收
+			dat: d,
+			utJson: tools.utJson	// JSON工具
+		};
+		tools.url ("qa2", o, req);
+		tools.rtmp ("qa2", o, res, next);
 	} else {
 		next();
 	}
