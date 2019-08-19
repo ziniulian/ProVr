@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html class="bal_out">
 	<head>
-		<title>{{=it.dat.nam}}</title>
+		<title>{{=it.dat.qa.nam}}</title>
 		{{#def.meta}}
 
 		<link rel="stylesheet" type="text/css" href="{{=it.url.rout}}css/s02.css">
@@ -31,7 +31,7 @@
 					</div>
 				</div>
 				<div class="qa_full" onclick="tls.fullScreen(boso);"></div>
-				<embed id="fDoe" src="{{=it.url.rout}}{{=it.dat.url}}{{=it.dat.file}}"
+				<embed id="fDoe" src="{{=it.url.rout}}{{=it.dat.qa.url}}{{=it.dat.qa.file}}"
 					wmode="opaque"
 					allowscriptaccess="always"
 					allowfullscreen="true"
@@ -43,8 +43,8 @@
 	</body>
 	<script>
 		tls.rout = "{{=it.url.rout}}";
-		dco.path = "{{=it.dat.url}}";
-		dco.dat = {{=it.utJson.toJson(it.dat.sub)}};
+		dco.path = "{{=it.dat.qa.url}}";
+		dco.dat = {{=it.utJson.toJson(it.dat.qa.sub)}};
 		document.body.onload = init;
 	</script>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>在线考试</title>
+		{{#def.meta}}
+
+		<link rel="stylesheet" type="text/css" href="{{=it.url.rout}}css/s02.css">
+		<script type="text/javascript" src="{{=it.url.rout}}js/qa2.js"></script>
+	</head>
+
+	<body>
+		<div id="boso">
+			<!-- 头 -->
+			<div id="headDoe" class="hom_head">
+				<div class="hom_w">
+					<div class="hom_log"></div>
+					<div class="hom_head_title">{{=it.dat.nam}}</div>
+					<div class="sfs"><br/></div>
+				</div>
+				<a class="hom_head_back mfs" href="{{=it.url.rout}}">< 返回首页</a>
+			</div>
+
+			<!-- 主体 -->
+			<div class="hom_body">
+				<div class="hom_w">
+					{{~it.dat.dl.sub:o:i}}
+						<div class="dl_nam bfs">
+							<div class="dl_hr dl_nhrl"></div>
+							{{=o.nam}}
+							<div class="dl_hr dl_nhrr"></div>
+						</div>
+						{{?o.txt}}
+							<div class="dl_txt mfs">{{=o.txt}}</div>
+						{{?}}
+						{{?o.file}}
+							<table class="dl_tab mfs">
+								<tbody>
+									<tr>
+										<th width="15%">文件类型</th>
+										{{?o.file[0].cls}}
+											<th width="25%">资料类别</th>
+										{{?}}
+										<th>文件名称</th>
+										<th width="10%">操作</th>
+									</tr>
+									{{~o.file:f:j}}
+										<tr>
+											<td class="dl_typ dl_typ_{{=f.typ}}"></td>
+											{{?f.cls}}
+												<td>{{=f.nam}}</td>
+											{{?}}
+											<td>{{=f.nam}}</td>
+											<td><a href="{{=it.url.rout}}{{=f.url}}" target="_blank">预览</a></td>
+										</tr>
+									{{~}}
+								</tbody>
+							</table>
+						{{?}}
+					{{~}}
+					<div class="bfs"><br/><br/></div>
+				</div>
+			</div>
+
+			<!-- 尾 -->
+			<div class="hom_foot">
+				<div class="hom_foot_txt sfs">
+					&nbsp; &nbsp; 建设单位 ： 兰州大学公共卫生学院
+					<br/>
+					&nbsp; &nbsp; 合作单位 ： 兰州翼途动漫文化传播有限公司
+				</div>
+			</div>
+			<div class="hom_foot2"></div>
+		</div>
+	</body>
+</html>

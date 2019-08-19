@@ -12,7 +12,7 @@ curPath = curPath.substr(0, curPath.length - 12);
 
 // 服务
 var srv = new LZR.Node.Srv ({
-	ip: process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1",
+	ip: process.env.OPENSHIFT_NODEJS_IP || "0.0.0.0",
 	port: process.env.OPENSHIFT_NODEJS_PORT || 8080		// 对应阿里云服务nginx.conf文件配置的 80 端口
 });
 srv.ro.path = curPath;
@@ -99,11 +99,12 @@ srv.ro.get("/index/", function (req, res, next) {
 			dis: "Lzr"	// 用户姓名显示
 		},
 		dat: {
+			nam: tools.dat.nam,	// 网站名称
 			menu: tools.menuDat,	// 菜单
 			hom: tools.dat.hom,	// 首页数据
 			img: tools.imgDat	// 相册数据
 		},
-		scd: "home",	// 菜单选中项
+		// scd: "home",	// 菜单选中项
 		utJson: tools.utJson	// JSON工具
 	};
 
@@ -119,6 +120,7 @@ srv.ro.get("/home/:item/:sub?/", function (req, res, next) {
 		var o = {
 			user: {},	// 用户信息，以后以后改用post进行数据接收
 			dat: {
+				nam: tools.dat.nam,
 				menu: tools.menuDat,	// 菜单
 				hom: tools.dat.hom,	// 首页数据
 				itm: d	// 数据
@@ -155,6 +157,7 @@ srv.ro.get("/ball/", function (req, res, next) {
 	var o = {
 		user: {},	// 用户信息，以后以后改用post进行数据接收
 		dat: {
+			nam: tools.dat.nam,
 			ball: tools.dat.ball
 		}
 	};
@@ -170,7 +173,10 @@ srv.ro.get("/qa/:id/:file/", function (req, res, next) {
 		d.file = req.params.file + ".swf";
 		var o = {
 			user: {},	// 用户信息，以后以后改用post进行数据接收
-			dat: d,
+			dat: {
+				nam: tools.dat.nam,
+				qa: d
+			},
 			utJson: tools.utJson	// JSON工具
 		};
 		tools.url ("qa", o, req);
@@ -187,11 +193,32 @@ srv.ro.get("/qa2/:id/", function (req, res, next) {
 		// todo: 若题型有多种，则需对 单选、多选、问答题等进行分组整理。目前暂时只有单选题，故暂不做调整。
 		var o = {
 			user: {},	// 用户信息，以后改用post进行数据接收
-			dat: d,
+			dat: {
+				nam: tools.dat.nam,
+				qa: d
+			},
 			utJson: tools.utJson	// JSON工具
 		};
 		tools.url ("qa2", o, req);
 		tools.rtmp ("qa2", o, res, next);
+	} else {
+		next();
+	}
+});
+
+// 资料下载
+srv.ro.get("/dl/:id/", function (req, res, next) {
+	var d = tools.dat.dl[req.params.id];
+	if (d) {
+		var o = {
+			user: {},	// 用户信息，以后改用post进行数据接收
+			dat: {
+				nam: tools.dat.nam,
+				dl: d
+			}
+		};
+		tools.url ("dl", o, req);
+		tools.rtmp ("dl", o, res, next);
 	} else {
 		next();
 	}

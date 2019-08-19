@@ -128,6 +128,15 @@ a{
 	background-image: url(../img/an001.png);
 }
 
+.hom_head_back {
+	display: inline-block;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	color: #FFF;
+	font-weight: bolder;
+}
+
 /*---------------------- 首页 尾部 ----------------------*/
 
 .hom_foot {
@@ -699,7 +708,7 @@ a{
 }
 
 .hom2_head {
-	padding-left: 70%;
+	padding-left: 60%;
 	line-height: 2.2;
 	background-color: #00528C;
 	background-repeat: no-repeat;
@@ -725,12 +734,15 @@ a{
 .hom2_txt {
 	position: absolute;
 	top: 0;
-	right: 2rem;
+	right: 4%;
+	width: 96%;
+	text-align: right;
 }
 
 .hom2_title {
+	display: inline-block;
 	margin-top: 3vh;
-	line-height: 1.2;
+	line-height: 1.3;
 	text-align: center;
 	font-weight: bolder;
 	font-size: 1.3rem;
@@ -741,14 +753,15 @@ a{
 
 
 .hom2_btn_out {
-	margin-left: 42%;
-	width: 46%;
+	display: inline-block;
+	width: 35%;
+	margin-right: 5%;
 	text-align: center;
 }
 
 .hom2_btn {
 	display: inline-block;
-	margin-top: 6vh;
+	margin: 6vh 1vw 0 0;
 	padding: 0.2rem 1rem;
 	border: solid 0.1rem #FFF;
 	border-radius: 0.3rem;
@@ -765,12 +778,12 @@ a{
 }
 
 .hom2_box1 {
-	animation: bounceInUp .5s 1.5s forwards;
+	animation: bounceInLeft .5s 1.5s forwards;
 	opacity: 0;
 }
 
 .hom2_box2 {
-	animation: bounceInDown .5s 1.5s forwards;
+	animation: bounceInRight .5s 1.5s forwards;
 	opacity: 0;
 }
 
@@ -785,7 +798,17 @@ a{
 }
 
 .hom2_box5 {
-	animation: fadeIn .5s 2.5s forwards;
+	animation: bounceInLeft .5s 2.5s forwards;
+	opacity: 0;
+}
+
+.hom2_box6 {
+	animation: bounceInRight .5s 2.5s forwards;
+	opacity: 0;
+}
+
+.hom2_box7 {
+	animation: fadeIn .5s 3s forwards;
 	opacity: 0;
 }
 
@@ -816,14 +839,15 @@ a{
 }
 
 .hom2_video {
+	position: relative;
 	width: 60vw;
 	height: 33.75vw;
 }
 
 .hom2_vbtn {
 	position: absolute;
-	right: 1rem;
-	top: 1rem;
+	right: -1.5rem;
+	top: -1.5rem;
 	width: 2rem;
 	height: 2rem;
 	cursor: pointer;
@@ -909,6 +933,96 @@ a{
 
 .qa2_right {
 	background-color: #FF0;
+}
+
+/*---------------------- 资料下载 ----------------------*/
+.dl_nam {
+	position: relative;
+	margin: 3rem auto 1.2rem auto;
+	text-align: center;
+	font-weight: bolder;
+	color: #5497C4;
+}
+
+.dl_hr {
+	height: 1px;
+	background-color: #E6E6E6;
+}
+
+.dl_nhrl {
+	position: absolute;
+	width: 38%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 1px;
+	background-color: #A4C9EE;
+}
+
+.dl_nhrr {
+	position: absolute;
+	width: 38%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 1px;
+	background-color: #A4C9EE;
+}
+
+.dl_txt {
+	margin-left: 2rem;
+	line-height: 3;
+}
+
+.dl_tab {
+	width: 95%;
+	margin: auto;
+	border: 0;
+	line-height: 2;
+	border-collapse: collapse;
+}
+
+.dl_tab th {
+	text-align: left;
+	padding-left: 1rem;
+	background-color: #F0F0F0;
+	color: #333;
+}
+
+.dl_tab tr {
+	border-bottom: solid 1px #E6E6E6;
+}
+
+.dl_tab td {
+	text-align: left;
+	padding-left: 1rem;
+	line-height: 3;
+}
+
+.dl_tab td a {
+	color: #00F;
+	font-weight: bolder;
+}
+
+.dl_typ {
+	background-repeat: no-repeat;
+	background-position: center center;
+	/*background-size: contain;*/
+	background-size: auto 66%;
+}
+
+.dl_typ_pdf {
+	background-image: url(../img/pdf.png);
+}
+
+.dl_typ_word {
+	background-image: url(../img/word.png);
+}
+
+.dl_typ_video {
+	background-image: url(../img/video.png);
 }
 
 /*---------------------- 响应式布局 ----------------------*/

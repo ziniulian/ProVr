@@ -39,17 +39,18 @@ var dco = {
 	runTim: function (t) {
 		if (dco.tid) {
 			dco.tim --;
-			if (dco.tim === 0) {
-				dco.total();
-			}
 		} else if (t) {
 			dco.tim = t * 60;
 			dco.tid = setInterval (dco.runTim, 1000);
 		}
 
-		var m = dco.tim / 60;
-		var s = dco.tim % 60;
-		dco.timDoe.innerHTML = Math.floor(m) + "分" + s + "秒";
+		if (dco.tim === 0) {
+			dco.total();
+		} else {
+			var m = dco.tim / 60;
+			var s = dco.tim % 60;
+			dco.timDoe.innerHTML = Math.floor(m) + "分" + s + "秒";
+		}
 	},
 
 	// 作答
@@ -82,7 +83,7 @@ var dco = {
 			if (dco.tid) {
 				clearInterval(dco.tid);
 				dco.tid = 0;
-				dco.rt = dco.dat.tim - dco.tim;
+				dco.rt = dco.dat.tim * 60 - dco.tim;
 			}
 
 			// 关闭所有选择按钮

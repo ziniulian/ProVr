@@ -10,11 +10,16 @@
 
 	<body>
 		<div id="boso">
+			<!-- 头 -->
 			<div id="headDoe" class="hom_head">
 				<div class="hom_w">
 					<div class="hom_log"></div>
+					<div class="hom_head_title">{{=it.dat.nam}}</div>
+					<div class="sfs"><br/></div>
 				</div>
+				<a class="hom_head_back mfs" href="{{=it.url.rout}}">< 返回首页</a>
 			</div>
+			<!-- 主体 -->
 			<div class="hom_body">
 				<div class="qa2_l">
 					<table class="qa2_tb1 sfs">
@@ -22,7 +27,7 @@
 							<tr>
 								<td class="qa2_tb1_td">考试须知</td>
 								<td>
-									&nbsp; （1） 本考卷共包括四大项，考试时间为<span class="qa_r_cet">{{=it.dat.tim}}</span>分钟，满分<span class="qa_r_cet">{{=it.dat.ts}}</span>分。<br/>
+									&nbsp; （1） 本考卷共包括四大项，考试时间为<span class="qa_r_cet">{{=it.dat.qa.tim}}</span>分钟，满分<span class="qa_r_cet">{{=it.dat.qa.ts}}</span>分。<br/>
 									&nbsp; （2） 试卷中选择题请点击你认为的正确答案选择
 								</td>
 							</tr>
@@ -41,9 +46,9 @@
 						<br/>
 						<b>单选题</b>
 						<div class="qa2_hr"></div>
-						{{ for (var s in it.dat.sub) { }}
-							<b id="qid{{=s}}">{{=s}}、 {{=it.dat.sub[s].q}}</b> （{{=it.dat.sub[s].v}}分）<br/>
-							{{~it.dat.sub[s].o:o:i}}
+						{{ for (var s in it.dat.qa.sub) { }}
+							<b id="qid{{=s}}">{{=s}}、 {{=it.dat.qa.sub[s].q}}</b> （{{=it.dat.qa.sub[s].v}}分）<br/>
+							{{~it.dat.qa.sub[s].o:o:i}}
 								<input type="radio" name="qor{{=s}}" value="{{=i}}" onclick="dco.ans('{{=s}}', {{=i}}, this);"><span id="qor{{=s}}_{{=i}}">{{=o}}</span></input><br/>
 							{{~}}
 							<div class="qa2_hr"></div>
@@ -56,7 +61,7 @@
 						<span id="timeDoe" class="bfs qa_r_cet"></span>
 						<br/><br/>
 					</div>
-					{{ for (var s in it.dat.sub) { }}
+					{{ for (var s in it.dat.qa.sub) { }}
 						<a id="qidbtn{{=s}}" class="qa2_qidbtn sfs" href="#qid{{=s}}">{{=s}}</a>
 					{{ } }}
 					<div class="qa2_hr"></div>
@@ -65,15 +70,18 @@
 					<br/>
 					<span class="qa2_qidbtn qa2_qided qa2_qidspan midSub"></span>
 					<span class="midSub sfs"> 已答</span>
+					<br/>
 					<div id="r_btnDoe" class="qa2_btn mfs" onclick="dco.total();">提交试卷</div>
 				</div>
 			</div>
+
+			<!-- 尾 -->
 		</div>
 	</body>
 
 	<script>
 		dco.rout = "{{=it.url.rout}}";
-		dco.dat = {{=it.utJson.toJson(it.dat)}};
+		dco.dat = {{=it.utJson.toJson(it.dat.qa)}};
 		document.body.onload = init;
 	</script>
 </html>
