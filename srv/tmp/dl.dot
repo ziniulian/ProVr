@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>在线考试</title>
+		<title>{{=it.dat.dl.nam}}</title>
 		{{#def.meta}}
 
 		<link rel="stylesheet" type="text/css" href="{{=it.url.rout}}css/s02.css">
@@ -47,7 +47,7 @@
 										<tr>
 											<td class="dl_typ dl_typ_{{=f.typ}}"></td>
 											{{?f.cls}}
-												<td>{{=f.nam}}</td>
+												<td>{{=f.cls}}</td>
 											{{?}}
 											<td>{{=f.nam}}</td>
 											<td><a href="{{=it.url.rout}}{{=f.url}}" target="_blank">预览</a></td>

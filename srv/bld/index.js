@@ -227,9 +227,9 @@ srv.ro.get("/dl/:id/", function (req, res, next) {
 // 静态文件夹
 srv.ro.setStaticDir("/", curPath + "web");
 
-// 异常处理
-srv.use("*", function (req, res) {
-	res.status(404).send("404!");
+// 特殊 Flash 文件的跳转
+srv.ro.get ("*/SteelOverAll.swf", function (req, res) {
+	res.redirect("/v/swf/SteelOverAll.swf");
 });
 
 srv.start();
