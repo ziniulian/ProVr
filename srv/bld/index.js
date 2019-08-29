@@ -228,8 +228,8 @@ srv.ro.get("/dl/:id/", function (req, res, next) {
 srv.ro.setStaticDir("/", curPath + "web");
 
 // 特殊 Flash 文件的跳转
-srv.ro.get ("*/SteelOverAll.swf", function (req, res) {
-	res.redirect("/v/swf/SteelOverAll.swf");
+srv.ro.get ("*/ClearOverNoVol.swf", function (req, res) {
+	res.redirect("/v/swf/ClearOverNoVol.swf");
 });
 
 srv.start();
