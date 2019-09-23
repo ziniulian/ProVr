@@ -2,6 +2,13 @@
 module.exports = {
 	nam: "重大公共卫生事件应急处置的仿真教学（以环境重金属污染为例）",
 	menu: ["home", "info", "team", "net", "stc", "df", "bld", "book"],	// 菜单
+	ilib: {	// 实验平台接口参数
+		host: "http://202.205.145.156:8017",	// 实验平台域名
+		url: "http://202.205.145.156:8017/details/v5?id=3328",	// 实验项目链接
+		iid: 100400,	// issuerId , 实验项目编号
+		sk: "16jmp2",	// Secret Key
+		ak: "SbYymvfZ8UjEmShxRAB0b1Dtaa0uGjDOOJa/f0Mbuo4="	// Aes Key
+	},
 	hom: {	// 首页
 		home: {
 			nam: "首页",	// 名称

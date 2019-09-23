@@ -46,6 +46,9 @@
 
 	http://39.107.64.153:8094/nls/login?token=AAABbErxtREBAAAAAAABht8%3D.c%2B7qJCAz0VizSIqlHvPhIfsgxbJSYLH3t%2FNXYGu18z4Qv9hxhXIGd2td%2BtAbKjgOp3yYT40t9i%2FtXCAXiAuw1uJ%2BiTEDErhayAGJx7Ea0co%3D.JPRgGPeFjpGSh%2FEOhfS0uKueabkNHjAI8HOfx2%2BBkZ8%3D
 
+	调试说明： http://shenbao.ilab-x.com/declare/wiki#1-6
+	调试项目： http://202.205.145.156:8017/details/v5?id=3328
+
 *******************************************************************
 
 

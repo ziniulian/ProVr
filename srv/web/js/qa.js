@@ -14,7 +14,6 @@ function init () {
 
 // AS 调用的方法名
 function cq (id) {
-console.log("id = " + id);
 	dco.show(id);
 }
 
