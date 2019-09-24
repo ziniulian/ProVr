@@ -4,6 +4,13 @@ function init () {
 	dco.fDoe = flotDoe;
 	dco.rDoe.btn = r_btnDoe;
 	dco.rDoe.timTxt = r_timTxtDoe;
+
+	LZR.load([
+		"LZR.Base.Json",
+		"LZR.HTML.Base.Ajax"
+	]);
+	dco.ajx = new LZR.HTML.Base.Ajax ();
+
 	window.onscroll = dco.flot;
 	dco.flot();
 	dco.runTim(dco.dat.tim);
@@ -19,6 +26,7 @@ var dco = {
 	timDoe: null,	// 显示时间
 	hedDoe: null,	// 页首
 	fDoe: null,	// 浮动窗
+	ajx: null,	// ajax
 	rDoe: {		// 与结果显示相关的容器
 		btn: null,	// 按钮
 		timTxt: null	// 显示结果时需频闭掉的剩余时间提示
@@ -105,6 +113,7 @@ var dco = {
 			dco.rDoe.btn.className = "Lc_nosee";	// 关闭提交按钮
 			dco.rDoe.timTxt.innerHTML = "";	// 关闭剩余时间
 			dco.timDoe.innerHTML = "得分：" + dco.r ;		// 显示总分
+			dco.ajx.get(dco.rout + "pushILib/" + dco.r, true);	// 上传分数
 		}
 	}
 };

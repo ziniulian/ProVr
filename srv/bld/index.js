@@ -4,6 +4,7 @@ var crypto = require("crypto");
 
 // LZR 子模块加载
 LZR.load([
+	"LZR.Node.Db.NodeAjax",
 	"LZR.Base.Json",
 	"LZR.Node.Srv"
 ]);
@@ -26,6 +27,7 @@ var tools = {
 	menuDat: [],	// 菜单数据，主要用于头尾的创建
 
 	utJson: LZR.getSingleton(LZR.Base.Json),
+	ajax: new LZR.Node.Db.NodeAjax(),
 
 	// 获取首页需要的数据
 	initDat: function () {
@@ -63,6 +65,18 @@ var tools = {
 		o = new Buffer(tools.dat.ilib.ak, "base64");
 		tools.dat.ilib.akiv = o.toString("binary", 0, 16);
 		tools.dat.ilib.aksk = o.toString("binary");
+
+		// ajax初始化
+		tools.ajax.crtEvt ({
+			push: tools.dat.ilib.host + "/project/log/upload?xjwt=<0>"
+		});
+		tools.ajax.evt.push.add(function (r, req, res, next) {
+			if (r.indexOf("\"code\":0") > 0) {
+				res.send("{\"ok\":true}");
+			} else {
+				res.send("{\"ok\":false, \"msg\":" + r + "}");
+			}
+		});
 	},
 
 	// 整理路径参数
@@ -141,49 +155,35 @@ var tools = {
 						// s += t.final("utf8");
 						// console.log(s);
 
-						/* 加解密参考资料 ：
-							1. 密钥要转为"binary" ： https://stackoverflow.com/questions/7787773/encrypt-with-node-js-crypto-module-and-decrypt-with-java-in-android-app
-							2. AES/CBC 要使用 createCipheriv ： https://blog.csdn.net/sbt0198/article/details/53791612
-							3. 常用的 crypto加密 ： https://blog.csdn.net/halibote330/article/details/76170757
-							4. Buffer转数值 ： https://blog.csdn.net/andybojue/article/details/41679483
-							5. base64编码与解码 ： https://www.cnblogs.com/yudis/p/7065745.html
-							6. base64编码与解码 ： https://www.jianshu.com/p/06d65720f16b
-							7. express-jwt 基本用法 ： https://blog.csdn.net/qq_27818541/article/details/76656784
-							8. cookie 和 session ： http://wiki.jikexueyuan.com/project/node-lessons/cookie-session.html
-							9. cookie-session 的使用 ： https://blog.csdn.net/zhujun_xiaoxin/article/details/79090976
-							10. cookie-session 的安装 ： https://www.cnblogs.com/sansancn/p/11012612.html
-							11. express-session 的使用 ： https://www.jianshu.com/p/c8c77e81bd06
-						*/
-
 						// payload
 						try {
 							t = crypto.createDecipheriv("aes-256-cbc", tools.dat.ilib.aksk, tools.dat.ilib.akiv);
 							var s = [];
 							s.push(t.update(a[1], "base64"));
-							s.push(t.final());
+							s.push(t["final"]());
 							s = Buffer.concat(s).toString("utf8", 8);
 							s = s.substring(0, s.lastIndexOf("}") + 1);
 							s = tools.utJson.toObj(s);
-// console.log(s);
+
 							r.uid = s.id;	// 用户id
 							r.un = s.un;	// 用户username
 							r.dis = s.dis;	// 用户姓名显示
 							r.stim = Date.now();
 						} catch (e) {
-							// console.log ("parseXjwt : payload AES 解析失败");
+							console.log ("parseXjwt : payload AES 解析失败");
 							r = null;
 						}
 					} else {
-						// console.log ("parseXjwt : header expiry 时效过期");
+						console.log ("parseXjwt : header expiry 时效过期");
 					}
 				} else {
-					// console.log ("parseXjwt : header 长度不一致");
+					console.log ("parseXjwt : header 长度不一致");
 				}
 			} else {
-				// console.log ("parseXjwt : signature 验证失败");
+				console.log ("parseXjwt : signature 验证失败");
 			}
 		} else {
-			// console.log ("parseXjwt : 2点不一致");
+			console.log ("parseXjwt : 2点不一致");
 		}
 		return r;
 	},
@@ -214,7 +214,7 @@ var tools = {
 		t = crypto.createCipheriv("aes-256-cbc", tools.dat.ilib.aksk, tools.dat.ilib.akiv);
 		r += ".";
 		r += t.update(payload, "utf8", "base64");
-		r += t.final("base64");
+		r += t["final"]("base64");
 
 		t = crypto.createHmac("sha256", tools.dat.ilib.sk);
 		t.update(r);
@@ -229,8 +229,7 @@ tools.initDat();	// 初始化数据
 srv.so.use(cookieSession({
 	name: "lzugw.cn",
 	keys: ["lzugw'sPassword:18278362"],
-	// maxAge: 24*60*60*1000 //24hours
-	maxAge: 5000
+	maxAge: 3*24*60*60*1000 //3天
 }));
 
 // 创建模板
@@ -241,6 +240,8 @@ srv.ro.get("/", function (req, res, next) {
 		var u = tools.parseXjwt (req.query.token);
 		if (u) {
 			req.session.usr = u;
+		} else {
+			req.session = null;
 		}
 		next();
 	} else {
@@ -325,6 +326,7 @@ srv.ro.get("/qa/:id/:file/", function (req, res, next) {
 	// 权限检查
 	var u = tools.getUsr(req, true);
 	if (!u) {
+		req.session = null;
 		res.redirect(tools.dat.ilib.url);
 		return;
 	}
@@ -352,6 +354,7 @@ srv.ro.get("/qa2/:id/", function (req, res, next) {
 	// 权限检查
 	var u = tools.getUsr(req, true);
 	if (!u) {
+		req.session = null;
 		res.redirect(tools.dat.ilib.url);
 		return;
 	}
@@ -400,27 +403,23 @@ srv.ro.get("/pushILib/:score/", function (req, res, next) {
 		var t = {
 			username: u.un,
 			projectTitle: tools.dat.nam,
-			childProjectTitle: "接口测试",		// 为凑字数，此项必填
+			childProjectTitle: "重大公共卫生事件应急处置",		// 为凑字数，此项必填
 			status: 1,
 			score: p,
 			startDate: u.stim,
 			endDate: Date.now(),
-			// attachmentId: 12,
+			// attachmentId: 12,	// 关联附件，可省略
 			issuerId: tools.dat.ilib.iid
 		};
-		t.timeUsed = Math.floor((t.endDate - t.startDate) / 1000 / 60);
-		if (t.timeUsed <= 0) {	// timeUsed 必须大于 0
-			t.timeUsed  = 1;
-		}
-		t = tools.tokenXjwt(t);
-		res.send(t);
-		// res.json(tools.parseXjwt(t));
-		// res.json({ok:true});
-		// todo : ajax http://202.205.145.156:8017/project/log/upload?xjwt=
+		t.timeUsed = Math.floor((t.endDate - t.startDate) / 1000 / 60) + 1;	// timeUsed 必须大于 0
+		tools.ajax.qry("push", null, res, null, [tools.tokenXjwt(t)]);
 	} else {
-		res.json({ok:false});
+		res.send("{\"ok\":false}");
 	}
 });
+
+// LZR库文件访问服务
+srv.ro.setStaticDir("/myLib/", LZR.curPath);
 
 // 静态文件夹
 srv.ro.setStaticDir("/", curPath + "web");

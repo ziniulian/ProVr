@@ -9,13 +9,14 @@
 		<link rel="stylesheet" type="text/css" href="{{=it.url.rout}}css/s02.css">
 		<script type="text/javascript" src="{{=it.url.rout}}js/flashCtrl.js"></script>
 		<script type="text/javascript" src="{{=it.url.rout}}js/qa.js"></script>
+		<script type="text/javascript" src="{{=it.url.rout}}myLib/LZR.js"></script>
 	</head>
 	<body class="bal_out">
 		<div id="boso" class="bal_out midOut">
 			<div class="midTop"></div><!--
 			--><div class="midSub qa_swf">
 				<!-- <div id="loaDoe" class="qa_loding bfs"></div> -->
-				<div id = "tDoe" class = "Lc_nosee"> 
+				<div id = "tDoe" class = "Lc_nosee">
 					<div class="qa_bg bfs">
 						选择题
 						<div class="qa_cbg mfs">
@@ -44,7 +45,9 @@
 	<script>
 		tls.rout = "{{=it.url.rout}}";
 		dco.path = "{{=it.dat.qa.url}}";
+		dco.usrNam = "{{=it.user.dis || it.user.un}}";
 		dco.dat = {{=it.utJson.toJson(it.dat.qa.sub)}};
+		dco.ts = {{=it.dat.qa.ts}};
 		document.body.onload = init;
 	</script>
 </html>

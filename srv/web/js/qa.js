@@ -8,6 +8,13 @@ function init () {
 	dco.doeRc = rcDoe;
 	dco.rout = tls.rout;
 	dco.path = dco.rout + dco.path;
+
+	LZR.load([
+		"LZR.Base.Json",
+		"LZR.HTML.Base.Ajax"
+	]);
+	dco.ajx = new LZR.HTML.Base.Ajax ();
+
 	// dco.doeL = loaDoe;
 	// dco.loading();
 }
@@ -40,7 +47,10 @@ var dco = {
 	doeB: null,	// 按钮容器
 	doeR: null,	// 结果容器
 	doeRc: null,	// 结果内容
-	count: 0,	// 总分
+	count: 0,	// 总得分
+	usrNam: "",	// 用户名
+	ajx: null,	// ajax
+	ts: 100,	// 满分
 
 	// 资源加载中
 	loading: function () {
@@ -152,7 +162,13 @@ var dco = {
 
 	// 输出得分情况
 	total: function () {
-		dco.doeQ.innerHTML = "总分 ： " + dco.count;
+		if (dco.usrNam) {
+			dco.doeQ.innerHTML = dco.usrNam + " ， 您好！<br/><br/>您最终的考试得分是 ： ";
+			dco.ajx.get(dco.rout + "pushILib/" + dco.count, true);	// 上传分数
+		} else {
+			dco.doeQ.innerHTML = "得分 ： ";
+		}
+		dco.doeQ.innerHTML += dco.count + " 分 （ 满分:" + dco.ts + "分 ）";
 		dco.doeA.innerHTML = "";
 		dco.doeR.className = "Lc_nosee";
 		dco.doe.className = "qa_mark Lc_noselect";

@@ -2,6 +2,11 @@
 虚拟仿真实验教学
 =======
 
+- 对接实验平台接口 ：
+	实验平台： http://www.ilab-x.com/
+	调试说明： http://shenbao.ilab-x.com/declare/wiki#1-6
+	调试项目： http://202.205.145.156:8017/details/v5?id=3328
+	正式项目： http://www.ilab-x.com/details/v5?id=3829
 
 *******************************************************************
 
@@ -38,16 +43,11 @@
 计划：
 -------------------------------------------------------------------
 
-
+- 对接实验平台的用户登录接口
+- 添加登录页面，暂时只在首页添加登录登出按钮。
+- aes-256-cbc 在高版本node下运行时会报 Invalid IV length 异常
+- 将播放 FLV 视频的功能、滚动相册功能、flash控制功能、XJWT加解密功能 整合到 LZR 库里
 - Nginx 静态文件夹做权限控制
-- 将播放 FLV 视频的功能、滚动相册功能、flash控制功能 整合到 LZR 库里
-- 对接实验平台接口 ：
-	http://www.ilab-x.com/details?id=3048
-
-	http://39.107.64.153:8094/nls/login?token=AAABbErxtREBAAAAAAABht8%3D.c%2B7qJCAz0VizSIqlHvPhIfsgxbJSYLH3t%2FNXYGu18z4Qv9hxhXIGd2td%2BtAbKjgOp3yYT40t9i%2FtXCAXiAuw1uJ%2BiTEDErhayAGJx7Ea0co%3D.JPRgGPeFjpGSh%2FEOhfS0uKueabkNHjAI8HOfx2%2BBkZ8%3D
-
-	调试说明： http://shenbao.ilab-x.com/declare/wiki#1-6
-	调试项目： http://202.205.145.156:8017/details/v5?id=3328
 
 *******************************************************************
 
@@ -57,6 +57,11 @@
 
 开发明细：
 -------------------------------------------------------------------
+
+##### 2019-9-24 （ 对接实验平台接口 ）：
+	对接实验平台接口
+	qa 、 qa2 自动是上传考试成绩
+	已使用正式密钥
 
 ##### 2019-8-26 （ Nginx 错误处理 ）：
 	Nginx 错误处理，返回 404

@@ -6,6 +6,7 @@
 
 		<link rel="stylesheet" type="text/css" href="{{=it.url.rout}}css/s02.css">
 		<script type="text/javascript" src="{{=it.url.rout}}js/qa2.js"></script>
+		<script type="text/javascript" src="{{=it.url.rout}}myLib/LZR.js"></script>
 	</head>
 
 	<body>
@@ -36,7 +37,7 @@
 					<table class="qa2_tb2 sfs">
 						<tbody>
 							<tr>
-								<td>姓名 ： 评委专家</td>
+								<td>姓名 ： {{=it.user.dis || it.user.un || "评委专家"}}</td>
 								<td>考试名称 ： 课后测验</td>
 								<td>出题人 ： 系统管理员</td>
 							</tr>
