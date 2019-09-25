@@ -1025,6 +1025,73 @@ a{
 	background-image: url(../img/video.png);
 }
 
+/*---------------------- 用户登录 ----------------------*/
+.sgin_head {
+	display: inline-block;
+	width: 10rem;
+	height: 2rem;
+	background-repeat: no-repeat;
+	background-position: 0.6rem center;
+	background-size: auto 100%;
+	background-image: url(../img/logo.png);
+}
+
+.sgin_out {
+	width: 60%;
+	margin: 2rem auto 0 auto;
+	padding: 0.3rem 0;
+	color: #333;
+	background-color: #FCFCFC;
+	border-radius: 0.5rem;
+}
+.sgin_out input {
+	display: block;
+	width: 81%;
+	margin: 1.5rem auto 0 auto;
+	padding: 0 2%;
+	font-size: 0.7rem;
+	line-height: 2.5;
+	border-radius: 0.2rem;
+}
+
+.sgin_btn {
+	cursor: pointer;
+	width: 85%;
+	margin: 1.5rem auto 0 auto;
+	text-align: center;
+	line-height: 2.5;
+	color: #FFF;
+	font-weight: bold;
+	background-color: #00528C;
+	border-radius: 0.3rem;
+}
+
+.sgin_memo {
+	width: 85%;
+	margin: 1rem auto 0 auto;
+	font-style: italic;
+	color: red;
+}
+
+.sgin_sub {
+	position: relative;
+	margin: 1.5rem auto 0.3rem auto;
+	width: 85%;
+	text-align: center;
+}
+.sgin_sub .l {
+	text-align: left;
+}
+.sgin_sub .r {
+	text-align: right;
+}
+.sgin_sub a {
+	display: inline-block;
+	width: 33.33%;
+	color: #00B;
+	text-decoration: underline;
+}
+
 /*---------------------- 响应式布局 ----------------------*/
 @media screen and (max-width:900px){
 	.hom_w {

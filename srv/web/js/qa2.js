@@ -113,7 +113,7 @@ var dco = {
 			dco.rDoe.btn.className = "Lc_nosee";	// 关闭提交按钮
 			dco.rDoe.timTxt.innerHTML = "";	// 关闭剩余时间
 			dco.timDoe.innerHTML = "得分：" + dco.r ;		// 显示总分
-			dco.ajx.get(dco.rout + "pushILib/" + dco.r, true);	// 上传分数
+			dco.ajx.asynPost(dco.rout + "pushILib/" + dco.r);	// 上传分数
 		}
 	}
 };

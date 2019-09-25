@@ -164,7 +164,7 @@ var dco = {
 	total: function () {
 		if (dco.usrNam) {
 			dco.doeQ.innerHTML = dco.usrNam + " ， 您好！<br/><br/>您最终的考试得分是 ： ";
-			dco.ajx.get(dco.rout + "pushILib/" + dco.count, true);	// 上传分数
+			dco.ajx.asynPost(dco.rout + "pushILib/" + dco.count);	// 上传分数
 		} else {
 			dco.doeQ.innerHTML = "得分 ： ";
 		}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="bal_out">
+	<head>
+		<title>重大公共卫生事件应急处理</title>
+		{{#def.meta}}
+
+		<link href="{{=it.url.rout}}css/s02.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="{{=it.url.rout}}js/flashCtrl.js"></script>
+		<script type="text/javascript" src="{{=it.url.rout}}js/hom2.js"></script>
+
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body class="bal_out">
+		<div id="boso" class="hom2_bg">
+			<div class="hom2_head bfs">
+				<a href="{{=it.url.rout}}">首页</a> &nbsp;
+				<a href="{{=it.url.rout}}index/">项目简介</a> &nbsp; &nbsp;
+				{{? it.user.un}}
+					<a class="sfs" href="{{=it.link}}" target="_blank">{{=it.user.dis || it.user.un}}</a> &nbsp;
+					<a class="sfs" href="{{=it.url.rout}}signOut/{{=encodeURIComponent(it.url.o)}}/">退出</a>
+				{{??}}
+					<a class="sfs" href="{{=it.url.rout}}signIn/{{=encodeURIComponent(it.url.o)}}/">登录</a>
+				{{?}}
+			</div>
+			<div class="hom2_body">
+				<div class="hom2_img"></div>
+				<div class="hom2_txt">
+					<div class="hom2_title">
+						“重大公共卫生事件应急处置”的仿真教学<br/>（ 以环境重金属污染为例 ）
+					</div>
+					<br/>
+					<div class="hom2_btn_out">
+						<a class="hom2_btn bfs hom2_box1" href="{{=it.url.rout}}dl/pre/">课前预习</a>
+						<a class="hom2_btn bfs hom2_box2" href="{{=it.url.rout}}dl/mtl/">课程资料</a>
+						<a class="hom2_btn bfs hom2_box3" href="{{=it.url.rout}}qa2/lb/">答题测试</a>
+						<a class="hom2_btn bfs hom2_box4" href="{{=it.url.rout}}ball/">背景介绍</a>
+						<a class="hom2_btn hom2_box5 bfs" href="{{=it.url.rout}}qa/lb/liubing/">虚拟实验</a>
+						<div class="hom2_box6">
+							<a class="hom2_btn2 sfs" href="{{=it.url.rout}}qa/lb/liubing/">流病调查</a>
+							<a class="hom2_btn2 sfs" href="{{=it.url.rout}}qa/lb/huanjing/">环境采样</a>
+							<a class="hom2_btn2 sfs" href="{{=it.url.rout}}qa/lb/shiyanshi/">实验检测</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hom2_foot mfs">
+				<div class="hom2_box7">
+					<a href="javascript: dco.show('b.flv');">● 申报视频</a> &nbsp;
+					<a href="javascript: dco.show('c.flv');">● 引导视频</a> &nbsp;
+					<a href="{{=it.url.rout}}v/pag.pdf" target="_blank">● 申报书下载</a> &nbsp;
+					<a href="https://www.flash.cn//" target="_blank">● flash插件下载</a> &nbsp; &nbsp;
+				</div>
+				<div class="hom2_foot2 sfs">
+					建设单位：兰州大学公共卫生学院 &nbsp; 技术支持：兰州翼途动漫文化传播有限公司
+				</div>
+			</div>
+			<div id="vDoe" class="Lc_nosee">
+				<div class="midTop"></div><!--
+				--><div id="videoDoe" class="hom2_video midSub">
+					<div class="hom2_vbtn" onclick="dco.hid();"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		tls.rout = "{{=it.url.rout}}";
+	</script>
+</html>

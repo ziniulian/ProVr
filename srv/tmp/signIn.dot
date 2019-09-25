@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="bal_out">
+	<head>
+		<title>用户登录</title>
+		{{#def.meta}}
+
+		<link href="{{=it.url.rout}}css/s02.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="{{=it.url.rout}}js/signIn.js"></script>
+		<script type="text/javascript" src="{{=it.url.rout}}myLib/LZR.js"></script>
+	</head>
+
+	<body class="bal_out">
+		<div id="boso" class="hom2_bg">
+			<a href="{{=it.url.rout}}"><div class="sgin_head mfs"></div></a>
+			<div class="sgin_out">
+				<input id="usrDoe" type="text" placeholder="手机号/用户名/邮箱"/>
+				<input id="pswDoe" type="password" placeholder="密码"/>
+				<div class="sgin_btn mfs" onclick="dco.run();">登 录</div>
+				<div id="memoDeo" class="sgin_memo mfs"></div>
+				<div class="sgin_sub">
+					<a class="l sfs" href="{{=it.ilib}}/register" target="_blank">注册</a><!--
+					--><a class="sfs" href="{{=it.link}}" target="_blank">去实验平台登录</a><!--
+					--><a class="r sfs" href="{{=it.ilib}}/find/password" target="_blank">忘记密码</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		dco.rout = "{{=it.url.rout}}";
+		dco.bcu = "{{=it.bcu}}";
+		document.body.onload = init;
+	</script>
+</html>

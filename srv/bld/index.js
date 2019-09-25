@@ -68,7 +68,8 @@ var tools = {
 
 		// ajax初始化
 		tools.ajax.crtEvt ({
-			push: tools.dat.ilib.host + "/project/log/upload?xjwt=<0>"
+			push: tools.dat.ilib.host + "/project/log/upload?xjwt=<0>",
+			login: tools.dat.ilib.host + "/sys/api/user/validate?username=<0>&password=<1>&nonce=<2>&cnonce=<3>"
 		});
 		tools.ajax.evt.push.add(function (r, req, res, next) {
 			if (r.indexOf("\"code\":0") > 0) {
@@ -77,11 +78,35 @@ var tools = {
 				res.send("{\"ok\":false, \"msg\":" + r + "}");
 			}
 		});
+		tools.ajax.evt.login.add(function (r, req, res, next) {
+			var o = tools.utJson.toObj(r);
+			switch (o.code) {
+				case 0:	// 登录成功
+					req.session.usr = {
+						iid: tools.dat.ilib.iid,
+						un: o.username,
+						dis: o.name,
+						stim: Date.now()
+					};
+					res.send("{\"ok\":true}");
+					break;
+				case 4:	// 密码错误
+					res.send("{\"ok\":false, \"msg\":\"用户名或密码错误\"}");
+					break;
+				case 5:	// 用户名错误
+					res.send("{\"ok\":false, \"msg\":\"用户名或密码错误.\"}");
+					break;
+				default:
+					res.send("{\"ok\":false, \"msg\":\"登录失败\"}");
+					break;
+			}
+		});
 	},
 
 	// 整理路径参数
 	url: function (dotNam, o, req) {
 		o.url = {
+			o: req.originalUrl,
 			base: req.baseUrl,
 			dot: dotNam
 		};
@@ -137,24 +162,6 @@ var tools = {
 							iid: (t.readUInt32BE(9) * 0x100000000 + t.readUInt32BE(13))	// issuerId : 接入平台编号。由“实验空间”分配给实验教学项目的编号
 						};
 
-						// t = crypto.createCipher("aes256", tools.dat.ilib.ak);
-						// var s = t.update("Hello", "utf8", "base64");
-						// s += t.final("base64");
-						// console.log (s);
-						// t = crypto.createDecipher("aes256", tools.dat.ilib.ak);
-						// s = t.update(s, "base64", "utf8");
-						// s += t.final("utf8");
-						// console.log(s);
-
-						// t = crypto.createCipheriv("aes-256-cbc", tools.dat.ilib.aksk, tools.dat.ilib.akiv);
-						// var s = t.update("Hello", "utf8", "base64");
-						// s += t.final("base64");
-						// console.log (s);
-						// t = crypto.createDecipheriv("aes-256-cbc", tools.dat.ilib.aksk, tools.dat.ilib.akiv);
-						// s = t.update(s, "base64", "utf8");
-						// s += t.final("utf8");
-						// console.log(s);
-
 						// payload
 						try {
 							t = crypto.createDecipheriv("aes-256-cbc", tools.dat.ilib.aksk, tools.dat.ilib.akiv);
@@ -170,20 +177,20 @@ var tools = {
 							r.dis = s.dis;	// 用户姓名显示
 							r.stim = Date.now();
 						} catch (e) {
-							console.log ("parseXjwt : payload AES 解析失败");
+							// console.log ("parseXjwt : payload AES 解析失败");
 							r = null;
 						}
 					} else {
-						console.log ("parseXjwt : header expiry 时效过期");
+						// console.log ("parseXjwt : header expiry 时效过期");
 					}
 				} else {
-					console.log ("parseXjwt : header 长度不一致");
+					// console.log ("parseXjwt : header 长度不一致");
 				}
 			} else {
-				console.log ("parseXjwt : signature 验证失败");
+				// console.log ("parseXjwt : signature 验证失败");
 			}
 		} else {
-			console.log ("parseXjwt : 2点不一致");
+			// console.log ("parseXjwt : 2点不一致");
 		}
 		return r;
 	},
@@ -203,9 +210,9 @@ var tools = {
 
 		payload = "11111111";
 		payload += tools.utJson.toJson(body);
-		payload += "1";
+		payload += "1";	// 缺少一个字符，实验平台服务端解析数据会失败。
 		if (new Buffer(payload, "utf8").length % 16 === 0) {
-			// 数据长度不能等于16的整数倍
+			// 数据长度不能等于16的整数倍，否则实验平台服务端解析数据会失败。
 			body.childProjectTitle += " ";
 			payload = "11111111";
 			payload += tools.utJson.toJson(body);
@@ -229,7 +236,7 @@ tools.initDat();	// 初始化数据
 srv.so.use(cookieSession({
 	name: "lzugw.cn",
 	keys: ["lzugw'sPassword:18278362"],
-	maxAge: 3*24*60*60*1000 //3天
+	maxAge: 8*3600000 // 8小时
 }));
 
 // 创建模板
@@ -243,10 +250,14 @@ srv.ro.get("/", function (req, res, next) {
 		} else {
 			req.session = null;
 		}
-		next();
-	} else {
-		next();
 	}
+
+	var o = {
+		user: req.session ? (req.session.usr || {}) : {},
+		link: tools.dat.ilib.host + "/my/profile"
+	};
+	tools.url ("hom2", o, req);
+	tools.rtmp ("hom2", o, res, next);
 });
 
 // 首页
@@ -327,7 +338,7 @@ srv.ro.get("/qa/:id/:file/", function (req, res, next) {
 	var u = tools.getUsr(req, true);
 	if (!u) {
 		req.session = null;
-		res.redirect(tools.dat.ilib.url);
+		res.redirect(req.baseUrl + "/signIn/" + encodeURIComponent(req.originalUrl) + "/");
 		return;
 	}
 
@@ -355,7 +366,7 @@ srv.ro.get("/qa2/:id/", function (req, res, next) {
 	var u = tools.getUsr(req, true);
 	if (!u) {
 		req.session = null;
-		res.redirect(tools.dat.ilib.url);
+		res.redirect(req.baseUrl + "/signIn/" + encodeURIComponent(req.originalUrl) + "/");
 		return;
 	}
 
@@ -396,7 +407,7 @@ srv.ro.get("/dl/:id/", function (req, res, next) {
 });
 
 // 上传考试成绩
-srv.ro.get("/pushILib/:score/", function (req, res, next) {
+srv.ro.post("/pushILib/:score/", function (req, res, next) {
 	var u = tools.getUsr(req);
 	var p = req.params.score - 0;
 	if (u && p >= 0) {
@@ -404,7 +415,7 @@ srv.ro.get("/pushILib/:score/", function (req, res, next) {
 			username: u.un,
 			projectTitle: tools.dat.nam,
 			childProjectTitle: "重大公共卫生事件应急处置",		// 为凑字数，此项必填
-			status: 1,
+			status: (p < 60) ? 2 : 1,
 			score: p,
 			startDate: u.stim,
 			endDate: Date.now(),
@@ -418,6 +429,42 @@ srv.ro.get("/pushILib/:score/", function (req, res, next) {
 	}
 });
 
+// 登出
+srv.ro.get("/signOut/:backUrl/", function (req, res, next) {
+	req.session = null;
+	res.redirect(req.params.backUrl);
+});
+
+// 登录检查
+srv.ro.post("/login/:u/:p/", function (req, res, next) {
+	var p, hash = crypto.createHash("sha256");
+	hash.update(req.params.p);
+	p = hash.digest("hex").toUpperCase();
+	hash = crypto.createHash("sha256");
+	hash.update(tools.dat.ilib.nonce);
+	hash.update(p);
+	hash.update(tools.dat.ilib.cnonce);
+	p = hash.digest("hex").toUpperCase();
+	tools.ajax.qry("login", req, res, null, [req.params.u, p, tools.dat.ilib.nonce, tools.dat.ilib.cnonce]);
+});
+
+// 登录
+srv.ro.get("/signIn/:backUrl?/", function (req, res, next) {
+	var bcu = req.params.backUrl || "/";
+	var u = tools.getUsr(req);
+	if (u) {
+		res.redirect(bcu);
+	} else {
+		var o = {
+			bcu: bcu,
+			ilib: tools.dat.ilib.host,
+			link: tools.dat.ilib.host + "/login?ref=" + encodeURIComponent(tools.dat.ilib.url)
+		};
+		tools.url ("signIn", o, req);
+		tools.rtmp ("signIn", o, res, next);
+	}
+});
+
 // LZR库文件访问服务
 srv.ro.setStaticDir("/myLib/", LZR.curPath);
 
@@ -426,7 +473,7 @@ srv.ro.setStaticDir("/", curPath + "web");
 
 // 特殊 Flash 文件的跳转
 srv.ro.get ("*/ClearOverNoVol.swf", function (req, res) {
-	res.redirect("/v/swf/ClearOverNoVol.swf");
+	res.redirect(req.baseUrl + "/v/swf/ClearOverNoVol.swf");
 });
 
 srv.start();

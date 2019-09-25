@@ -7,7 +7,9 @@ module.exports = {
 		url: "http://www.ilab-x.com/details/v5?id=3829",	// 实验项目链接
 		iid: 101039,	// issuerId , 实验项目编号
 		sk: "58ycaz",	// Secret Key
-		ak: "SCusvKeU4wHVgGg/veXqFQAKjsskkvOlzDaeRPJcQnI="	// Aes Key
+		ak: "SCusvKeU4wHVgGg/veXqFQAKjsskkvOlzDaeRPJcQnI=",	// Aes Key
+		nonce: "0F2785E6ED1B59AC",	// 盐1
+		cnonce: "F5A981C203030722"	// 盐2
 	},
 	hom: {	// 首页
 		home: {
