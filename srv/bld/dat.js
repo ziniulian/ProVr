@@ -8,6 +8,8 @@ module.exports = {
 		iid: 101039,	// issuerId , 实验项目编号
 		sk: "58ycaz",	// Secret Key
 		ak: "SCusvKeU4wHVgGg/veXqFQAKjsskkvOlzDaeRPJcQnI=",	// Aes Key
+		nam: "“重大公共卫生事件应急处置”的仿真教学（以环境重金属污染为例）",	// 实验名称，必须与实验平台的名称一致
+		subNam: "重大公共卫生事件应急处置",	// 子实验名称
 		nonce: "0F2785E6ED1B59AC",	// 盐1
 		cnonce: "F5A981C203030722"	// 盐2
 	},

@@ -413,8 +413,8 @@ srv.ro.post("/pushILib/:score/", function (req, res, next) {
 	if (u && p >= 0) {
 		var t = {
 			username: u.un,
-			projectTitle: tools.dat.nam,
-			childProjectTitle: "重大公共卫生事件应急处置",		// 为凑字数，此项必填
+			projectTitle: tools.dat.ilib.nam,
+			childProjectTitle: tools.dat.ilib.subNam,		// 为凑字数，此项必填
 			status: (p < 60) ? 2 : 1,
 			score: p,
 			startDate: u.stim,
