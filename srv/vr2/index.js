@@ -1,28 +1,24 @@
-require("lzr");
-var cookieSession = require("cookie-session");
+// 第二版项目，与第一版雷同，只是首页和头尾颜色不一样。
 var crypto = require("crypto");
+
+// 文件位置
+var curPath = require.resolve("./index.js").replace("index.js", "");
 
 // LZR 子模块加载
 LZR.load([
 	"LZR.Node.Db.NodeAjax",
 	"LZR.Base.Json",
-	"LZR.Node.Srv"
+	"LZR.Node.Srv.Result"
 ]);
 
-// 文件位置
-var curPath = require.resolve("./index.js");
-curPath = curPath.substr(0, curPath.length - 12);
-
-// 服务
-var srv = new LZR.Node.Srv ({
-	ip: process.env.OPENSHIFT_NODEJS_IP || "0.0.0.0",
-	port: process.env.OPENSHIFT_NODEJS_PORT || 8080		// 对应阿里云服务nginx.conf文件配置的 80 端口
+// 创建路由
+var r = new LZR.Node.Router ({
+	path: curPath
 });
-srv.ro.path = curPath;
 
 // 工具
 var tools = {
-	dat: require("./dat.js"),	// 数据
+	dat: require("./bld/dat.js"),	// 数据
 	imgDat: [],	// 滚动相册数据
 	menuDat: [],	// 菜单数据，主要用于头尾的创建
 
@@ -122,7 +118,7 @@ var tools = {
 	// 回传模板
 	rtmp: function (dotNam, o, res, next) {
 		// 返回模板
-		var t = srv.ro.getTmp(dotNam, o);
+		var t = r.getTmp(dotNam, o);
 		if (t) {
 			res.send(t);
 		} else {
@@ -233,16 +229,16 @@ var tools = {
 };
 tools.initDat();	// 初始化数据
 
-srv.so.use(cookieSession({
-	name: "lzugw.cn",
-	keys: ["lzugw'sPassword:18278362"],
-	maxAge: 8*3600000 // 8小时
-}));
+// srv.so.use(cookieSession({
+// 	name: "lzugw.cn",
+// 	keys: ["lzugw'sPassword:18278362"],
+// 	maxAge: 8*3600000 // 8小时
+// }));
 
 // 创建模板
-srv.ro.crtTmp("tmp");
+r.crtTmp("tmp");
 
-srv.ro.get("/", function (req, res, next) {
+r.get("/", function (req, res, next) {
 	if (req.query.token) {
 		var u = tools.parseXjwt (req.query.token);
 		if (u) {
@@ -261,7 +257,7 @@ srv.ro.get("/", function (req, res, next) {
 });
 
 // 首页
-srv.ro.get("/index/", function (req, res, next) {
+r.get("/index/", function (req, res, next) {
 	var o = {
 		user: {},
 		dat: {
@@ -279,7 +275,7 @@ srv.ro.get("/index/", function (req, res, next) {
 });
 
 // 分页
-srv.ro.get("/home/:item/:sub?/", function (req, res, next) {
+r.get("/home/:item/:sub?/", function (req, res, next) {
 	var d = tools.dat.hom[req.params.item];
 
 	if (d) {
@@ -319,7 +315,7 @@ srv.ro.get("/home/:item/:sub?/", function (req, res, next) {
 });
 
 // 全景图
-srv.ro.get("/ball/", function (req, res, next) {
+r.get("/ball/", function (req, res, next) {
 	var o = {
 		user: {},	// 用户信息，以后以后改用post进行数据接收
 		dat: {
@@ -333,7 +329,7 @@ srv.ro.get("/ball/", function (req, res, next) {
 });
 
 // 问答题
-srv.ro.get("/qa/:id/:file/", function (req, res, next) {
+r.get("/qa/:id/:file/", function (req, res, next) {
 	// 权限检查
 	var u = tools.getUsr(req, true);
 	if (!u) {
@@ -361,7 +357,7 @@ srv.ro.get("/qa/:id/:file/", function (req, res, next) {
 });
 
 // 问答题2，在线限时答题页面
-srv.ro.get("/qa2/:id/", function (req, res, next) {
+r.get("/qa2/:id/", function (req, res, next) {
 	// 权限检查
 	var u = tools.getUsr(req, true);
 	if (!u) {
@@ -389,7 +385,7 @@ srv.ro.get("/qa2/:id/", function (req, res, next) {
 });
 
 // 资料下载
-srv.ro.get("/dl/:id/", function (req, res, next) {
+r.get("/dl/:id/", function (req, res, next) {
 	var d = tools.dat.dl[req.params.id];
 	if (d) {
 		var o = {
@@ -407,7 +403,7 @@ srv.ro.get("/dl/:id/", function (req, res, next) {
 });
 
 // 上传考试成绩
-srv.ro.post("/pushILib/:score/", function (req, res, next) {
+r.post("/pushILib/:score/", function (req, res, next) {
 	var u = tools.getUsr(req);
 	var p = req.params.score - 0;
 	if (u && p >= 0) {
@@ -430,13 +426,13 @@ srv.ro.post("/pushILib/:score/", function (req, res, next) {
 });
 
 // 登出
-srv.ro.get("/signOut/:backUrl/", function (req, res, next) {
+r.get("/signOut/:backUrl/", function (req, res, next) {
 	req.session = null;
 	res.redirect(req.params.backUrl);
 });
 
 // 登录检查
-srv.ro.post("/login/:u/:p/", function (req, res, next) {
+r.post("/login/:u/:p/", function (req, res, next) {
 	var p, hash = crypto.createHash("sha256");
 	hash.update(req.params.p);
 	p = hash.digest("hex").toUpperCase();
@@ -449,8 +445,8 @@ srv.ro.post("/login/:u/:p/", function (req, res, next) {
 });
 
 // 登录
-srv.ro.get("/signIn/:backUrl?/", function (req, res, next) {
-	var bcu = req.params.backUrl || "/";
+r.get("/signIn/:backUrl?/", function (req, res, next) {
+	var bcu = req.params.backUrl || (req.baseUrl + "/");
 	var u = tools.getUsr(req);
 	if (u) {
 		res.redirect(bcu);
@@ -465,18 +461,15 @@ srv.ro.get("/signIn/:backUrl?/", function (req, res, next) {
 	}
 });
 
-// 第二版项目
-srv.use("/Vr2/", require("../vr2"));
-
 // LZR库文件访问服务
-srv.ro.setStaticDir("/myLib/", LZR.curPath);
+r.setStaticDir("/myLib/", LZR.curPath);
 
 // 静态文件夹
-srv.ro.setStaticDir("/", curPath + "web");
+r.setStaticDir("/", curPath + "web");
 
 // 特殊 Flash 文件的跳转
-srv.ro.get ("*/ClearOverNoVol.swf", function (req, res) {
+r.get ("*/ClearOverNoVol.swf", function (req, res) {
 	res.redirect(req.baseUrl + "/v/swf/ClearOverNoVol.swf");
 });
 
-srv.start();
+module.exports = r;
