@@ -124,7 +124,7 @@ module.exports = {
 			sub: [
 				{
 					nam: "有效链接",
-					txt: "<a href=\"http://101.200.45.232/Vr2/\" target=\"_blank\">101.200.45.232/Vr2/</a>"
+					txt: "<a href=\"http://yxxn.lzu.edu.cn/Vr2/\" target=\"_blank\">http://yxxn.lzu.edu.cn/Vr2/</a>"	// Lzr_TODO : IP
 				},
 				{
 					nam: "网络条件要求",

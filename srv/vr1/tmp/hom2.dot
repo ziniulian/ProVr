@@ -19,7 +19,7 @@
 				<a href="{{=it.url.rout}}index/">项目简介</a> &nbsp; &nbsp;
 				{{? it.user.un}}
 					<a class="sfs" href="{{=it.link}}" target="_blank">{{=it.user.dis || it.user.un}}</a> &nbsp;
-					<a class="sfs" href="{{=it.url.rout}}signOut/%2F/">退出</a>
+					<a class="sfs" href="{{=it.url.rout}}signOut/{{=encodeURIComponent(it.url.rout)}}/">退出</a>
 				{{??}}
 					<a class="sfs" href="{{=it.url.rout}}signIn/{{=encodeURIComponent(it.url.o)}}/">登录</a>
 				{{?}}
