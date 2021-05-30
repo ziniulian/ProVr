@@ -76,6 +76,7 @@ java -jar L:\Doc\Git\LZR_JS\src\compiler.jar --js [原路径] --js_output_file [
 
 ##### 2021-5-30 （ 改用兰大 windows 服务器 ）：
 	改用兰大 windows 服务器，不再使用 阿里云 CentOS 的 pm2 + Nginx 方式。
+	登录登出 backUrl 传参方式修改
 
 ##### 2020-9-9 （ 添加第二版 ）：
 	添加 vr2 第二版页面

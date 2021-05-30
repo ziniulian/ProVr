@@ -19,9 +19,9 @@
 				<a class="hom2_head_btn" href="{{=it.url.rout}}index/">项目简介</a> &nbsp; &nbsp;
 				{{? it.user.un}}
 					<a class="mfs" href="{{=it.link}}" target="_blank">{{=it.user.dis || it.user.un}}</a> &nbsp;
-					<a class="mfs" href="{{=it.url.rout}}signOut/{{=encodeURIComponent(it.url.rout)}}/">退出</a>
+					<a class="mfs" href="{{=it.url.rout}}signOut/">退出</a>
 				{{??}}
-					<a class="hom2_head_btn2" href="{{=it.url.rout}}signIn/{{=encodeURIComponent(it.url.o)}}/">登录</a>
+					<a class="hom2_head_btn2" href="{{=it.url.rout}}signIn/">登录</a>
 				{{?}}
 			</div>
 			<div class="hom2_body">

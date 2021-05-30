@@ -229,12 +229,6 @@ var tools = {
 };
 tools.initDat();	// 初始化数据
 
-// srv.so.use(cookieSession({
-// 	name: "lzugw.cn",
-// 	keys: ["lzugw'sPassword:18278362"],
-// 	maxAge: 8*3600000 // 8小时
-// }));
-
 // 创建模板
 r.crtTmp("tmp");
 
@@ -334,7 +328,7 @@ r.get("/qa/:id/:file/", function (req, res, next) {
 	var u = tools.getUsr(req, true);
 	if (!u) {
 		req.session = null;
-		res.redirect(req.baseUrl + "/signIn/" + encodeURIComponent(req.originalUrl) + "/");
+		res.redirect(req.baseUrl + "/signIn/?bcu=" + encodeURIComponent(req.originalUrl));
 		return;
 	}
 
@@ -362,7 +356,7 @@ r.get("/qa2/:id/", function (req, res, next) {
 	var u = tools.getUsr(req, true);
 	if (!u) {
 		req.session = null;
-		res.redirect(req.baseUrl + "/signIn/" + encodeURIComponent(req.originalUrl) + "/");
+		res.redirect(req.baseUrl + "/signIn/?bcu=" + encodeURIComponent(req.originalUrl));
 		return;
 	}
 
@@ -426,9 +420,10 @@ r.post("/pushILib/:score/", function (req, res, next) {
 });
 
 // 登出
-r.get("/signOut/:backUrl/", function (req, res, next) {
+r.get("/signOut/", function (req, res, next) {
 	req.session = null;
-	res.redirect(req.params.backUrl);
+	var bcu = req.query.bcu || (req.baseUrl + "/");
+	res.redirect(bcu);
 });
 
 // 登录检查
@@ -445,8 +440,8 @@ r.post("/login/:u/:p/", function (req, res, next) {
 });
 
 // 登录
-r.get("/signIn/:backUrl?/", function (req, res, next) {
-	var bcu = req.params.backUrl || (req.baseUrl + "/");
+r.get("/signIn/", function (req, res, next) {
+	var bcu = req.query.bcu || (req.baseUrl + "/");
 	var u = tools.getUsr(req);
 	if (u) {
 		res.redirect(bcu);
