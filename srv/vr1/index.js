@@ -427,16 +427,22 @@ r.get("/signOut/", function (req, res, next) {
 });
 
 // 登录检查
-r.post("/login/:u/:p/", function (req, res, next) {
-	var p, hash = crypto.createHash("sha256");
-	hash.update(req.params.p);
+r.post("/login/", function (req, res, next) {
+	var p, ru, rp, hash = crypto.createHash("sha256");
+	ru = req.body.u;
+	rp = req.body.p;
+	if (!ru || !rp) {
+		res.send("{\"ok\":false, \"msg\":\"用户名和密码不能为空\"}");
+		return;
+	}
+	hash.update(rp);
 	p = hash.digest("hex").toUpperCase();
 	hash = crypto.createHash("sha256");
 	hash.update(tools.dat.ilib.nonce);
 	hash.update(p);
 	hash.update(tools.dat.ilib.cnonce);
 	p = hash.digest("hex").toUpperCase();
-	tools.ajax.qry("login", req, res, null, [req.params.u, p, tools.dat.ilib.nonce, tools.dat.ilib.cnonce]);
+	tools.ajax.qry("login", req, res, null, [ru, p, tools.dat.ilib.nonce, tools.dat.ilib.cnonce]);
 });
 
 // 登录

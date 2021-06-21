@@ -16,10 +16,9 @@ var dco = {
 	run: function () {
 		var u = dco.rout + "login/";
 		if (usrDoe.value) {
-			u += usrDoe.value;
 			if (pswDoe.value) {
 				memoDeo.innerHTML = "登录中，请稍候 ...";
-				var o = dco.ajx.post(u + "/" + pswDoe.value);
+				var o = dco.ajx.post(u, {u:usrDoe.value, p:pswDoe.value});
 				o = dco.utJson.toObj(o);
 				if (o.ok) {
 					memoDeo.innerHTML = "登录成功！";

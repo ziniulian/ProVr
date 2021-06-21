@@ -22,6 +22,9 @@
 
 // 压缩指令：
 java -jar L:\Doc\Git\LZR_JS\src\compiler.jar --js [原路径] --js_output_file [新路径]
+java -jar L:\Doc\Git\LZR_JS\src\compiler.jar --js index.js --js_output_file out\index.js
+java -jar L:\Doc\Git\LZR_JS\src\compiler.jar --js vr1\index.js --js_output_file out\vr1\index.js
+java -jar L:\Doc\Git\LZR_JS\src\compiler.jar --js vr1\web\js\signIn.js --js_output_file out\web\signIn.js
 
 *******************************************************************
 
@@ -73,6 +76,11 @@ java -jar L:\Doc\Git\LZR_JS\src\compiler.jar --js [原路径] --js_output_file [
 
 开发明细：
 -------------------------------------------------------------------
+
+##### 2021-6-19 （ 等保认证整改 ）：
+	登录信息写入post请求体中
+	添加日志功能
+	自动跳转至https路径（暂时屏蔽）
 
 ##### 2021-5-30 （ 改用兰大 windows 服务器 ）：
 	改用兰大 windows 服务器，不再使用 阿里云 CentOS 的 pm2 + Nginx 方式。

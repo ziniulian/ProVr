@@ -1,5 +1,7 @@
 require("lzr");
 var cookieSession = require("cookie-session");
+var bodyParser = require('body-parser');	// post 参数插件
+var logger = require('morgan');		// 日志插件
 var crypto = require("crypto");
 
 // LZR 子模块加载
@@ -24,6 +26,25 @@ srv.so.use(cookieSession({
 	keys: ["lzugw'sPassword:18278362"],
 	maxAge: 8*3600000 // 8小时
 }));
+
+// 接收 post 请求体
+srv.so.use(bodyParser.json());
+srv.so.use(bodyParser.urlencoded({ extended: true }));
+
+// 输出日志
+var fs = require('fs');
+var accessLogger = fs.createWriteStream('logs/access.log', { flags: 'a' });
+// srv.so.use(logger('dev'));	// 控制台输出
+srv.so.use(logger({ stream: accessLogger }));
+
+// https跳转
+// srv.ro.get("*", function (req, res, next) {
+// 	if(req.protocol === 'https') {
+// 		next();
+// 	} else {
+// 		res.redirect("https://" + req.headers.host + req.originalUrl);
+// 	}
+// });
 
 srv.ro.get("/", function (req, res, next) {
 	res.redirect(req.baseUrl + "/Vr1/");
