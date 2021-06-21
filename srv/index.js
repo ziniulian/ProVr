@@ -37,15 +37,6 @@ var accessLogger = fs.createWriteStream('logs/access.log', { flags: 'a' });
 // srv.so.use(logger('dev'));	// 控制台输出
 srv.so.use(logger({ stream: accessLogger }));
 
-// https跳转
-// srv.ro.get("*", function (req, res, next) {
-// 	if(req.protocol === 'https') {
-// 		next();
-// 	} else {
-// 		res.redirect("https://" + req.headers.host + req.originalUrl);
-// 	}
-// });
-
 srv.ro.get("/", function (req, res, next) {
 	res.redirect(req.baseUrl + "/Vr1/");
 });

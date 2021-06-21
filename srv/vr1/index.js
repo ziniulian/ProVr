@@ -1,6 +1,10 @@
 // 第二版项目，与第一版雷同，只是首页和头尾颜色不一样。
 var crypto = require("crypto");
 
+// 输出日志
+var fs = require('fs');
+var accessLogger = fs.createWriteStream('logs/access.log', { flags: 'a', encoding:'utf8' });
+
 // 文件位置
 var curPath = require.resolve("./index.js").replace("index.js", "");
 
@@ -84,16 +88,20 @@ var tools = {
 						dis: o.name,
 						stim: Date.now()
 					};
+					accessLogger.write("登录成功 (" + (o.name || o.username) +") : ");
 					res.send("{\"ok\":true}");
 					break;
 				case 4:	// 密码错误
 					res.send("{\"ok\":false, \"msg\":\"用户名或密码错误\"}");
+					accessLogger.write("密码错误 : ");
 					break;
 				case 5:	// 用户名错误
 					res.send("{\"ok\":false, \"msg\":\"用户名或密码错误.\"}");
+					accessLogger.write("用户名错误 : ");
 					break;
 				default:
 					res.send("{\"ok\":false, \"msg\":\"登录失败\"}");
+					accessLogger.write("登录失败 : ");
 					break;
 			}
 		});
@@ -343,6 +351,7 @@ r.get("/qa/:id/:file/", function (req, res, next) {
 			},
 			utJson: tools.utJson	// JSON工具
 		};
+		accessLogger.write("---- " + (u.dis || u.un) + ", 开始虚拟实验, " + req.originalUrl + " : ");
 		tools.url ("qa", o, req);
 		tools.rtmp ("qa", o, res, next);
 	} else {
@@ -371,6 +380,7 @@ r.get("/qa2/:id/", function (req, res, next) {
 			},
 			utJson: tools.utJson	// JSON工具
 		};
+		accessLogger.write("---- " + (u.dis || u.un) + ", 开始在线答题 : ");
 		tools.url ("qa2", o, req);
 		tools.rtmp ("qa2", o, res, next);
 	} else {
@@ -413,6 +423,7 @@ r.post("/pushILib/:score/", function (req, res, next) {
 			issuerId: tools.dat.ilib.iid
 		};
 		t.timeUsed = Math.floor((t.endDate - t.startDate) / 1000 / 60) + 1;	// timeUsed 必须大于 0
+		accessLogger.write("---- " + (u.dis || u.un) + ", 提交考试成绩, " + p + " : ");
 		tools.ajax.qry("push", null, res, null, [tools.tokenXjwt(t)]);
 	} else {
 		res.send("{\"ok\":false}");
@@ -421,6 +432,10 @@ r.post("/pushILib/:score/", function (req, res, next) {
 
 // 登出
 r.get("/signOut/", function (req, res, next) {
+	var u = tools.getUsr(req);
+	if (u) {
+		accessLogger.write("---- " + (u.dis || u.un) + ", 退出, 成功 : ");
+	}
 	req.session = null;
 	var bcu = req.query.bcu || (req.baseUrl + "/");
 	res.redirect(bcu);
@@ -434,6 +449,16 @@ r.post("/login/", function (req, res, next) {
 	if (!ru || !rp) {
 		res.send("{\"ok\":false, \"msg\":\"用户名和密码不能为空\"}");
 		return;
+	} else if (ru === "logMg" && rp === "2020LogMg-_") {
+		req.session.usr = {
+			iid: tools.dat.ilib.iid,
+			un: "logMg",
+			dis: "日志管理",
+			stim: Date.now()
+		};
+		accessLogger.write("---- " + ru + ", 登录, 登录成功 (日志管理)  : ");
+		res.send("{\"ok\":true}");
+		return;
 	}
 	hash.update(rp);
 	p = hash.digest("hex").toUpperCase();
@@ -442,6 +467,7 @@ r.post("/login/", function (req, res, next) {
 	hash.update(p);
 	hash.update(tools.dat.ilib.cnonce);
 	p = hash.digest("hex").toUpperCase();
+	accessLogger.write("---- " + ru + ", 登录, ");
 	tools.ajax.qry("login", req, res, null, [ru, p, tools.dat.ilib.nonce, tools.dat.ilib.cnonce]);
 });
 
@@ -459,6 +485,26 @@ r.get("/signIn/", function (req, res, next) {
 		};
 		tools.url ("signIn", o, req);
 		tools.rtmp ("signIn", o, res, next);
+	}
+});
+
+// 日志
+r.get("/log/", function (req, res) {
+	var u = tools.getUsr(req);
+	if (u) {
+		if (u.un === "logMg" && u.dis === "日志管理") {
+			accessLogger.write("---- " + (u.dis || u.un) + ", 下载日志 : ");
+			res.header("Content-type", "application/octet-stream");
+			res.sendFile("access.log", {
+				root: "./logs/"
+			});
+		} else {
+			res.redirect(req.baseUrl + "/");
+		}
+	} else {
+		req.session = null;
+		res.redirect(req.baseUrl + "/signIn/?bcu=" + encodeURIComponent(req.originalUrl));
+		return;
 	}
 });
 
