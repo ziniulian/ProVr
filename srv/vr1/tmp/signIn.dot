@@ -15,6 +15,10 @@
 			<div class="sgin_out">
 				<input id="usrDoe" type="text" placeholder="手机号/用户名/邮箱"/>
 				<input id="pswDoe" type="password" placeholder="密码"/>
+				<div class="sgin_vc_out">
+					<input id="vcDoe" class="sgin_vc" type="text" placeholder="验证码"/>
+					<canvas id="vcImgDoe"  class="sgin_vc_img" onclick="dco.vc.draw();" />
+				</div>
 				<div class="sgin_btn mfs" onclick="dco.run();">登 录</div>
 				<div id="memoDeo" class="sgin_memo mfs"></div>
 				<div class="sgin_sub">

@@ -444,8 +444,17 @@ r.get("/signOut/", function (req, res, next) {
 // 登录检查
 r.post("/login/", function (req, res, next) {
 	var p, ru, rp, hash = crypto.createHash("sha256");
-	ru = req.body.u;
-	rp = req.body.p;
+	if (!req.body.t) {
+		res.send("{\"ok\":false, \"msg\":\"传参错误\"}");
+		return;
+	}
+	p = tools.utJson.toSeObj(req.body.t);
+	if (!p.t || (Date.now() - p.t) > 10000) {
+		res.send("{\"ok\":false, \"msg\":\"传参错误\"}");
+		return;
+	}
+	ru = p.u;
+	rp = p.p;
 	if (!ru || !rp) {
 		res.send("{\"ok\":false, \"msg\":\"用户名和密码不能为空\"}");
 		return;

@@ -1054,6 +1054,22 @@ a{
 	border-radius: 0.2rem;
 }
 
+.sgin_vc_out {
+	width: 85%;
+	margin: 1.5rem auto 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.sgin_vc_out .sgin_vc {
+	width: 60%;
+	margin: 0;
+}
+.sgin_vc_out .sgin_vc_img {
+	width: 30%;
+	height: 2rem;
+}
+
 .sgin_btn {
 	cursor: pointer;
 	width: 85%;
@@ -1075,7 +1091,7 @@ a{
 
 .sgin_sub {
 	position: relative;
-	margin: 1.5rem auto 0.3rem auto;
+	margin: 1.5rem auto 0.5rem auto;
 	width: 85%;
 	text-align: center;
 }
