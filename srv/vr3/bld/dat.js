@@ -4,9 +4,10 @@ module.exports = {
 	menu: ["home", "info", "team", "net", "stc", "df", "bld", "book"],	// 菜单
 	ilib: {	// 实验平台接口参数
 		host: "http://www.ilab-x.com",
-		url: "http://www.ilab-x.com/details/2020?id=6207",	// 实验项目链接
-		iid: "103415",	// appId , 实验项目编号
-		sk: "m/5HGb4/u8i0WUcGHZVCii6j05Y/vQLcOVhHSTV0ki4=",	// Secret Key
+		url: "http://www.ilab-x.com/details/v5?id=3829",	// 实验项目链接
+		iid: 101039,	// issuerId , 实验项目编号
+		sk: "58ycaz",	// Secret Key
+		ak: "SCusvKeU4wHVgGg/veXqFQAKjsskkvOlzDaeRPJcQnI=",	// Aes Key
 		nam: "“重大公共卫生事件应急处置”的仿真教学（以环境重金属污染为例）",	// 实验名称，必须与实验平台的名称一致
 		subNam: "重大公共卫生事件应急处置",	// 子实验名称
 		nonce: "0F2785E6ED1B59AC",	// 盐1
@@ -123,7 +124,8 @@ module.exports = {
 			sub: [
 				{
 					nam: "有效链接",
-					txt: "<a href=\"http://ldgw.lzu.edu.cn/Vr2/\" target=\"_blank\">http://ldgw.lzu.edu.cn/Vr2/</a>"	// Lzr_TODO : IP
+					// txt: "<a href=\"http://101.200.45.232/\" target=\"_blank\">101.200.45.232</a>"
+					txt: "<a href=\"http://ldgw.lzu.edu.cn/Vr3/\" target=\"_blank\">http://ldgw.lzu.edu.cn/Vr3/</a>"	// Lzr_TODO : IP
 				},
 				{
 					nam: "网络条件要求",

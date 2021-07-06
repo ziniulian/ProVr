@@ -61,38 +61,18 @@ var tools = {
 			});
 		}
 
-		// 登录用密钥
-		o = crypto.createHash("md5");
-		o.update(tools.dat.ilib.nonce + tools.dat.ilib.cnonce + tools.dat.ilib.iid + tools.dat.ilib.sk);
-		tools.dat.ilib.logk = o.digest("hex").toUpperCase();
+		// AES密钥
+		o = new Buffer(tools.dat.ilib.ak, "base64");
+		tools.dat.ilib.akiv = o.toString("binary", 0, 16);
+		tools.dat.ilib.aksk = o.toString("binary");
 
 		// ajax初始化
 		tools.ajax.crtEvt ({
-			token: tools.dat.ilib.host + "/open/api/v2/token?ticket=<0>&appid=<1>&signature=<2>",
-			push: tools.dat.ilib.host + "/open/api/v2/data_upload?access_token=<0>",
-			login: tools.dat.ilib.host + "/open/api/v2/user/validate?username=<0>&password=<1>&nonce=<2>&cnonce=<3>&appid=<4>&signature=<5>"
-		});
-		tools.ajax.evt.token.add(function (r, req, res, next) {
-			var u = {}
-			var o = tools.utJson.toObj(r);
-			if (o.code === 0) {
-				u.iid = tools.dat.ilib.iid,
-				u.ak = o.access_token;
-				u.un = o.un;	// 用户username
-				u.dis = o.dis;	// 用户姓名显示
-				u.stim = Date.now();
-				req.session.usr = u;
-			} else {
-				req.session = null;
-			}
-			var o = {
-				user: u,
-				link: tools.dat.ilib.host + "/my/profile"
-			};
-			tools.url ("hom2", o, req);
-			tools.rtmp ("hom2", o, res, next);
+			push: tools.dat.ilib.host + "/project/log/upload?xjwt=<0>",
+			login: tools.dat.ilib.host + "/sys/api/user/validate?username=<0>&password=<1>&nonce=<2>&cnonce=<3>"
 		});
 		tools.ajax.evt.push.add(function (r, req, res, next) {
+console.log (r);
 			if (r.indexOf("\"code\":0") > 0) {
 				res.send("{\"ok\":true}");
 			} else {
@@ -105,25 +85,20 @@ var tools = {
 				case 0:	// 登录成功
 					req.session.usr = {
 						iid: tools.dat.ilib.iid,
-						ak: o.access_token,
-						un: o.un,
-						dis: o.dis,
+						un: o.username,
+						dis: o.name,
 						stim: Date.now()
 					};
-					accessLogger.write("登录成功 (" + (o.dis || o.un) +") : ");
+					accessLogger.write("登录成功 (" + (o.name || o.username) +") : ");
 					res.send("{\"ok\":true}");
 					break;
-				case 2:	// 密码错误
+				case 4:	// 密码错误
 					res.send("{\"ok\":false, \"msg\":\"用户名或密码错误\"}");
 					accessLogger.write("密码错误 : ");
 					break;
-				case 3:	// 用户名错误
+				case 5:	// 用户名错误
 					res.send("{\"ok\":false, \"msg\":\"用户名或密码错误.\"}");
 					accessLogger.write("用户名错误 : ");
-					break;
-				case 4:	// 验证错误
-					res.send("{\"ok\":false, \"msg\":\"登录失败\"}");
-					accessLogger.write("验证错误 : ");
 					break;
 				default:
 					res.send("{\"ok\":false, \"msg\":\"登录失败\"}");
@@ -267,19 +242,21 @@ tools.initDat();	// 初始化数据
 r.crtTmp("tmp");
 
 r.get("/", function (req, res, next) {
-	if (req.query.ticket) {
-		var s, o = crypto.createHash("md5");
-		o.update(req.query.ticket + tools.dat.ilib.iid + tools.dat.ilib.sk);
-		s = o.digest("hex").toUpperCase();
-		tools.ajax.qry("token", req, res, null, [encodeURIComponent(req.query.ticket), tools.dat.ilib.iid, s]);
-	} else {
-		var o = {
-			user: req.session ? (req.session.usr || {}) : {},
-			link: tools.dat.ilib.host + "/my/profile"
-		};
-		tools.url ("hom2", o, req);
-		tools.rtmp ("hom2", o, res, next);
+	if (req.query.token) {
+		var u = tools.parseXjwt (req.query.token);
+		if (u) {
+			req.session.usr = u;
+		} else {
+			req.session = null;
+		}
 	}
+
+	var o = {
+		user: req.session ? (req.session.usr || {}) : {},
+		link: tools.dat.ilib.host + "/my/profile"
+	};
+	tools.url ("hom2", o, req);
+	tools.rtmp ("hom2", o, res, next);
 });
 
 // 首页
@@ -434,42 +411,21 @@ r.get("/dl/:id/", function (req, res, next) {
 r.post("/pushILib/:score/", function (req, res, next) {
 	var u = tools.getUsr(req);
 	var p = req.params.score - 0;
-	if (u && u.ak && p >= 0) {
-		var t = Date.now();
-		var tu = Math.floor((t - u.stim) / 1000 );	// timeUsed 必须大于 0
-		if (tu < 1) {
-			tu = 1;
-		}
-		var o = {
+	if (u && p >= 0) {
+		var t = {
 			username: u.un,
-			title: tools.dat.ilib.nam,
+			projectTitle: tools.dat.ilib.nam,
+			childProjectTitle: tools.dat.ilib.subNam,		// 为凑字数，此项必填
 			status: (p < 60) ? 2 : 1,
 			score: p,
-			startTime: u.stim,
-			endTime: t,
-			timeUsed: tu,
-			appid: tools.dat.ilib.iid,
-			originId: "LZR_VR1_" + t,
-			steps: []
+			startDate: u.stim,
+			endDate: Date.now(),
+			// attachmentId: 12,	// 关联附件，可省略
+			issuerId: tools.dat.ilib.iid
 		};
-		for (var i = 1; i < 12; i ++) {
-			o.steps.push({
-				seq: i,
-				title: "步骤" + i,
-				startTime: u.stim,
-				endTime: t,
-				timeUsed: tu,
-				expectTime: 0,
-				maxScore: 10,
-				score: 0,
-				repeatCount: 1,
-				evaluation:"--",
-				scoringModel:"--",
-				remarks:"--"
-			});
-		}
-		accessLogger.write("---- " + (u.dis || u.un) + ", 提交考试成绩, LZR_VR1_" + t + ", " + p + " : ");
-		tools.ajax.qry("push", null, res, null, [encodeURIComponent(u.ak)], o, "json");
+		t.timeUsed = Math.floor((t.endDate - t.startDate) / 1000 / 60) + 1;	// timeUsed 必须大于 0
+		accessLogger.write("---- " + (u.dis || u.un) + ", 提交考试成绩, " + p + " : ");
+		tools.ajax.qry("push", null, res, null, [tools.tokenXjwt(t)]);
 	} else {
 		res.send("{\"ok\":false}");
 	}
@@ -522,7 +478,7 @@ r.post("/login/", function (req, res, next) {
 	hash.update(tools.dat.ilib.cnonce);
 	p = hash.digest("hex").toUpperCase();
 	accessLogger.write("---- " + ru + ", 登录, ");
-	tools.ajax.qry("login", req, res, null, [ru, p, tools.dat.ilib.nonce, tools.dat.ilib.cnonce, tools.dat.ilib.iid, tools.dat.ilib.logk]);
+	tools.ajax.qry("login", req, res, null, [ru, p, tools.dat.ilib.nonce, tools.dat.ilib.cnonce]);
 });
 
 // 登录

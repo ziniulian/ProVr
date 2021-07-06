@@ -47,6 +47,9 @@ srv.use("/Vr1/", require("./vr1"));
 // 项目2
 srv.use("/Vr2/", require("./vr2"));
 
+// 旧项目
+srv.use("/Vr3/", require("./vr3"));
+
 srv.ro.setStaticDir("/myLib/", LZR.curPath);
 
 srv.use("*", function (req, res) {
